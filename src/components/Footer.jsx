@@ -1,22 +1,18 @@
 import { Link } from "react-router-dom";
-import { Shield, MapPin, Mail, Phone, Clock } from "lucide-react";
+import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import { LinkedInIcon, TwitterIcon, FacebookIcon, InstagramIcon } from "./SocialIcons";
+import footerBg from "../assets/footer_bg.png";
+import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="text-black" style={{ backgroundColor: "#8FC9FF" }}>
-      <div className="container-xl py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+    <footer className="text-black bg-cover bg-center relative" style={{ backgroundImage: `url(${footerBg})` }}>
+      <div className="container-xl py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4 relative z-10">
         <div>
-          <Link to="/" className="flex items-center gap-2 mb-4">
-            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-black text-[#8FC9FF]">
-              <Shield size={20} strokeWidth={2.5} />
-            </span>
-            <span className="leading-tight">
-              <span className="block font-display font-bold text-lg text-black">NRIS</span>
-              <span className="block text-[11px] uppercase tracking-wider text-black/60">
-                Insurance Services
-              </span>
-            </span>
+          <Link to="/" className="flex items-center mb-6 group">
+            <div className="transition-transform group-hover:scale-105">
+              <Logo />
+            </div>
           </Link>
           <p className="text-sm leading-relaxed text-black/80 max-w-xs">
             National Resource Insurance Services — a trusted brokerage delivering
@@ -85,7 +81,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-black/10">
+      <div className="border-t border-black/10 relative z-10">
         <div className="container-xl py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-black/60">
           <p>© 2026 National Resource Insurance Services. All rights reserved.</p>
           <div className="flex gap-6">

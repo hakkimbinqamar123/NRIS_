@@ -38,8 +38,8 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 bg-white ${scrolled
-        ? "shadow-[0_2px_20px_-4px_rgba(11,78,162,0.12)]"
+      className={`fixed top-0 w-full z-50 transition-all duration-300 bg-transparent ${scrolled
+        ? "shadow-[0_2px_20px_-4px_rgba(11,78,162,0.12)] bg-white/90 backdrop-blur-md"
         : ""
         }`}
     >
@@ -52,12 +52,12 @@ export default function Navbar() {
           {links.map((l) => (
             l.dropdown ? (
               <div key={l.to} className="relative group">
-                <Link to={l.to} className="relative flex items-center gap-1 text-sm font-medium text-ink/80 transition-colors hover:text-primary py-2">
-                  {l.label} <ChevronDown size={14} className="transition-transform group-hover:rotate-180" />
+                <Link to={l.to} className="relative flex items-center gap-1 text-base font-medium text-ink/80 transition-colors hover:text-primary py-2">
+                  {l.label} <ChevronDown size={16} className="transition-transform group-hover:rotate-180" />
                 </Link>
-                <div className="absolute left-0 top-full hidden w-48 flex-col rounded-xl bg-white p-2 shadow-[0_10px_40px_-10px_rgba(11,78,162,0.15)] border border-blue-500/10 group-hover:flex">
+                <div className="absolute left-0 top-full hidden w-56 flex-col rounded-xl bg-white p-2 shadow-[0_10px_40px_-10px_rgba(11,78,162,0.15)] border border-blue-500/10 group-hover:flex">
                   {l.dropdown.map((dl) => (
-                    <a key={dl.to} href={dl.to} className="rounded-lg px-4 py-2 text-sm text-ink/80 hover:bg-red-50 hover:text-red-600 transition-colors">
+                    <a key={dl.to} href={dl.to} className="rounded-lg px-4 py-2 text-base text-ink/80 hover:bg-red-50 hover:text-red-600 transition-colors">
                       {dl.label}
                     </a>
                   ))}
@@ -69,7 +69,7 @@ export default function Navbar() {
                 to={l.to}
                 end={l.to === "/"}
                 className={({ isActive }) =>
-                  `relative text-sm font-medium transition-colors hover:text-primary after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-primary after:transition-all ${isActive
+                  `relative text-base font-medium transition-colors hover:text-primary after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-primary after:transition-all ${isActive
                     ? "text-primary after:w-full"
                     : "text-ink/80 after:w-0 hover:after:w-full"
                   }`
@@ -82,7 +82,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden lg:block">
-          <Link to="/contact" className="btn-primary text-sm rounded-full">
+          <Link to="/contact" className="btn-primary text-base rounded-full">
             Get a Quote <ArrowRight size={16} />
           </Link>
         </div>

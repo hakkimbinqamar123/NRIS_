@@ -4,7 +4,7 @@ import CTASection from "../components/CTASection";
 
 // Importing images for the news feed
 import healthImg from "../assets/health.png";
-import motorImg from "../assets/Motor.png";
+import motorImg from "../assets/motor.png";
 import engineeringImg from "../assets/Eng.png";
 import propertyImg from "../assets/property1.png";
 import marineImg from "../assets/marine1.png";

@@ -32,7 +32,7 @@ import AnimatedSection from "../components/AnimatedSection";
 import CTASection from "../components/CTASection";
 import nrisHeroBanner from "../assets/NRIS_hero_banner.png";
 import healthImg from "../assets/health.png";
-import motorImg from "../assets/Motor.png";
+import motorImg from "../assets/motor.png";
 import engineeringImg from "../assets/Eng.png";
 import propertyImg from "../assets/Home.png";
 import whyChooseUsImg from "../assets/why_choose_us.png";

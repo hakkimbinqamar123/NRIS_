@@ -122,7 +122,7 @@ export default function HealthInsurance() {
               Why do you need a health insurance policy?
             </h2>
           </AnimatedSection>
-          
+
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {policyReasons.map((r, i) => (
               <AnimatedSection key={i} delay={i * 0.1} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">

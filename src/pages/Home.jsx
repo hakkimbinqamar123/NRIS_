@@ -30,7 +30,7 @@ import {
 } from "lucide-react";
 import AnimatedSection from "../components/AnimatedSection";
 import CTASection from "../components/CTASection";
-import nrisHeroBanner from "../assets/NRIS_hero_banner.png";
+import nrisHeroBanner from "../assets/NRIS_hero_banner2.png";
 import healthImg from "../assets/health.png";
 import motorImg from "../assets/motor.png";
 import engineeringImg from "../assets/Eng.png";
@@ -258,77 +258,7 @@ export default function Home() {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.15} className="relative w-full max-w-[420px] mx-auto lg:col-span-4 lg:col-start-9 lg:ml-auto">
-            <div className="relative h-[420px] w-full overflow-hidden rounded-2xl shadow-2xl border border-white/20">
-              <img
-                src={whyChooseUsImg}
-                alt="Why Choose NRIS"
-                className="h-full w-full object-cover"
-              />
-            </div>
 
-            {[
-              {
-                label: "Health Insurance",
-                top: "4%",
-                left: "-3%",
-                icon: ShieldCheck,
-                iconBg: "bg-red-900/90",
-                iconColor: "text-red-200",
-              },
-              {
-                label: "Motor Insurance",
-                top: "42%",
-                right: "-5%",
-                icon: Car,
-                iconBg: "bg-red-600/90",
-                iconColor: "text-white",
-              },
-              {
-                label: "Engineering Insurance",
-                bottom: "6%",
-                left: "-2%",
-                icon: Building2,
-                iconBg: "bg-red-900/90",
-                iconColor: "text-red-200",
-              },
-            ].map((c, i) => (
-              <motion.div
-                key={c.label}
-                initial={{ opacity: 0, y: 16, scale: 0.9 }}
-                animate={{ opacity: 1, y: [0, -10, 0], scale: 1 }}
-                transition={{
-                  opacity: { duration: 0.5, delay: 0.3 + i * 0.15 },
-                  scale: { duration: 0.5, delay: 0.3 + i * 0.15 },
-                  y: {
-                    duration: 3.2 + i * 0.5,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 0.7 + i * 0.25,
-                  },
-                }}
-                className="absolute hidden sm:flex items-center gap-2 rounded-xl bg-white px-4 py-3 shadow-lg border border-black/5"
-                style={{
-                  top: c.top,
-                  left: c.left,
-                  right: c.right,
-                  bottom: c.bottom,
-                }}
-              >
-                <span className={`flex h-8 w-8 items-center justify-center rounded-full ${c.iconBg} ${c.iconColor}`}>
-                  <c.icon size={16} />
-                </span>
-                <span className="text-xs">
-                  <span className="block text-muted">
-                    Covered
-                  </span>
-                  <span className="block font-semibold text-ink">
-                    ✓ {c.label}
-                  </span>
-                </span>
-              </motion.div>
-            ))}
-          </AnimatedSection>
         </div>
       </section>
 

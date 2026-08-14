@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import AnimatedSection from "./AnimatedSection";
 
-export default function PageHero({ eyebrow, title, subtitle, crumb, cta, bgImage, noOverlay, lightOverlay }) {
+export default function PageHero({ eyebrow, title, subtitle, crumb, cta, bgImage, noOverlay, lightOverlay, transparentBg, fullHeight }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -12,8 +12,8 @@ export default function PageHero({ eyebrow, title, subtitle, crumb, cta, bgImage
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
 
   return (
-    <section ref={ref} className="relative pt-24 pb-[150px] border-b border-black/5 overflow-hidden">
-      {bgImage && (
+    <section ref={ref} className="relative pt-24 min-h-screen flex items-center pb-24 border-b border-black/5 overflow-hidden">
+      {!transparentBg && bgImage && (
         <>
           <motion.div style={{ y: yBg }} className="absolute -inset-y-[10%] inset-x-0 z-0">
             <motion.img 
@@ -28,7 +28,7 @@ export default function PageHero({ eyebrow, title, subtitle, crumb, cta, bgImage
           {lightOverlay && <div className="absolute inset-0 z-0 bg-white/40" />}
         </>
       )}
-      {!bgImage && (
+      {!transparentBg && !bgImage && (
         <div className="absolute inset-0 z-0 overflow-hidden bg-slate-50">
           <motion.div style={{ y: yBg }} className="absolute inset-0 z-0">
             <motion.div
@@ -52,14 +52,14 @@ export default function PageHero({ eyebrow, title, subtitle, crumb, cta, bgImage
         </div>
       )}
       
-      <div className="container-xl relative z-10">
+      <div className="container-xl relative z-10 w-full">
         <AnimatedSection>
           {eyebrow && <span className="badge-pill mb-5">{eyebrow}</span>}
-          <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink max-w-3xl mb-5 leading-tight">
+          <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink max-w-xl mb-5 leading-tight">
             {title}
           </h1>
           {subtitle && (
-            <p className="text-muted text-lg max-w-2xl mb-8 leading-relaxed">
+            <p className="text-muted text-lg max-w-lg mb-8 leading-relaxed">
               {subtitle}
             </p>
           )}

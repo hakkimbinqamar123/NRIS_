@@ -25,14 +25,16 @@ import {
   PiggyBank,
   Wallet,
   CheckCircle2,
+  Smile,
+  Smartphone,
 } from "lucide-react";
 import AnimatedSection from "../components/AnimatedSection";
 import CTASection from "../components/CTASection";
-import nrisHeroBanner from "../assets/NRIS_hero_banner.jpg";
-import healthImg from "../assets/health.jpg";
-import motorImg from "../assets/motor.jpg";
-import engineeringImg from "../assets/engineering.jpg";
-import propertyImg from "../assets/hero.jpg";
+import nrisHeroBanner from "../assets/NRIS_hero_banner.png";
+import healthImg from "../assets/health.png";
+import motorImg from "../assets/Motor.png";
+import engineeringImg from "../assets/Eng.png";
+import propertyImg from "../assets/Home.png";
 import whyChooseUsImg from "../assets/why_choose_us.png";
 
 const goals = [
@@ -44,34 +46,34 @@ const goals = [
 
 const whyChoose = [
   {
-    icon: Users,
-    title: "Experienced Advisors",
-    desc: "Two decades of underwriting and broking expertise across major insurers.",
-  },
-  {
-    icon: Target,
+    icon: Smile,
     title: "Tailored Solutions",
     desc: "Coverage engineered around your risk profile — never off-the-shelf.",
   },
   {
-    icon: Handshake,
-    title: "Trusted Partnerships",
+    icon: Users,
+    title: "Partnership with World Class Insurers",
     desc: "Access to a curated network of A-rated regional and global insurers.",
   },
   {
-    icon: Zap,
-    title: "Fast Claims Assistance",
+    icon: ShieldCheck,
+    title: "Risk Management",
+    desc: "Proactive risk identification and mitigation strategies.",
+  },
+  {
+    icon: Smartphone,
+    title: "Consultancy You Can Trust",
+    desc: "Expert advisory services tailored to your specific needs.",
+  },
+  {
+    icon: Wallet,
+    title: "Up To Date Business Insights",
+    desc: "Data-driven market analytics to inform your insurance decisions.",
+  },
+  {
+    icon: Car,
+    title: "Claim Assistance",
     desc: "Dedicated claims managers with 24/7 response and end-to-end tracking.",
-  },
-  {
-    icon: BadgePercent,
-    title: "Competitive Premiums",
-    desc: "Real market comparisons to secure best value without compromise.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Customer-Centric Service",
-    desc: "A single relationship manager — from renewal cycles to claim resolution.",
   },
 ];
 
@@ -207,7 +209,7 @@ export default function Home() {
     <div className="relative min-h-screen">
       <div className="fixed inset-0 z-[-1] overflow-hidden">
         <motion.div
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-[position:65%_center]"
           style={{ backgroundImage: `url(${nrisHeroBanner})` }}
           animate={{ scale: [1, 1.05, 1] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -215,22 +217,20 @@ export default function Home() {
         <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
       </div>
       {/* HERO */}
-      <section className="relative overflow-hidden pt-16 pb-24 min-h-[calc(100vh-64px)] flex items-center">
-        <div className="container-xl grid items-center gap-12 lg:grid-cols-2 w-full">
-          <AnimatedSection>
+      <section className="relative overflow-hidden pt-16 pb-24 min-h-screen flex items-center">
+        <div className="container-xl grid items-center gap-8 lg:grid-cols-12 w-full">
+          <AnimatedSection className="lg:col-span-5">
             <span className="badge-pill mb-6 bg-red-50 text-red-700 border-red-100">
               <span className="h-1.5 w-1.5 rounded-full bg-red-500" /> Licensed Insurance Brokerage
             </span>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.05] mb-6">
-              <span className="block text-ink">Your safety</span>
+              <span className="block text-[#0B4EA2]">Your safety</span>
               <span className="block text-red-600">
                 our priority
               </span>
             </h1>
-            <p className="text-lg text-ink/80 leading-relaxed mb-8 max-w-xl">
-              National Resource Insurance Services provides comprehensive
-              insurance brokerage solutions for individuals, businesses, and
-              enterprises with expert guidance and customized protection.
+            <p className="text-muted text-lg md:text-xl max-w-xl mb-8 leading-relaxed font-medium">
+              At <span className="font-bold text-red-600">NRIS Insurance</span>, we understand that every journey matters. Our comprehensive policies give you <span className="text-[#0B4EA2]">peace of mind</span>, safeguarding your vehicle and well-being on the road.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/contact" className="btn-primary bg-red-600 hover:bg-red-700 border-red-600 text-white">
@@ -258,7 +258,7 @@ export default function Home() {
             </div>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.15} className="relative">
+          <AnimatedSection delay={0.15} className="relative w-full max-w-[420px] mx-auto lg:col-span-4 lg:col-start-9 lg:ml-auto">
             <div className="relative h-[420px] w-full overflow-hidden rounded-2xl shadow-2xl border border-white/20">
               <img
                 src={whyChooseUsImg}
@@ -398,29 +398,30 @@ export default function Home() {
             </p>
           </AnimatedSection>
 
-          <div className="flex flex-row overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar">
-            {whyChoose.map((item, i) => (
-              <AnimatedSection
-                key={item.title}
-                delay={i * 0.08}
-                className="group h-[320px] w-[280px] shrink-0 snap-center [perspective:1000px]"
-              >
-                <div className="relative h-full w-full rounded-2xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-md hover:shadow-xl">
-                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border border-red-100 bg-white/90 backdrop-blur-sm p-8 text-center [backface-visibility:hidden]">
-                    <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-red-600 text-white shadow-lg shadow-red-600/30">
-                      <item.icon size={26} />
-                    </span>
-                    <h3 className="font-display text-xl font-semibold text-ink">
-                      {item.title}
-                    </h3>
-                  </div>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-red-600 p-8 text-center text-white [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                    <p className="text-base leading-relaxed">{item.desc}</p>
+          <AnimatedSection className="w-full relative py-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4">
+              {whyChoose.map((item, i) => (
+                <div
+                  key={i}
+                  className="group h-[320px] w-full [perspective:1000px]"
+                >
+                  <div className="relative h-full w-full rounded-2xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-md hover:shadow-xl">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border border-red-100 bg-white/90 backdrop-blur-sm p-4 sm:p-6 text-center [backface-visibility:hidden]">
+                      <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white shadow-lg shadow-red-600/30">
+                        <item.icon size={24} />
+                      </span>
+                      <h3 className="font-display text-base lg:text-sm xl:text-base font-semibold text-ink">
+                        {item.title}
+                      </h3>
+                    </div>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-red-600 p-4 sm:p-6 text-center text-white [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                      <p className="text-sm xl:text-base leading-relaxed">{item.desc}</p>
+                    </div>
                   </div>
                 </div>
-              </AnimatedSection>
-            ))}
-          </div>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

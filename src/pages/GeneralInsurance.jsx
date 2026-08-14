@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import {
   Shield,
   Building,
@@ -18,21 +19,33 @@ import PageHero from "../components/PageHero";
 import AnimatedSection from "../components/AnimatedSection";
 import CTASection from "../components/CTASection";
 // For now, reuse engineering image as a placeholder for general
-import generalImg from "../assets/engineering.jpg";
+import generalImg from "../assets/Eng.png";
 import generalHeroBg from "../assets/engineering_hero_bg.png";
-import property1Img from "../assets/property1.png";
+import nrisHeroBanner from "../assets/NRIS_hero_banner2.png";
+import property1Img from "../assets/Home.png";
 import property2Img from "../assets/property2.png";
 import property3Img from "../assets/property3.png";
-import property4Img from "../assets/property4.png";
+import property4Img from "../assets/home2.png";
 import marine1Img from "../assets/marine1.png";
 import marine2Img from "../assets/marine2.png";
 import marine3Img from "../assets/marine3.png";
-import marine4Img from "../assets/marine4.png";
+import marine4Img from "../assets/Marine.png";
 
 export default function GeneralInsurance() {
   return (
-    <>
+    <div className="relative min-h-screen">
+      <div className="fixed inset-0 z-[-1] overflow-hidden">
+        <motion.div
+          className="absolute inset-0 bg-cover bg-[position:65%_center]"
+          style={{ backgroundImage: `url(${nrisHeroBanner})` }}
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
+      </div>
       <PageHero
+        transparentBg={true}
+        fullHeight={true}
         bgImage={generalHeroBg}
         noOverlay={true}
         crumb="General Insurance"
@@ -41,8 +54,8 @@ export default function GeneralInsurance() {
             <Shield size={14} /> General Insurance
           </>
         }
-        title={<>Comprehensive protection for <span className="text-red-600">commercial enterprise</span></>}
-        subtitle={<span className="text-white">From property portfolios and global supply chains to complex engineering projects and liability exposures — NRIS secures your operations.</span>}
+        title={<><span className="text-[#0B4EA2]">Comprehensive protection for</span> <span className="text-red-600">commercial enterprise</span></>}
+        subtitle={<span className="text-black drop-shadow-md">From property portfolios and global supply chains to complex engineering projects and liability exposures — NRIS secures your operations.</span>}
         cta={
           <Link to="/contact" className="btn-primary bg-blue-600 hover:bg-blue-700 shadow-blue-500/30 text-white">
             Request a quote <ArrowRight size={18} />
@@ -246,6 +259,6 @@ export default function GeneralInsurance() {
       </section>
 
       <CTASection />
-    </>
+    </div>
   );
 }

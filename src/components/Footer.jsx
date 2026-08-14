@@ -7,7 +7,7 @@ import Logo from "./Logo";
 export default function Footer() {
   return (
     <footer className="text-black bg-cover bg-center relative" style={{ backgroundImage: `url(${footerBg})` }}>
-      <div className="container-xl py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-4 relative z-10">
+      <div className="container-xl py-28 grid gap-12 md:grid-cols-2 lg:grid-cols-4 relative z-10">
         <div>
           <Link to="/" className="flex items-center mb-6 group">
             <div className="transition-transform group-hover:scale-105">
@@ -39,7 +39,9 @@ export default function Footer() {
           </h4>
           <ul className="space-y-3 text-sm">
             <li><Link to="/" className="hover:text-black/70 transition-colors">Home</Link></li>
+            <li><Link to="/about" className="hover:text-black/70 transition-colors">About Us</Link></li>
             <li><Link to="/news" className="hover:text-black/70 transition-colors">News & Insights</Link></li>
+            <li><Link to="/careers" className="hover:text-black/70 transition-colors">Careers</Link></li>
             <li><Link to="/contact" className="hover:text-black/70 transition-colors">Contact Us</Link></li>
             <li><Link to="/contact" className="hover:text-black/70 transition-colors">Get a Quote</Link></li>
           </ul>
@@ -53,6 +55,9 @@ export default function Footer() {
             <li><Link to="/health-insurance" className="hover:text-black/70 transition-colors">Health Insurance</Link></li>
             <li><Link to="/motor-insurance" className="hover:text-black/70 transition-colors">Motor Insurance</Link></li>
             <li><Link to="/engineering-insurance" className="hover:text-black/70 transition-colors">Engineering Insurance</Link></li>
+            <li><Link to="/property-insurance" className="hover:text-black/70 transition-colors">Property Insurance</Link></li>
+            <li><Link to="/marine-insurance" className="hover:text-black/70 transition-colors">Marine Insurance</Link></li>
+            <li><Link to="/liability-insurance" className="hover:text-black/70 transition-colors">Public Liability</Link></li>
           </ul>
         </div>
 

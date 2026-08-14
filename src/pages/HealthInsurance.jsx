@@ -21,24 +21,18 @@ import FAQAccordion from "../components/FAQAccordion";
 import CTASection from "../components/CTASection";
 import healthImg from "../assets/health.png";
 import healthHeroBg from "../assets/health_hero_bg.png";
+import nrisHeroBanner from "../assets/NRIS_hero_banner2.png";
 
-const riskScenarios = {
-  who: [
-    "Small, medium, and large employers, including multinationals",
-    "Financial institutions",
-    "Colleges, universities, and other institutions of higher learning",
-    "Affinity groups, including associations, clubs, societies, labor unions, amateur sports teams, and volunteer groups",
-    "Cruise lines, travel agencies, and tour operators",
-    "A range of industries, including retailing, publishing, oil and natural gas, utilities, and telecommunications"
-  ],
-  what: [
-    "Personal accident coverage including accidental death and disability (AD&D), injury medical expenses, repatriation to home country and temporary total disability benefits",
-    "Travel insurance, business and personal",
-    "Student accident insurance and international academic field-trips insurance",
-    "Global medical insurance: short-term accident and sickness coverage for employees traveling outside their home country or country of permanent assignment, as well as benefits for lost baggage and personal effects",
-    "Employee benefits such as AD&D and occupational injuries"
-  ]
-};
+const policyReasons = [
+  { num: "01", title: "Medical Insurance Is Compulsory In The UAE", desc: "In order to renew the visa, GDRFA requires valid health insurance cover" },
+  { num: "02", title: "Affordable Plans", desc: "We device policies that are tailored to your needs and are made available at very competitive rates" },
+  { num: "03", title: "Pre And Post Hospitalization Expenses", desc: "In-Patient and Out-Patient services are covered depending on the health plan limits and co-pay" },
+  { num: "04", title: "Health Cover For New Borns", desc: "New Borns will be automatically covered under the mother's policy up to 30 days securing proper medical support to the child" },
+  { num: "05", title: "Maternity Cover", desc: "As per the UAE regulations, all married females from the age 18-50 will be having a maternity cover as per the terms and conditions of the policy" },
+  { num: "06", title: "Pre-Existing And Chronic Conditions", desc: "All pre-existing medical conditions and chronic diseases are covered subject to continuity and depending on the plan's limit and co-pay" }
+];
+
+
 
 const plans = [
   {
@@ -61,12 +55,21 @@ const plans = [
   },
 ];
 
-
-
 export default function HealthInsurance() {
   return (
-    <>
+    <div className="relative min-h-screen">
+      <div className="fixed inset-0 z-[-1] overflow-hidden">
+        <motion.div
+          className="absolute inset-0 bg-cover bg-[position:65%_center]"
+          style={{ backgroundImage: `url(${nrisHeroBanner})` }}
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
+      </div>
       <PageHero
+        transparentBg={true}
+        fullHeight={true}
         bgImage={healthHeroBg}
         noOverlay={true}
         crumb="Health Insurance"
@@ -77,11 +80,11 @@ export default function HealthInsurance() {
         }
         title={
           <>
-            Comprehensive medical cover for <span className="text-red-600">every stage of life</span>
+            <span className="text-[#0B4EA2]">Comprehensive medical cover for</span> <span className="text-red-600">every stage of life</span>
           </>
         }
         subtitle={
-          <span className="text-white font-medium drop-shadow-md">
+          <span className="text-black font-medium drop-shadow-md">
             From personal plans to enterprise-wide group medical schemes — NRIS builds programs that keep employees, families, and individuals healthy and protected.
           </span>
         }
@@ -92,78 +95,48 @@ export default function HealthInsurance() {
         }
       />
 
-      {/* Overview */}
-      <section className="section">
-        <div className="container-xl grid items-center gap-12 lg:grid-cols-2">
+      {/* Intro Text */}
+      <section className="section bg-white pt-24 pb-16">
+        <div className="container-xl max-w-4xl mx-auto text-center">
           <AnimatedSection>
-            <div className="relative w-full overflow-hidden rounded-2xl shadow-lg transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl cursor-pointer">
-              <motion.img 
-                src={healthImg} 
-                alt="Health Insurance Overview" 
-                className="w-full h-auto origin-center"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              />
-            </div>
-          </AnimatedSection>
-          <AnimatedSection delay={0.2} animation="slideRight">
-            <span className="badge-pill mb-4 bg-red-50 text-red-600 border-red-100">Overview</span>
-            <h2 className="font-display text-3xl font-bold text-ink mb-5">
-              Advisory-led health insurance broking
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-8 leading-tight">
+              Providing access to quality and affordable healthcare in the UAE
             </h2>
-            <p className="text-muted leading-relaxed mb-6">
-              Medical inflation is outpacing salaries. NRIS negotiates on your
-              behalf with regional and international insurers to structure a
-              plan that protects your people without inflating your budget. We
-              handle onboarding, claims escalations, and renewal benchmarking
-              end-to-end.
-            </p>
-            <ul className="space-y-3">
-              {["Multi-insurer market comparison", "Clinically-informed benefit design", "24/7 claims escalation desk"].map((t) => (
-                <li key={t} className="flex items-center gap-3 text-ink/80">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <Check size={14} />
-                  </span>
-                  {t}
-                </li>
-              ))}
-            </ul>
+            <div className="text-left space-y-6 text-muted text-lg leading-relaxed">
+              <p>
+                At NRiS, we make the optimum use of our long year's of experience, expertise and research in health sector by offering you a whole spectrum of health insurance benefits and providing insights in forming a unique health plan based on your needs and resources. We offer tailor made individual and Group medical health insurance plans & other general insurances as per your specific requirements. Whether you are an individual seeking insurance plans for your family or a mid or large level organization or employer in need of insuring your workforce, we have market metrics and our industry experience to bring you the best solutions.
+              </p>
+              <p>
+                We research the availability of solutions based on your health data to determine the best deal that meets all your objectives. We then connect you with the right insurer, leveraging our sizeable portfolio and experience in brokering, to generate competition and favorable pricing. We give you access to innumerable health benefits by comparing products from different insurers and matching them against your needs. We regularly review and update your existing insurance portfolio to maintain optimum insurance coverage with changing circumstances. We aim to avail you best deals in competitive prices and make sure you are fully covered with no loopholes that might cost you later. Our goal is to ensure minimum hassle and assure your peace of mind in events of medical emergencies.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Risk Scenarios */}
-      <section className="bg-gradient-to-b from-[#fcfdfd] to-[#f4f7fb] py-16 border-t border-blue-500/10">
-        <div className="container-xl max-w-6xl mx-auto grid gap-12 lg:grid-cols-[1fr_2.5fr]">
-          <AnimatedSection animation="scaleUp">
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink border-l-[6px] border-blue-600 pl-5 leading-tight">
-              Risk Scenarios
+      {/* Insurance Policy Reasons */}
+      <section className="bg-surface py-20">
+        <div className="container-xl">
+          <AnimatedSection className="text-center max-w-2xl mx-auto mb-16" animation="slideUp">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink">
+              Why do you need a health insurance policy?
             </h2>
           </AnimatedSection>
           
-          <div className="grid gap-12 sm:grid-cols-2">
-            <AnimatedSection delay={0.1}>
-              <h3 className="font-bold text-ink mb-6">Who it's for:</h3>
-              <ul className="space-y-4">
-                {riskScenarios.who.map((item, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-ink/80 leading-relaxed">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </AnimatedSection>
-            <AnimatedSection delay={0.2}>
-              <h3 className="font-bold text-ink mb-6">What it covers:</h3>
-              <ul className="space-y-4">
-                {riskScenarios.what.map((item, i) => (
-                  <li key={i} className="flex gap-3 text-sm text-ink/80 leading-relaxed">
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ink" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </AnimatedSection>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {policyReasons.map((r, i) => (
+              <AnimatedSection key={i} delay={i * 0.1} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="flex items-center justify-center bg-[#c61017] text-white font-bold text-lg h-10 w-10 shrink-0 rounded-[2px]">
+                    {r.num}
+                  </span>
+                  <h3 className="font-bold text-ink leading-tight text-lg">{r.title}</h3>
+                </div>
+                <p className="text-gray-600 text-[15px] leading-relaxed">
+                  {r.desc}
+                </p>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>
@@ -222,6 +195,6 @@ export default function HealthInsurance() {
       </section>
 
       <CTASection />
-    </>
+    </div>
   );
 }

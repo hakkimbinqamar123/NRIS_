@@ -18,6 +18,7 @@ import FAQAccordion from "../components/FAQAccordion";
 import CTASection from "../components/CTASection";
 import motorImg from "../assets/motor.png";
 import motorHeroBg from "../assets/motor_hero_bg.png";
+import nrisHeroBanner from "../assets/NRIS_hero_banner2.png";
 
 const riskScenarios = {
   who: [
@@ -49,8 +50,19 @@ const products = [
 
 export default function MotorInsurance() {
   return (
-    <>
+    <div className="relative min-h-screen">
+      <div className="fixed inset-0 z-[-1] overflow-hidden">
+        <motion.div
+          className="absolute inset-0 bg-cover bg-[position:65%_center]"
+          style={{ backgroundImage: `url(${nrisHeroBanner})` }}
+          animate={{ scale: [1, 1.05, 1] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
+      </div>
       <PageHero
+        transparentBg={true}
+        fullHeight={true}
         bgImage={motorHeroBg}
         noOverlay={true}
         crumb="Motor Insurance"
@@ -61,12 +73,12 @@ export default function MotorInsurance() {
         }
         title={
           <>
-            <span className="text-black drop-shadow-md">Cover for every kilometer</span><br />
-            <span className="text-red-600 drop-shadow-md">on any road</span>
+            <span className="block text-red-600 mb-2">Make your roads shorter</span>
+            <span className="block text-[#0B4EA2]">Your safety is our priority</span>
           </>
         }
         subtitle={
-          <span className="text-white font-medium drop-shadow-md">
+          <span className="text-black font-medium drop-shadow-md">
             From a single family car to nationwide fleets — NRIS structures motor policies that keep you moving and settle claims fast when it matters.
           </span>
         }
@@ -162,6 +174,6 @@ export default function MotorInsurance() {
 
 
       <CTASection />
-    </>
+    </div>
   );
 }

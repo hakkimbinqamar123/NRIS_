@@ -80,7 +80,7 @@ export default function HealthInsurance() {
         }
         title={
           <>
-            <span className="text-[#0B4EA2]">Comprehensive medical cover for</span> <span className="text-red-600">every stage of life</span>
+            <span className="text-[#0B4EA2]">Comprehensive Medical Cover For</span> <span className="text-red-600">Every Stage Of Life</span>
           </>
         }
         subtitle={

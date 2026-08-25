@@ -63,7 +63,7 @@ export default function GeneralInsurance() {
             <Shield size={14} /> General Insurance
           </>
         }
-        title={<><span className="text-[#0B4EA2]">Comprehensive protection for</span> <span className="text-red-600">commercial enterprise</span></>}
+        title={<><span className="text-[#0B4EA2]">Comprehensive Protection For</span> <span className="text-red-600">Commercial Enterprise</span></>}
         subtitle={<span className="text-black drop-shadow-md">From property portfolios and global supply chains to complex engineering projects and liability exposures — NRIS secures your operations.</span>}
         cta={
           <Link to="/contact" className="btn-primary bg-blue-600 hover:bg-blue-700 shadow-blue-500/30 text-white">

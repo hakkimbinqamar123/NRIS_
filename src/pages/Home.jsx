@@ -224,9 +224,9 @@ export default function Home() {
               <span className="h-1.5 w-1.5 rounded-full bg-red-500" /> Licensed Insurance Brokerage
             </span>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.05] mb-6">
-              <span className="block text-[#0B4EA2]">Your safety</span>
+              <span className="block text-[#0B4EA2]">Your Safety</span>
               <span className="block text-red-600">
-                our priority
+                Our Priority
               </span>
             </h1>
             <p className="text-muted text-lg md:text-xl max-w-xl mb-8 leading-relaxed font-medium">

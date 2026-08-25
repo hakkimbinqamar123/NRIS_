@@ -58,8 +58,8 @@ export default function MotorInsurance() {
         }
         title={
           <>
-            <span className="block text-red-600 mb-2">Make your roads shorter</span>
-            <span className="block text-[#0B4EA2]">Your safety is our priority</span>
+            <span className="block text-red-600 mb-2">Make Your Roads Shorter</span>
+            <span className="block text-[#0B4EA2]">Your Safety Is Our Priority</span>
           </>
         }
         subtitle={

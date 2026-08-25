@@ -97,12 +97,23 @@ export default function HealthInsurance() {
 
       {/* Intro Text */}
       <section className="section bg-white pt-24 pb-16">
-        <div className="container-xl max-w-4xl mx-auto text-center">
+        <div className="container-xl grid gap-12 lg:grid-cols-2 items-center">
           <AnimatedSection>
+            <div className="relative h-[500px] w-full overflow-hidden rounded-2xl shadow-lg transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl cursor-pointer">
+              <motion.img
+                src={healthImg}
+                alt="Health Insurance"
+                className="h-full w-full object-cover origin-center"
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              />
+            </div>
+          </AnimatedSection>
+          <AnimatedSection delay={0.2} animation="slideRight">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-8 leading-tight">
-              Providing access to quality and affordable healthcare in the UAE
+              Providing access to quality and affordable <span className="text-[#0B4EA2]">healthcare</span> in the UAE
             </h2>
-            <div className="text-left space-y-6 text-muted text-lg leading-relaxed">
+            <div className="text-left space-y-6 text-muted text-[16px] leading-[1.8] font-medium">
               <p>
                 At NRiS, we make the optimum use of our long year's of experience, expertise and research in health sector by offering you a whole spectrum of health insurance benefits and providing insights in forming a unique health plan based on your needs and resources. We offer tailor made individual and Group medical health insurance plans & other general insurances as per your specific requirements. Whether you are an individual seeking insurance plans for your family or a mid or large level organization or employer in need of insuring your workforce, we have market metrics and our industry experience to bring you the best solutions.
               </p>
@@ -125,14 +136,20 @@ export default function HealthInsurance() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {policyReasons.map((r, i) => (
-              <AnimatedSection key={i} delay={i * 0.1} className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="flex items-center justify-center bg-[#c61017] text-white font-bold text-lg h-10 w-10 shrink-0 rounded-[2px]">
+              <AnimatedSection
+                key={i}
+                delay={i * 0.1}
+                className="group bg-white rounded-xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col hover:-translate-y-2 hover:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer"
+              >
+                <div className="flex items-start gap-4 mb-4">
+                  <span className="flex items-center justify-center bg-[#c61017] text-white font-bold text-lg h-10 w-10 shrink-0 rounded-[2px] group-hover:bg-[#a00d12] transition-colors duration-300">
                     {r.num}
                   </span>
-                  <h3 className="font-bold text-ink leading-tight text-lg">{r.title}</h3>
+                  <h3 className="font-bold text-ink leading-tight text-[16px] group-hover:text-[#0B4EA2] transition-colors duration-300 pt-1">
+                    {r.title}
+                  </h3>
                 </div>
-                <p className="text-gray-600 text-[15px] leading-relaxed">
+                <p className="text-gray-600 text-[14px] leading-relaxed mt-2">
                   {r.desc}
                 </p>
               </AnimatedSection>

@@ -31,6 +31,15 @@ import marine2Img from "../assets/marine2.png";
 import marine3Img from "../assets/marine3.png";
 import marine4Img from "../assets/Marine.png";
 
+const engineeringCards = [
+  { num: "01", title: "Contractors' All Risks", desc: "Secures the contractor from any accidents that happen on the construction site while working" },
+  { num: "02", title: "Erection All Risks", desc: "Provides coverage for losses and/or damages to materials and erection works owned by principals and contractors/subcontractors" },
+  { num: "03", title: "Contractors' Plant & Machinery", desc: "Protection for loss or damage to machinery/plant. A wide range of risks and damage cases covered" },
+  { num: "04", title: "Third Party Liability", desc: "Covers accidental damage to third party property or accidental death or bodily injury to third party" },
+  { num: "05", title: "Machinery Breakdown", desc: "Covers loss or damage to machinery caused by defects in casting and material, faulty design, bad workmanship etc" },
+  { num: "06", title: "Owner's Controlled Insurance Program (OCIP)", desc: "OCIP is an insurance policy held by a property owner during the construction or renovation of a property" }
+];
+
 export default function GeneralInsurance() {
   return (
     <div className="relative min-h-screen">
@@ -67,18 +76,32 @@ export default function GeneralInsurance() {
       <section className="section bg-surface">
         <div className="container-xl grid items-center gap-12 lg:grid-cols-2">
           <AnimatedSection>
-            <div className="relative h-80 w-full overflow-hidden rounded-2xl shadow-lg">
-              <img src={generalImg} alt="General Insurance Overview" className="h-full w-full object-cover" />
+            <div className="relative h-[500px] w-full overflow-hidden rounded-2xl shadow-lg transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl cursor-pointer">
+              <motion.img
+                src={generalImg}
+                alt="General Insurance Overview"
+                className="h-full w-full object-cover origin-center"
+                animate={{ scale: [1, 1.05, 1] }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              />
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.2} animation="slideRight">
             <span className="badge-pill mb-4 bg-red-50 text-red-600 border-red-100">Overview</span>
             <h2 className="font-display text-3xl font-bold text-ink mb-5">
-              Enterprise-grade risk transfer
+              <span className="text-[#0B4EA2]">Enterprise</span>-grade risk transfer
             </h2>
-            <p className="text-muted leading-relaxed">
-              Modern businesses face interconnected risks. A fire doesn't just damage property; it halts production and disrupts supply chains. NRIS structures holistic general insurance programs that interlock property, marine, engineering, and liability covers — ensuring no gaps in your protection.
-            </p>
+            <div className="space-y-4 text-muted leading-relaxed">
+              <p>
+                Modern businesses face interconnected risks. A fire doesn't just damage property; it halts production and disrupts supply chains. NRIS structures holistic general insurance programs that interlock property, marine, engineering, and liability covers — ensuring no gaps in your protection.
+              </p>
+              <p>
+                Whether you are mitigating daily operational hazards or preparing for catastrophic events, our team offers tailored solutions to keep your business resilient. We specialize in evaluating complex exposures and aligning them with robust insurance products from A-rated international markets.
+              </p>
+              <p>
+                Protect your balance sheet and secure your company's future with our comprehensive commercial insurance strategies.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </section>
@@ -98,18 +121,24 @@ export default function GeneralInsurance() {
             </p>
           </AnimatedSection>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { icon: Factory, title: "Contractors All Risk (CAR)", desc: "Cover for construction works, materials on-site, and third-party liability during the project." },
-              { icon: Cog, title: "Plant & Machinery", desc: "Physical damage and breakdown protection for heavy equipment and construction plant." },
-              { icon: MonitorSmartphone, title: "Electronic Equipment", desc: "Coverage for servers, telecom systems, and specialist IT hardware." }
-            ].map((p, i) => (
-              <AnimatedSection key={p.title} delay={i * 0.15} animation="scaleUp" className="group overflow-hidden flex flex-col rounded-2xl border border-blue-500/10 bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 p-7">
-                <span className="mb-4 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-red-50 text-red-600 shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white">
-                  <p.icon size={24} />
-                </span>
-                <h3 className="font-display font-semibold text-ink mb-2">{p.title}</h3>
-                <p className="text-muted text-sm leading-relaxed">{p.desc}</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {engineeringCards.map((b, i) => (
+              <AnimatedSection
+                key={b.num}
+                delay={i * 0.1}
+                className="group bg-white rounded-xl p-6 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col hover:-translate-y-2 hover:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer"
+              >
+                <div className="flex items-start gap-4 mb-3">
+                  <div className="bg-[#e61919] text-white font-bold text-xl h-10 w-10 flex items-center justify-center rounded shrink-0 group-hover:bg-[#cc1616] transition-colors duration-300">
+                    {b.num}
+                  </div>
+                  <h3 className="font-bold text-ink text-[15px] leading-snug pt-1 group-hover:text-[#0B4EA2] transition-colors duration-300">
+                    {b.title}
+                  </h3>
+                </div>
+                <p className="text-muted text-[14px] leading-relaxed mt-2">
+                  {b.desc}
+                </p>
               </AnimatedSection>
             ))}
           </div>
@@ -124,16 +153,20 @@ export default function GeneralInsurance() {
               <Building size={14} className="mr-1" /> Property
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-5">
-              Secure your physical assets & continuity
+              Stay covered against natural calamities
             </h2>
-            <p className="text-muted leading-relaxed mb-6">
-              Property insurance is the bedrock of commercial risk management. We go beyond basic fire policies to include comprehensive "All Risk" wordings and Business Interruption coverage, ensuring that if a disaster strikes, your cash flow doesn't stop.
+            <p className="text-muted text-[15px] leading-relaxed mb-8">
+              We understand the emotional and financial importance of a home and therefore commit ourselves to providing the best coverage plans that will give protection against any unforeseeable risk. It can be quite difficult to navigate through a myriad of policies and decide which one would be ideal. <span className="text-[#0B4EA2] font-semibold">NRiS</span> offers complete assistance from selecting the right policy for their home till processing any claim. We give counseling in obtaining comprehensive protection from unforeseen events that can cause damage to houses and provide overall coverage to Assets, Interests, Liabilities and the residents.
             </p>
-            <ul className="space-y-3">
-              {["Property All Risk (PAR)", "Business Interruption (BI)", "Fire and Allied Perils", "Terrorism and Sabotage"].map((t) => (
-                <li key={t} className="flex items-center gap-3 text-ink/80">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600">
-                    <Check size={14} />
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                "Property All Risk", "Strata Insurance",
+                "Fire and Allied Perils", "Tenants & Occupied Liability",
+                "Business interruption", "Hotel Comprehensive"
+              ].map((t) => (
+                <li key={t} className="flex items-center gap-3 text-ink font-medium text-[15px]">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 border-[#f39c12] text-[#f39c12]">
+                    <Check size={12} strokeWidth={4} />
                   </span>
                   {t}
                 </li>

@@ -116,9 +116,9 @@ const processSteps = [
 ];
 
 const stats = [
-  { value: 20, suffix: "+", label: "YEARS EXPERIENCE" },
-  { value: 5000, suffix: "+", label: "SATISFIED CLIENTS", format: true },
-  { value: 100, suffix: "+", label: "CORPORATE CLIENTS" },
+  { value: 30, suffix: "+", label: "YEARS EXPERIENCE" },
+  { value: 100000, suffix: "+", label: "SATISFIED CLIENTS", format: true },
+  { value: 1000, suffix: "+", label: "CORPORATE CLIENTS" },
   { value: 98, suffix: "%", label: "CLAIM SATISFACTION" },
 ];
 

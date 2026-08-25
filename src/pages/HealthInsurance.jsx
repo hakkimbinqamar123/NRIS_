@@ -111,7 +111,7 @@ export default function HealthInsurance() {
           </AnimatedSection>
           <AnimatedSection delay={0.2} animation="slideRight">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-8 leading-tight">
-              Providing access to quality and affordable <span className="text-[#0B4EA2]">healthcare</span> in the UAE
+              Providing Access To Quality And Affordable <span className="text-[#0B4EA2]">Healthcare</span> In The UAE
             </h2>
             <div className="text-left space-y-6 text-muted text-[16px] leading-[1.8] font-medium">
               <p>
@@ -130,7 +130,7 @@ export default function HealthInsurance() {
         <div className="container-xl">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16" animation="slideUp">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink">
-              Why do you need a health insurance policy?
+              Why Do You Need A Health Insurance Policy?
             </h2>
           </AnimatedSection>
 
@@ -164,7 +164,7 @@ export default function HealthInsurance() {
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16" animation="slideUp">
             <span className="badge-pill mb-4 bg-blue-50 text-blue-600 border-blue-100">Plans</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
-              Choose the coverage model that fits
+              Choose The Coverage Model That Fits
             </h2>
           </AnimatedSection>
           <div className="grid gap-8 md:grid-cols-3">
@@ -201,7 +201,7 @@ export default function HealthInsurance() {
           <AnimatedSection animation="scaleUp">
             <span className="badge-pill mb-4 bg-red-100 text-red-700 border-red-200">Why NRIS</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
-              Broker advantage — not just paperwork
+              Broker Advantage — Not Just Paperwork
             </h2>
             <p className="text-muted text-lg leading-relaxed">
               You get a partner that treats your medical program as a

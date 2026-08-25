@@ -2,10 +2,11 @@ import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import iconPng from "../assets/icon.png";
+import nrisIcon from "../assets/NRiS without Background.png";
 
 const links = [
   { to: "/", label: "Home" },
+  { to: "/about", label: "About Us" },
   { to: "/health-insurance", label: "Health Insurance" },
   { to: "/motor-insurance", label: "Motor Insurance" },
   { 
@@ -45,7 +46,7 @@ export default function Navbar() {
     >
       <div className="container-xl flex items-center justify-between py-2">
         <Link to="/" className="flex items-center gap-2 group">
-          <img src={iconPng} alt="NRIS Logo" className="h-16 w-auto object-contain transition-transform group-hover:scale-105" />
+          <img src={nrisIcon} alt="NRIS Logo" className="h-16 w-auto object-contain transition-transform group-hover:scale-105" />
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">

@@ -93,7 +93,7 @@ export default function MotorInsurance() {
             <div className="mb-8">
               <div className="h-1 w-24 bg-[#0B4EA2] mb-6"></div>
               <h2 className="font-display text-4xl font-bold text-ink leading-tight tracking-tight">
-                <span className="text-[#0B4EA2]">NRiS</span> assists you to save big on the best policy for your car.
+                <span className="text-[#0B4EA2]">NRiS</span> Assists You To Save Big On The Best Policy For Your Car.
               </h2>
             </div>
             
@@ -126,7 +126,7 @@ export default function MotorInsurance() {
               <div className="h-1 w-16 bg-[#0B4EA2] rounded-full"></div>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink leading-tight">
-              What are the benefits of a motor<br />insurance policy?
+              What Are The Benefits Of A Motor<br />Insurance Policy?
             </h2>
           </AnimatedSection>
 

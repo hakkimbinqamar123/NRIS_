@@ -16,7 +16,7 @@ export default function QuoteSection() {
     <section className="bg-white py-16 border-t border-black/5">
       <div className="container-xl max-w-3xl mx-auto">
         <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-8">
-          Start a Quote
+          Start A Quote
         </h2>
 
         <div className="flex flex-col gap-4">

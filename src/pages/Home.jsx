@@ -285,7 +285,7 @@ export default function Home() {
         <div className="container-xl">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-3">
-              What's most important to you right now?
+              What's Most Important To You Right Now?
             </h2>
             <p className="text-ink/70 text-sm sm:text-base">
               Tell us about your personal financial goals & we'll share the best
@@ -320,7 +320,7 @@ export default function Home() {
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
             <span className="badge-pill mb-4 bg-red-50 text-red-700 border-red-100">Why Choose NRIS</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
-              Advisory that goes beyond the policy
+              Advisory That Goes Beyond The Policy
             </h2>
             <p className="text-ink/70 text-lg">
               Six commitments that define the way we protect our clients — from
@@ -361,7 +361,7 @@ export default function Home() {
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
             <span className="badge-pill mb-4 bg-red-50 text-red-700 border-red-100">Our Services</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
-              Coverage across every risk you carry
+              Coverage Across Every Risk You Carry
             </h2>
             <p className="text-ink/70 text-lg">
               Three flagship practices, each led by specialists dedicated to

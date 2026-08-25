@@ -36,7 +36,7 @@ export default function Contact() {
           <div className="mb-12 text-center lg:text-left">
             <span className="badge-pill mb-4 inline-block">Contact</span>
             <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink mb-4">
-              Speak with an <span className="text-primary">NRIS</span> specialist
+              Speak With An <span className="text-primary">NRiS</span> Specialist
             </h1>
             <p className="text-muted text-lg max-w-2xl mx-auto lg:mx-0">
               Tell us about your coverage needs and a licensed advisor will respond within one business day.
@@ -46,7 +46,7 @@ export default function Contact() {
           {/* Form */}
           <AnimatedSection className="rounded-2xl border border-black/5 bg-white p-8 sm:p-10 shadow-sm">
             <h2 className="font-display text-2xl font-bold text-ink mb-1">
-              Request a quote
+              Request A Quote
             </h2>
             <p className="text-muted text-sm mb-8">
               All fields marked with * are required.

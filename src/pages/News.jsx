@@ -77,7 +77,7 @@ export default function News() {
         <div className="container-xl">
           <div className="mb-12 text-center lg:text-left">
             <span className="badge-pill mb-4">News & Insights</span>
-            <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink mb-4">Perspectives from our specialists</h1>
+            <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink mb-4">Perspectives From Our Specialists</h1>
             <p className="text-muted text-lg max-w-2xl mx-auto lg:mx-0">Market updates, coverage explainers, and thought leadership from the NRIS advisory team.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-[7fr_3fr] gap-12 lg:gap-10">

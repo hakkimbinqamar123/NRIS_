@@ -89,7 +89,7 @@ export default function GeneralInsurance() {
           <AnimatedSection delay={0.2} animation="slideRight">
             <span className="badge-pill mb-4 bg-red-50 text-red-600 border-red-100">Overview</span>
             <h2 className="font-display text-3xl font-bold text-ink mb-5">
-              <span className="text-[#0B4EA2]">Enterprise</span>-grade risk transfer
+              <span className="text-[#0B4EA2]">Enterprise</span>-Grade Risk Transfer
             </h2>
             <div className="space-y-4 text-muted leading-relaxed">
               <p>
@@ -114,7 +114,7 @@ export default function GeneralInsurance() {
               <HardHat size={14} className="mr-1" /> Engineering
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
-              Protection built for complex projects
+              Protection Built For Complex Projects
             </h2>
             <p className="text-muted leading-relaxed">
               Contractors All Risk, machinery, and industrial coverage engineered around your project timeline, contract obligations, and risk exposure.
@@ -153,7 +153,7 @@ export default function GeneralInsurance() {
               <Building size={14} className="mr-1" /> Property
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-5">
-              Stay covered against natural calamities
+              Stay Covered Against Natural Calamities
             </h2>
             <p className="text-muted text-[15px] leading-relaxed mb-8">
               We understand the emotional and financial importance of a home and therefore commit ourselves to providing the best coverage plans that will give protection against any unforeseeable risk. It can be quite difficult to navigate through a myriad of policies and decide which one would be ideal. <span className="text-[#0B4EA2] font-semibold">NRiS</span> offers complete assistance from selecting the right policy for their home till processing any claim. We give counseling in obtaining comprehensive protection from unforeseen events that can cause damage to houses and provide overall coverage to Assets, Interests, Liabilities and the residents.
@@ -224,7 +224,7 @@ export default function GeneralInsurance() {
               <Ship size={14} className="mr-1" /> Marine
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-5">
-              Protecting global supply chains
+              Protecting Global Supply Chains
             </h2>
             <p className="text-muted leading-relaxed mb-6">
               Whether you are importing raw materials, exporting finished goods, or operating a commercial vessel, our marine specialists tailor coverage for all forms of transit—by sea, air, and land.
@@ -251,7 +251,7 @@ export default function GeneralInsurance() {
               <Scale size={14} className="mr-1" /> Liability
             </span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
-              Shield your balance sheet from claims
+              Shield Your Balance Sheet From Claims
             </h2>
             <p className="text-muted leading-relaxed">
               Litigation and third-party claims can be catastrophic. We provide specialized liability covers to protect your directors, your products, and your professional services.
@@ -282,7 +282,7 @@ export default function GeneralInsurance() {
           <AnimatedSection className="text-center max-w-2xl mx-auto" animation="scaleUp">
             <span className="badge-pill mb-4 bg-red-100 text-red-700 border-red-200">Why NRIS</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
-              A broker that speaks your industry
+              A Broker That Speaks Your Industry
             </h2>
             <p className="text-muted text-lg leading-relaxed">
               We don't just sell policies; we analyze your operational workflow, supply chain dependencies, and contractual liabilities to engineer a robust safety net.

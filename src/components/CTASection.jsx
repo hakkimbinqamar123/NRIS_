@@ -26,7 +26,7 @@ export default function CTASection() {
               Let's Protect Your Future Together
             </h2>
             <p className="text-white/80 max-w-xl mx-auto mb-8">
-              Speak with an NRIS specialist and receive a tailored quotation
+              Speak with an NRiS specialist and receive a tailored quotation
               within 24 hours.
             </p>
             <div className="flex flex-wrap justify-center gap-4">

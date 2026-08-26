@@ -29,8 +29,8 @@ import {
   Smartphone,
 } from "lucide-react";
 import AnimatedSection from "../components/AnimatedSection";
+import AnimatedBackground from "../components/AnimatedBackground";
 import CTASection from "../components/CTASection";
-import nrisHeroBanner from "../assets/NRIS_hero_banner2.png";
 import healthImg from "../assets/health.png";
 import motorImg from "../assets/motor.png";
 import engineeringImg from "../assets/Eng.png";
@@ -213,19 +213,11 @@ function AnimatedCounter({ value, suffix, format }) {
 export default function Home() {
   return (
     <div className="relative min-h-screen">
-      <div className="fixed inset-0 z-[-1] overflow-hidden">
-        <motion.div
-          className="absolute inset-0 bg-cover bg-[position:65%_center]"
-          style={{ backgroundImage: `url(${nrisHeroBanner})` }}
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
-      </div>
+      <AnimatedBackground />
       {/* HERO */}
       <section className="relative overflow-hidden pt-16 pb-24 min-h-screen flex items-center">
         <div className="container-xl grid items-center gap-8 lg:grid-cols-12 w-full">
-          <AnimatedSection className="lg:col-span-5">
+          <AnimatedSection className="lg:col-span-5 bg-white/60 backdrop-blur-md p-8 sm:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60">
             <span className="badge-pill mb-6 bg-red-50 text-red-700 border-red-100">
               <span className="h-1.5 w-1.5 rounded-full bg-red-500" /> Licensed Insurance Brokerage
             </span>

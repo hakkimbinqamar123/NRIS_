@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import PageHero from "../components/PageHero";
 import AnimatedSection from "../components/AnimatedSection";
 import CTASection from "../components/CTASection";
-import nrisHeroBanner from "../assets/NRIS_hero_banner2.png";
+import AnimatedBackground from "../components/AnimatedBackground";
 import aboutImg from "../assets/about_team.png";
 import { Smile, HeartHandshake, Zap, TrendingUp, UserCheck, Trophy, ArrowRight, Star, ShieldCheck, Clock } from "lucide-react";
 
@@ -43,18 +43,10 @@ const coreValues = [
 export default function About() {
   return (
     <div className="relative min-h-screen">
-      <div className="fixed inset-0 z-[-1] overflow-hidden">
-        <motion.div
-          className="absolute inset-0 bg-cover bg-[position:65%_center]"
-          style={{ backgroundImage: `url(${nrisHeroBanner})` }}
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
-      </div>
+      <AnimatedBackground />
       <section className="relative overflow-hidden pt-16 pb-24 min-h-screen flex items-center">
         <div className="container-xl relative z-10">
-          <AnimatedSection className="max-w-3xl">
+          <AnimatedSection className="max-w-2xl bg-white/60 backdrop-blur-md p-8 sm:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm font-semibold text-[#0B4EA2] shadow-sm border border-blue-100/50 mb-8 backdrop-blur-sm">
               <span className="h-2 w-2 rounded-full bg-red-600"></span> About NRiS
             </span>

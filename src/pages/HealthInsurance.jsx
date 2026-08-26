@@ -17,6 +17,7 @@ import {
 import PageHero from "../components/PageHero";
 import AnimatedSection from "../components/AnimatedSection";
 import PhotoBlock from "../components/PhotoBlock";
+import AnimatedBackground from "../components/AnimatedBackground";
 import FAQAccordion from "../components/FAQAccordion";
 import CTASection from "../components/CTASection";
 import healthImg from "../assets/health.png";
@@ -58,15 +59,7 @@ const plans = [
 export default function HealthInsurance() {
   return (
     <div className="relative min-h-screen">
-      <div className="fixed inset-0 z-[-1] overflow-hidden">
-        <motion.div
-          className="absolute inset-0 bg-cover bg-[position:65%_center]"
-          style={{ backgroundImage: `url(${nrisHeroBanner})` }}
-          animate={{ scale: [1, 1.05, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        />
-        <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
-      </div>
+      <AnimatedBackground />
       <PageHero
         transparentBg={true}
         fullHeight={true}

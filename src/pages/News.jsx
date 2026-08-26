@@ -15,7 +15,7 @@ const articles = [
     tag: "Business", 
     date: "May 12, 2026", 
     title: "2026 Corporate Medical Trends: What Employers Must Know", 
-    author: "NRIS Advisory Team",
+    author: "NRiS Advisory Team",
     views: "1.2K",
     shares: "34",
     image: businessImg
@@ -24,7 +24,7 @@ const articles = [
     tag: "Motor", 
     date: "Apr 28, 2026", 
     title: "EV Insurance: Underwriting the Next Generation of Vehicles", 
-    author: "NRIS Advisory Team",
+    author: "NRiS Advisory Team",
     views: "956",
     shares: "12",
     image: motorImg
@@ -33,7 +33,7 @@ const articles = [
     tag: "Engineering", 
     date: "Mar 30, 2026", 
     title: "Managing Risk on Mega-Projects: Lessons from 2025", 
-    author: "NRIS Advisory Team",
+    author: "NRiS Advisory Team",
     views: "890",
     shares: "25",
     image: engineeringImg
@@ -42,7 +42,7 @@ const articles = [
     tag: "Property", 
     date: "Mar 08, 2026", 
     title: "Property Valuation Adjustments in Rapidly Growing Urban Centers", 
-    author: "NRIS Advisory Team",
+    author: "NRiS Advisory Team",
     views: "1.1K",
     shares: "40",
     image: propertyImg
@@ -51,7 +51,7 @@ const articles = [
     tag: "Health", 
     date: "Feb 21, 2026", 
     title: "Wellness Programs That Actually Move the Needle", 
-    author: "NRIS Advisory Team",
+    author: "NRiS Advisory Team",
     views: "1.5K",
     shares: "88",
     image: healthImg
@@ -60,7 +60,7 @@ const articles = [
     tag: "Marine", 
     date: "Feb 04, 2026", 
     title: "Navigating Global Supply Chain Risks and Marine Transit Exposures", 
-    author: "NRIS Advisory Team",
+    author: "NRiS Advisory Team",
     views: "720",
     shares: "18",
     image: marineImg

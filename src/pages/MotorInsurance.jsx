@@ -63,8 +63,8 @@ export default function MotorInsurance() {
           </>
         }
         subtitle={
-          <span className="text-black font-medium drop-shadow-md">
-            From a single family car to nationwide fleets — NRIS structures motor policies that keep you moving and settle claims fast when it matters.
+          <span className="text-black drop-shadow-md">
+            From a single family car to nationwide fleets — <span className="text-[#0B4EA2] font-bold">NRiS</span> structures motor policies that keep you moving and settle claims fast when it matters.
           </span>
         }
         cta={

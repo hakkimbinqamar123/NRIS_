@@ -35,8 +35,8 @@ export default function Contact() {
         <div className="container-xl">
           <div className="mb-12 text-center lg:text-left">
             <span className="badge-pill mb-4 inline-block">Contact</span>
-            <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink mb-4">
-              Speak With An <span className="text-primary">NRiS</span> Specialist
+            <h1 className="font-display text-4xl sm:text-5xl font-bold leading-tight mb-4">
+              Speak With An <span className="text-[#0B4EA2]">NRiS</span> Specialist
             </h1>
             <p className="text-muted text-lg max-w-2xl mx-auto lg:mx-0">
               Tell us about your coverage needs and a licensed advisor will respond within one business day.
@@ -61,7 +61,7 @@ export default function Contact() {
                   Thank you — request received
                 </h3>
                 <p className="text-muted max-w-sm">
-                  A licensed <span className="text-primary">NRIS</span> advisor will get back to you within one
+                  A licensed <span className="text-[#0B4EA2] font-semibold">NRiS</span> advisor will get back to you within one
                   business day.
                 </p>
                 <button

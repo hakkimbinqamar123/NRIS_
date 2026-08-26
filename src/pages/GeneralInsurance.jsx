@@ -64,7 +64,7 @@ export default function GeneralInsurance() {
           </>
         }
         title={<><span className="text-[#0B4EA2]">Comprehensive Protection For</span> <span className="text-red-600">Commercial Enterprise</span></>}
-        subtitle={<span className="text-black drop-shadow-md">From property portfolios and global supply chains to complex engineering projects and liability exposures — NRIS secures your operations.</span>}
+        subtitle={<span className="text-black drop-shadow-md">From property portfolios and global supply chains to complex engineering projects and liability exposures — <span className="text-[#0B4EA2] font-bold">NRiS</span> secures your operations.</span>}
         cta={
           <Link to="/contact" className="btn-primary bg-blue-600 hover:bg-blue-700 shadow-blue-500/30 text-white">
             Request a quote <ArrowRight size={18} />
@@ -93,7 +93,7 @@ export default function GeneralInsurance() {
             </h2>
             <div className="space-y-4 text-muted leading-relaxed">
               <p>
-                Modern businesses face interconnected risks. A fire doesn't just damage property; it halts production and disrupts supply chains. NRIS structures holistic general insurance programs that interlock property, marine, engineering, and liability covers — ensuring no gaps in your protection.
+                Modern businesses face interconnected risks. A fire doesn't just damage property; it halts production and disrupts supply chains. <span className="text-[#0B4EA2] font-semibold">NRiS</span> structures holistic general insurance programs that interlock property, marine, engineering, and liability covers — ensuring no gaps in your protection.
               </p>
               <p>
                 Whether you are mitigating daily operational hazards or preparing for catastrophic events, our team offers tailored solutions to keep your business resilient. We specialize in evaluating complex exposures and aligning them with robust insurance products from A-rated international markets.
@@ -280,7 +280,7 @@ export default function GeneralInsurance() {
       <section className="section bg-gradient-to-br from-red-50 to-blue-50 border-t border-white">
         <div className="container-xl">
           <AnimatedSection className="text-center max-w-2xl mx-auto" animation="scaleUp">
-            <span className="badge-pill mb-4 bg-red-100 text-red-700 border-red-200">Why NRIS</span>
+            <span className="badge-pill mb-4 bg-red-100 text-red-700 border-red-200">Why NRiS</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
               A Broker That Speaks Your Industry
             </h2>

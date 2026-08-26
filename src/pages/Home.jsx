@@ -132,14 +132,20 @@ const partners = [
 
 const testimonials = [
   {
-    quote:
-      "NRIS renegotiated our corporate medical program and delivered 22% savings without reducing benefits. Their team feels like part of ours.",
+    quote: (
+      <>
+        <span className="text-[#0B4EA2] font-semibold">NRiS</span> renegotiated our corporate medical program and delivered 22% savings without reducing benefits. Their team feels like part of ours.
+      </>
+    ),
     name: "Sarah Al-Mansoori",
     role: "CFO, Meridian Logistics",
   },
   {
-    quote:
-      "When our contractors' all-risk claim hit, the NRIS team had our loss adjuster on-site within 24 hours. Settlement in six weeks.",
+    quote: (
+      <>
+        When our contractors' all-risk claim hit, the <span className="text-[#0B4EA2] font-semibold">NRiS</span> team had our loss adjuster on-site within 24 hours. Settlement in six weeks.
+      </>
+    ),
     name: "James O'Connor",
     role: "Project Director, Vertex Construction",
   },
@@ -230,7 +236,7 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-muted text-lg md:text-xl max-w-xl mb-8 leading-relaxed font-medium">
-              At <span className="font-bold text-red-600">NRIS Insurance</span>, we understand that every journey matters. Our comprehensive policies give you <span className="text-[#0B4EA2]">peace of mind</span>, safeguarding your vehicle and well-being on the road.
+              At <span className="font-bold text-[#0B4EA2]">NRiS Insurance</span>, we understand that every journey matters. Our comprehensive policies give you <span className="text-[#0B4EA2]">peace of mind</span>, safeguarding your vehicle and well-being on the road.
             </p>
             <div className="flex flex-wrap gap-4 mb-10">
               <Link to="/contact" className="btn-primary bg-red-600 hover:bg-red-700 border-red-600 text-white">
@@ -318,7 +324,7 @@ export default function Home() {
       <section className="section">
         <div className="container-xl">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16">
-            <span className="badge-pill mb-4 bg-red-50 text-red-700 border-red-100">Why Choose NRIS</span>
+            <span className="badge-pill mb-4 bg-red-50 text-red-700 border-red-100">Why Choose NRiS</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
               Advisory That Goes Beyond The Policy
             </h2>

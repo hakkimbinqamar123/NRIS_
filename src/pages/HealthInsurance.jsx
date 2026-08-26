@@ -84,8 +84,8 @@ export default function HealthInsurance() {
           </>
         }
         subtitle={
-          <span className="text-black font-medium drop-shadow-md">
-            From personal plans to enterprise-wide group medical schemes — NRIS builds programs that keep employees, families, and individuals healthy and protected.
+          <span className="text-black drop-shadow-md">
+            From personal plans to enterprise-wide group medical schemes — <span className="text-[#0B4EA2] font-bold">NRiS</span> builds programs that keep employees, families, and individuals healthy and protected.
           </span>
         }
         cta={
@@ -199,7 +199,7 @@ export default function HealthInsurance() {
       <section className="section bg-gradient-to-br from-red-50 to-blue-50 border-t border-white">
         <div className="container-xl text-center max-w-2xl mx-auto">
           <AnimatedSection animation="scaleUp">
-            <span className="badge-pill mb-4 bg-red-100 text-red-700 border-red-200">Why NRIS</span>
+            <span className="badge-pill mb-4 bg-red-100 text-red-700 border-red-200">Why NRiS</span>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
               Broker Advantage — Not Just Paperwork
             </h2>

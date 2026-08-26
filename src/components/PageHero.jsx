@@ -53,7 +53,7 @@ export default function PageHero({ eyebrow, title, subtitle, crumb, cta, bgImage
       )}
       
       <div className="container-xl relative z-10 w-full">
-        <AnimatedSection className="max-w-2xl bg-white/60 backdrop-blur-md p-8 sm:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60">
+        <AnimatedSection>
           {eyebrow && <span className="badge-pill mb-5">{eyebrow}</span>}
           <h1 className="font-display text-4xl sm:text-5xl font-bold text-ink max-w-xl mb-5 leading-tight">
             {title}

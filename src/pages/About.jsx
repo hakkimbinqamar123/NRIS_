@@ -46,7 +46,7 @@ export default function About() {
       <AnimatedBackground />
       <section className="relative overflow-hidden pt-16 pb-24 min-h-screen flex items-center">
         <div className="container-xl relative z-10">
-          <AnimatedSection className="max-w-2xl bg-white/60 backdrop-blur-md p-8 sm:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60">
+          <AnimatedSection className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm font-semibold text-[#0B4EA2] shadow-sm border border-blue-100/50 mb-8 backdrop-blur-sm">
               <span className="h-2 w-2 rounded-full bg-red-600"></span> About NRiS
             </span>

@@ -217,7 +217,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden pt-16 pb-24 min-h-screen flex items-center">
         <div className="container-xl grid items-center gap-8 lg:grid-cols-12 w-full">
-          <AnimatedSection className="lg:col-span-5 bg-white/60 backdrop-blur-md p-8 sm:p-10 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white/60">
+          <AnimatedSection className="lg:col-span-5">
             <span className="badge-pill mb-6 bg-red-50 text-red-700 border-red-100">
               <span className="h-1.5 w-1.5 rounded-full bg-red-500" /> Licensed Insurance Brokerage
             </span>

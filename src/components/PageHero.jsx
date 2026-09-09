@@ -16,9 +16,9 @@ export default function PageHero({ eyebrow, title, subtitle, crumb, cta, bgImage
       {!transparentBg && bgImage && (
         <>
           <motion.div style={{ y: yBg }} className="absolute -inset-y-[10%] inset-x-0 z-0">
-            <motion.img 
-              src={bgImage} 
-              alt="" 
+            <motion.img
+              src={bgImage}
+              alt=""
               className="w-full h-full object-cover origin-center"
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
@@ -51,7 +51,7 @@ export default function PageHero({ eyebrow, title, subtitle, crumb, cta, bgImage
           <div className="absolute inset-0 z-0 bg-white/30" />
         </div>
       )}
-      
+
       <div className="container-xl relative z-10 w-full">
         <AnimatedSection>
           {eyebrow && <span className="badge-pill mb-5">{eyebrow}</span>}

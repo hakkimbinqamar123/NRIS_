@@ -36,6 +36,8 @@ import motorImg from "../assets/motor.png";
 import engineeringImg from "../assets/Eng.png";
 import propertyImg from "../assets/Home.png";
 import whyChooseUsImg from "../assets/why_choose_us.png";
+import heroBannerImg from "../assets/hero_banner_image.png";
+import homePageImg from "../assets/Home Page.png";
 
 const goals = [
   { icon: LineChart, title: "Planning for retirement", iconColor: "text-red-500" },
@@ -116,7 +118,7 @@ const processSteps = [
 ];
 
 const stats = [
-  { value: 30, suffix: "+", label: "YEARS EXPERIENCE" },
+  { value: 35, suffix: "+", label: "YEARS EXPERIENCE" },
   { value: 100000, suffix: "+", label: "SATISFIED CLIENTS", format: true },
   { value: 1000, suffix: "+", label: "CORPORATE CLIENTS" },
   { value: 98, suffix: "%", label: "CLAIM SATISFACTION" },
@@ -203,62 +205,31 @@ function AnimatedCounter({ value, suffix, format }) {
   }, [isInView, value, count]);
 
   return (
-    <span ref={ref} className="font-display text-4xl sm:text-5xl font-bold bg-gradient-to-r from-red-600 via-red-500 to-red-700 bg-clip-text text-transparent">
+    <span ref={ref} className="font-display text-4xl sm:text-5xl font-bold text-[#0B4EA2]">
       <motion.span>{rounded}</motion.span>
       {suffix}
     </span>
   );
 }
 
+
 export default function Home() {
   return (
     <div className="relative min-h-screen">
       <AnimatedBackground />
       {/* HERO */}
-      <section className="relative overflow-hidden pt-16 pb-24 min-h-screen flex items-center">
-        <div className="container-xl grid items-center gap-8 lg:grid-cols-12 w-full">
-          <AnimatedSection className="lg:col-span-5">
-            <span className="badge-pill mb-6 bg-red-50 text-red-700 border-red-100">
-              <span className="h-1.5 w-1.5 rounded-full bg-red-500" /> Licensed Insurance Brokerage
-            </span>
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.05] mb-6">
-              <span className="block text-[#0B4EA2]">Your Safety</span>
-              <span className="block text-red-600">
-                Our Priority
-              </span>
-            </h1>
-            <p className="text-muted text-lg md:text-xl max-w-xl mb-8 leading-relaxed font-medium">
-              At <span className="font-bold text-[#0B4EA2]">NRiS Insurance</span>, we understand that every journey matters. Our comprehensive policies give you <span className="text-[#0B4EA2]">peace of mind</span>, safeguarding your vehicle and well-being on the road.
-            </p>
-            <div className="flex flex-wrap gap-4 mb-10">
-              <Link to="/contact" className="btn-primary bg-red-600 hover:bg-red-700 border-red-600 text-white">
-                Get a Quote <ArrowRight size={18} />
-              </Link>
-              <a href="#services" className="btn-outline border-red-600 text-red-600 hover:bg-red-50">
-                Explore Services
-              </a>
-            </div>
-            <div className="flex flex-wrap items-center gap-6 text-sm text-ink/70">
-              <span className="flex items-center gap-1.5">
-                <span className="flex text-red-500">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} size={14} fill="currentColor" strokeWidth={0} />
-                  ))}
-                </span>
-                <span className="font-semibold text-ink">4.9 / 5</span> client rating
-              </span>
-              <span className="flex items-center gap-1.5">
-                <ShieldCheck size={16} className="text-red-600" /> A-Rated insurer network
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Clock size={16} className="text-red-600" /> 24/7 claims support
-              </span>
-            </div>
-          </AnimatedSection>
-
-
-        </div>
+      <section className="relative overflow-hidden min-h-screen w-full">
+        <motion.img
+          src={homePageImg}
+          alt="Home Page Hero"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        />
       </section>
+
+
 
       {/* STATS — now below hero */}
       <section className="py-16">
@@ -268,7 +239,7 @@ export default function Home() {
               <AnimatedSection key={s.label}>
                 <div className="flex flex-col items-center justify-center rounded-2xl bg-white/80 backdrop-blur-sm px-6 py-8 shadow-md border border-white/20">
                   <AnimatedCounter value={s.value} suffix={s.suffix} format={s.format} />
-                  <div className="text-red-800/70 text-xs font-semibold tracking-wider mt-2 uppercase">
+                  <div className="text-blue-800/70 text-xs font-semibold tracking-wider mt-2 uppercase">
                     {s.label}
                   </div>
                 </div>
@@ -278,39 +249,107 @@ export default function Home() {
         </div>
       </section>
 
-      {/* GOALS SECTION */}
-      <section className="py-16">
-        <div className="container-xl">
-          <AnimatedSection className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-3">
-              What's Most Important To You Right Now?
-            </h2>
-            <p className="text-ink/70 text-sm sm:text-base">
-              Tell us about your personal financial goals & we'll share the best
-              resources to help you reach them.
-            </p>
-          </AnimatedSection>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {goals.map((g, i) => (
-              <AnimatedSection
-                key={g.title}
-                delay={i * 0.1}
-                className="group relative flex flex-col items-center rounded-xl border border-red-100 bg-white/90 backdrop-blur-sm p-8 shadow-sm hover:shadow-md transition-all duration-300"
-              >
-                <div className="absolute top-4 left-4 text-gray-400">
-                  <CheckCircle2 size={24} className="fill-gray-400 text-white" />
-                </div>
-                <div className="mt-4 mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-slate-50 transition-transform duration-300 group-hover:scale-110">
-                  <g.icon size={40} className={g.iconColor} strokeWidth={1.5} />
-                </div>
-                <h3 className="text-center text-sm font-bold text-ink mt-auto">
-                  {g.title}
-                </h3>
-              </AnimatedSection>
-            ))}
-          </div>
+      {/* GOALS SECTION — centered hero */}
+      <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center text-center px-4">
+
+        {/* Subtle radial glow behind content */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
+          <div className="w-[700px] h-[700px] rounded-full bg-white/30 blur-3xl" />
         </div>
+
+        <AnimatedSection className="relative z-10 max-w-3xl mx-auto">
+          {/* Badge */}
+          <motion.span
+            className="inline-flex items-center gap-2 badge-pill mb-8 bg-blue-50/80 text-[#0B4EA2] border-blue-100 backdrop-blur-sm px-5 py-2 text-sm font-semibold"
+            initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+          >
+            <span className="h-2 w-2 rounded-full bg-[#0B4EA2] animate-pulse" />
+            Licensed Insurance Brokerage
+          </motion.span>
+
+          {/* Heading */}
+          <motion.h1
+            className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-6"
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+          >
+            <span className="block text-red-600">Your Safety</span>
+            <span className="block text-[#0B4EA2]">Our Priority</span>
+          </motion.h1>
+
+          {/* Sub-text */}
+          <motion.p
+            className="text-slate-700 text-lg md:text-xl max-w-xl mx-auto mb-8 leading-relaxed font-medium"
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+          >
+            At <span className="font-bold text-[#0B4EA2]">NRiS Insurance</span>, we understand that every journey matters. Our policies give you <span className="text-[#0B4EA2] font-semibold">peace of mind</span>.
+          </motion.p>
+
+          {/* Buttons */}
+          <motion.div
+            className="flex flex-wrap justify-center gap-4 mb-10"
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+          >
+            <Link
+              to="/contact"
+              className="btn-primary bg-[#0B4EA2] hover:bg-blue-800 border-[#0B4EA2] text-white px-8 py-3 text-base rounded-full shadow-lg"
+            >
+              Get a Quote <ArrowRight size={18} />
+            </Link>
+            <a
+              href="#services"
+              className="btn-outline border-[#0B4EA2] text-[#0B4EA2] hover:bg-blue-50 px-8 py-3 text-base rounded-full"
+            >
+              Explore Services
+            </a>
+          </motion.div>
+
+          {/* 4 license / credential pill badges */}
+          <motion.div
+            className="flex flex-wrap justify-center gap-3"
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.55 }}
+          >
+            {[
+              { label: "Estb: 1990" },
+              { label: "CB UAE N: 35" },
+              { label: "HAAD B012" },
+              { label: "DHA BRK-00067" },
+            ].map((item, i) => (
+              <motion.span
+                key={item.label}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-sm border border-blue-100 text-[#0B4EA2] text-sm font-bold shadow-sm"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.6 + i * 0.08, type: "spring" }}
+                whileHover={{ scale: 1.05, boxShadow: "0 4px 20px rgba(11,78,162,0.15)" }}
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-[#0B4EA2]" />
+                {item.label}
+              </motion.span>
+            ))}
+          </motion.div>
+
+          {/* Trust signals */}
+          <motion.div
+            className="flex flex-wrap justify-center items-center gap-6 text-xs text-slate-600 mt-8"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            <span className="flex items-center gap-1.5">
+              <ShieldCheck size={15} className="text-[#0B4EA2]" /> A-Rated insurer network
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Clock size={15} className="text-[#0B4EA2]" /> 24/7 claims support
+            </span>
+          </motion.div>
+        </AnimatedSection>
+
       </section>
+
 
       {/* WHY CHOOSE US */}
       <section className="section">

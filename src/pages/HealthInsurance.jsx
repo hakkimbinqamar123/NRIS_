@@ -56,51 +56,45 @@ const plans = [
   },
 ];
 
+import homePageImg from "../assets/Home Page.png";
+
 export default function HealthInsurance() {
   return (
     <div className="relative min-h-screen">
       <AnimatedBackground />
-      <PageHero
-        transparentBg={true}
-        fullHeight={true}
-        bgImage={healthHeroBg}
-        noOverlay={true}
-        crumb="Health Insurance"
-        eyebrow={
-          <>
-            <HeartPulse size={14} /> Health Insurance
-          </>
-        }
-        title={
-          <>
-            <span className="text-[#0B4EA2]">Comprehensive Medical Cover For</span> <span className="text-red-600">Every Stage Of Life</span>
-          </>
-        }
-        subtitle={
-          <span className="text-black drop-shadow-md">
-            From personal plans to enterprise-wide group medical schemes — <span className="text-[#0B4EA2] font-bold">NRiS</span> builds programs that keep employees, families, and individuals healthy and protected.
-          </span>
-        }
-        cta={
-          <Link to="/contact" className="btn-primary bg-blue-600 hover:bg-blue-700 shadow-blue-500/30 text-white">
-            Request a health quote <ArrowRight size={18} />
-          </Link>
-        }
-      />
+      {/* HERO */}
+      <section className="relative overflow-hidden min-h-screen w-full">
+        <motion.img
+          src={homePageImg}
+          alt="Health Insurance Hero"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        />
+      </section>
 
       {/* Intro Text */}
       <section className="section bg-white pt-24 pb-16">
         <div className="container-xl grid gap-12 lg:grid-cols-2 items-center">
+          {/* Left Column: Hero Text */}
           <AnimatedSection>
-            <div className="relative h-[500px] w-full overflow-hidden rounded-2xl shadow-lg transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl cursor-pointer">
-              <motion.img
-                src={healthImg}
-                alt="Health Insurance"
-                className="h-full w-full object-cover origin-center"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              />
+            <div className="mb-4">
+              <span className="badge-pill inline-flex items-center gap-2 bg-blue-50 text-blue-600 border-blue-100 px-4 py-1.5 font-semibold text-sm">
+                <HeartPulse size={16} /> Health Insurance
+              </span>
             </div>
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.2rem] font-extrabold leading-[1.1] mb-6">
+              <span className="block text-[#0B4EA2]">Comprehensive</span>
+              <span className="block text-[#0B4EA2]">Medical Cover For</span>
+              <span className="block text-red-600">Every Stage Of Life</span>
+            </h1>
+            <p className="text-slate-600 text-lg mb-8 leading-relaxed font-medium">
+              From personal plans to enterprise-wide group medical schemes — <span className="text-[#0B4EA2] font-bold">NRiS</span> builds programs that keep employees, families, and individuals healthy and protected.
+            </p>
+            <Link to="/contact" className="btn-primary bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/20 text-white w-max px-8 py-3.5 rounded-full text-base transition-transform hover:scale-105">
+              Request a health quote <ArrowRight size={18} />
+            </Link>
           </AnimatedSection>
           <AnimatedSection delay={0.2} animation="slideRight">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-8 leading-tight">
@@ -119,7 +113,7 @@ export default function HealthInsurance() {
       </section>
 
       {/* Insurance Policy Reasons */}
-      <section className="bg-surface py-20">
+      <section className="relative z-10 py-20">
         <div className="container-xl">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16" animation="slideUp">
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink">
@@ -128,31 +122,51 @@ export default function HealthInsurance() {
           </AnimatedSection>
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {policyReasons.map((r, i) => (
-              <AnimatedSection
-                key={i}
-                delay={i * 0.1}
-                className="group bg-white rounded-xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-gray-100 flex flex-col hover:-translate-y-2 hover:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <span className="flex items-center justify-center bg-[#c61017] text-white font-bold text-lg h-10 w-10 shrink-0 rounded-[2px] group-hover:bg-[#a00d12] transition-colors duration-300">
+            {policyReasons.map((r, i) => {
+              const isNavy = i % 2 === 0;
+              return (
+                <AnimatedSection
+                  key={i}
+                  delay={i * 0.1}
+                  className="relative bg-white border border-[#D8DEE6] p-[30px_28px_28px_96px] overflow-hidden hover:-translate-y-2 hover:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer"
+                >
+                  {/* Left side color bar */}
+                  <div className={`absolute left-0 top-0 bottom-0 w-[6px] ${isNavy ? 'bg-[#0B4EA2]' : 'bg-[#C81E2C]'}`} />
+                  
+                  {/* Number Box */}
+                  <div className={`absolute left-[26px] top-[26px] font-sans font-bold text-[13px] tracking-[0.04em] text-white w-10 h-10 flex items-center justify-center rounded-sm ${isNavy ? 'bg-[#0B4EA2]' : 'bg-[#C81E2C]'}`}>
                     {r.num}
-                  </span>
-                  <h3 className="font-bold text-ink leading-tight text-[16px] group-hover:text-[#0B4EA2] transition-colors duration-300 pt-1">
+                  </div>
+
+                  {/* Kicker */}
+                  <p className={`font-sans text-[11px] font-bold tracking-[0.12em] uppercase mb-[6px] ${isNavy ? 'text-[#0B4EA2]' : 'text-[#9E141F]'}`}>
+                    REASON
+                  </p>
+
+                  {/* Title */}
+                  <h3 className="font-sans text-[19px] font-bold text-[#0A1830] mb-3 tracking-[-0.01em]">
                     {r.title}
                   </h3>
-                </div>
-                <p className="text-gray-600 text-[14px] leading-relaxed mt-2">
-                  {r.desc}
-                </p>
-              </AnimatedSection>
-            ))}
+
+                  {/* Description */}
+                  <p className="font-sans text-[14.5px] leading-[1.55] text-[#4B5A6E] max-w-[34ch]">
+                    {r.desc}
+                  </p>
+
+                  {/* Divider in bottom right corner */}
+                  <div 
+                    className="absolute right-0 bottom-0 w-16 h-16" 
+                    style={{ background: isNavy ? 'linear-gradient(135deg, transparent 50%, rgba(11,78,162,0.035) 50%)' : 'linear-gradient(135deg, transparent 50%, rgba(200,30,44,0.05) 50%)' }}
+                  />
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* Plans */}
-      <section className="section bg-surface">
+      <section className="section relative z-10">
         <div className="container-xl">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16" animation="slideUp">
             <span className="badge-pill mb-4 bg-blue-50 text-blue-600 border-blue-100">Plans</span>

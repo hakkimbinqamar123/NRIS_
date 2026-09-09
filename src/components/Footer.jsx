@@ -14,7 +14,7 @@ export default function Footer() {
               <Logo />
             </div>
           </Link>
-          <p className="text-sm leading-relaxed text-black/80 max-w-xs">
+          <p className="text-base leading-relaxed text-black/80 max-w-xs">
             National Resource Insurance Services — a trusted brokerage delivering
             tailored coverage, expert advisory, and rapid claims support for
             individuals, businesses, and enterprises.
@@ -34,10 +34,10 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-black font-display font-semibold mb-4 text-sm uppercase tracking-wide">
+          <h4 className="text-black font-display font-semibold mb-4 text-base uppercase tracking-wide">
             Quick Links
           </h4>
-          <ul className="space-y-3 text-sm">
+          <ul className="space-y-3 text-base">
             <li><Link to="/" className="hover:text-black/70 transition-colors">Home</Link></li>
             <li><Link to="/about" className="hover:text-black/70 transition-colors">About Us</Link></li>
             <li><Link to="/news" className="hover:text-black/70 transition-colors">News & Insights</Link></li>
@@ -47,10 +47,10 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-black font-display font-semibold mb-4 text-sm uppercase tracking-wide">
+          <h4 className="text-black font-display font-semibold mb-4 text-base uppercase tracking-wide">
             Services
           </h4>
-          <ul className="space-y-3 text-sm">
+          <ul className="space-y-3 text-base">
             <li><Link to="/health-insurance" className="hover:text-black/70 transition-colors">Health Insurance</Link></li>
             <li><Link to="/motor-insurance" className="hover:text-black/70 transition-colors">Motor Insurance</Link></li>
             <li><Link to="/engineering-insurance" className="hover:text-black/70 transition-colors">Engineering Insurance</Link></li>
@@ -61,10 +61,10 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-black font-display font-semibold mb-4 text-sm uppercase tracking-wide">
+          <h4 className="text-black font-display font-semibold mb-4 text-base uppercase tracking-wide">
             Contact
           </h4>
-          <ul className="space-y-4 text-sm">
+          <ul className="space-y-4 text-base">
             <li className="flex gap-3">
               <MapPin size={18} className="shrink-0 text-black/70 mt-0.5" />
               <span>1201 Corporate Tower, Business Bay, Dubai, UAE</span>
@@ -86,7 +86,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-black/10 relative z-10">
-        <div className="container-xl py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-black/60">
+        <div className="container-xl py-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-sm text-black/60">
           <p>© 2026 National Resource Insurance Services. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>

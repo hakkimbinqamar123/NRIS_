@@ -14,9 +14,9 @@ import generalHeroBg from "../assets/engineering_hero_bg.png"; // reusing hero b
 import marImg from "../assets/MAR.png";
 
 const marineBenefits = [
-  { num: "01", title: "Cargo Protection", desc: "Covers goods against loss or damage during transit by sea, air, road, or rail, depending on the policy." },
+  { num: "01", title: "Cargo Protection", desc: "Covers goods against loss or damage during transit by sea, air, road, or rail." },
   { num: "02", title: "Financial Security", desc: "Reduces the financial impact of unexpected loss or damage to insured cargo." },
-  { num: "03", title: "Transit Risk Coverage", desc: "Can protect against risks such as accidents, fire, theft, collision, and natural perils, subject to policy terms." },
+  { num: "03", title: "Transit Risk Coverage", desc: "Can protect against risks such as accidents, fire, theft, collision, and natural perils." },
   { num: "04", title: "Global Trade Protection", desc: "Supports importers, exporters, and traders with coverage for domestic and international shipments." },
   { num: "05", title: "Flexible Coverage Options", desc: "Policies can be arranged for single shipments or ongoing shipments under an annual/open cover." },
   { num: "06", title: "Business Continuity", desc: "Helps businesses recover more quickly from insured transit losses and minimize disruption to operations." }

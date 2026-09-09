@@ -16,7 +16,7 @@ const engineeringCards = [
   { num: "06", title: "Owner's Controlled Insurance Program (OCIP)", desc: "OCIP is an insurance policy held by a property owner during the construction or renovation of a property" }
 ];
 
-import homePageImg from "../assets/Home Page.png";
+import homePageImg from "../assets/Engineerig.png";
 
 export default function Engineering() {
   return (
@@ -34,7 +34,7 @@ export default function Engineering() {
         />
       </section>
 
-      <section className="section relative z-10 border-t border-black/5">
+      <section className="section bg-white relative z-10 border-t border-black/5">
         <div className="container-xl mb-16 grid gap-12 lg:grid-cols-2 items-center">
           {/* Left Column: Hero Text */}
           <AnimatedSection>
@@ -65,14 +65,16 @@ export default function Engineering() {
             </p>
           </AnimatedSection>
         </div>
+      </section>
 
+      <section className="section relative z-10 pt-0">
         <div className="container-xl">
           <AnimatedSection className="text-center max-w-3xl mx-auto mb-16 relative">
             <div className="flex justify-center mb-4">
               <div className="h-1 w-16 bg-[#0B4EA2] rounded-full"></div>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink leading-tight">
-              Different policies under engineering insurance
+              Different Policies Under Engineering Insurance
             </h2>
           </AnimatedSection>
 
@@ -87,16 +89,13 @@ export default function Engineering() {
                 >
                   {/* Left side color bar */}
                   <div className={`absolute left-0 top-0 bottom-0 w-[6px] ${isNavy ? 'bg-[#0B4EA2]' : 'bg-[#C81E2C]'}`} />
-                  
+
                   {/* Number Box */}
                   <div className={`absolute left-[26px] top-[26px] font-sans font-bold text-[13px] tracking-[0.04em] text-white w-10 h-10 flex items-center justify-center rounded-sm ${isNavy ? 'bg-[#0B4EA2]' : 'bg-[#C81E2C]'}`}>
                     {b.num}
                   </div>
 
-                  {/* Kicker */}
-                  <p className={`font-sans text-[11px] font-bold tracking-[0.12em] uppercase mb-[6px] ${isNavy ? 'text-[#0B4EA2]' : 'text-[#9E141F]'}`}>
-                    COVERAGE TYPE
-                  </p>
+
 
                   {/* Title */}
                   <h3 className="font-sans text-[19px] font-bold text-[#0A1830] mb-3 tracking-[-0.01em]">
@@ -109,8 +108,8 @@ export default function Engineering() {
                   </p>
 
                   {/* Divider in bottom right corner */}
-                  <div 
-                    className="absolute right-0 bottom-0 w-16 h-16" 
+                  <div
+                    className="absolute right-0 bottom-0 w-16 h-16"
                     style={{ background: isNavy ? 'linear-gradient(135deg, transparent 50%, rgba(11,78,162,0.035) 50%)' : 'linear-gradient(135deg, transparent 50%, rgba(200,30,44,0.05) 50%)' }}
                   />
                 </AnimatedSection>

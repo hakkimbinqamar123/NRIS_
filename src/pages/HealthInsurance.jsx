@@ -56,7 +56,7 @@ const plans = [
   },
 ];
 
-import homePageImg from "../assets/Home Page.png";
+import medImg from "../assets/Med.png";
 
 export default function HealthInsurance() {
   return (
@@ -65,7 +65,7 @@ export default function HealthInsurance() {
       {/* HERO */}
       <section className="relative overflow-hidden min-h-screen w-full">
         <motion.img
-          src={homePageImg}
+          src={medImg}
           alt="Health Insurance Hero"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
           initial={{ opacity: 0 }}
@@ -116,8 +116,9 @@ export default function HealthInsurance() {
       <section className="relative z-10 py-20">
         <div className="container-xl">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16" animation="slideUp">
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink">
-              Why Do You Need A Health Insurance Policy?
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink leading-tight">
+              <span className="block">What Are The Benefits Of A Health</span>
+              <span className="block">Insurance Policy?</span>
             </h2>
           </AnimatedSection>
 
@@ -138,10 +139,7 @@ export default function HealthInsurance() {
                     {r.num}
                   </div>
 
-                  {/* Kicker */}
-                  <p className={`font-sans text-[11px] font-bold tracking-[0.12em] uppercase mb-[6px] ${isNavy ? 'text-[#0B4EA2]' : 'text-[#9E141F]'}`}>
-                    REASON
-                  </p>
+
 
                   {/* Title */}
                   <h3 className="font-sans text-[19px] font-bold text-[#0A1830] mb-3 tracking-[-0.01em]">

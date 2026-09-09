@@ -34,7 +34,7 @@ const benefits = [
 
 
 
-import homePageImg from "../assets/Home Page.png";
+import motImg from "../assets/Mot.png";
 
 export default function MotorInsurance() {
   return (
@@ -43,7 +43,7 @@ export default function MotorInsurance() {
       {/* HERO */}
       <section className="relative overflow-hidden min-h-screen w-full">
         <motion.img
-          src={homePageImg}
+          src={motImg}
           alt="Motor Insurance Hero"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
           initial={{ opacity: 0 }}
@@ -132,10 +132,7 @@ export default function MotorInsurance() {
                     {b.num}
                   </div>
 
-                  {/* Kicker */}
-                  <p className={`font-sans text-[11px] font-bold tracking-[0.12em] uppercase mb-[6px] ${isNavy ? 'text-[#0B4EA2]' : 'text-[#9E141F]'}`}>
-                    BENEFIT
-                  </p>
+
 
                   {/* Title */}
                   <h3 className="font-sans text-[19px] font-bold text-[#0A1830] mb-3 tracking-[-0.01em]">

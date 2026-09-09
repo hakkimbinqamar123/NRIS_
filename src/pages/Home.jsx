@@ -118,10 +118,10 @@ const processSteps = [
 ];
 
 const stats = [
-  { value: 35, suffix: "+", label: "YEARS EXPERIENCE" },
-  { value: 100000, suffix: "+", label: "SATISFIED CLIENTS", format: true },
-  { value: 1000, suffix: "+", label: "CORPORATE CLIENTS" },
-  { value: 98, suffix: "%", label: "CLAIM SATISFACTION" },
+  { value: 35, suffix: "+", label: "YEARS OF EXPERIENCE" },
+  { value: 25, suffix: "+", label: "INTERNATIONAL AND LOCAL INSURERS", format: true },
+  { value: 10, suffix: "+", label: "THIRD PARTY ADMINISTRATORS" },
+  { value: 1000, suffix: "+", label: "SATISFIED COORPORATE CLIENTS", format: true },
 ];
 
 const partners = [
@@ -239,7 +239,7 @@ export default function Home() {
               <AnimatedSection key={s.label}>
                 <div className="flex flex-col items-center justify-center rounded-2xl bg-white/80 backdrop-blur-sm px-6 py-8 shadow-md border border-white/20">
                   <AnimatedCounter value={s.value} suffix={s.suffix} format={s.format} />
-                  <div className="text-blue-800/70 text-xs font-semibold tracking-wider mt-2 uppercase">
+                  <div className="text-blue-800/70 text-LG font-semibold tracking-wider mt-2 uppercase text-center">
                     {s.label}
                   </div>
                 </div>
@@ -259,18 +259,18 @@ export default function Home() {
 
         <AnimatedSection className="relative z-10 max-w-3xl mx-auto">
           {/* Badge */}
-          <motion.span
+          {/* <motion.span
             className="inline-flex items-center gap-2 badge-pill mb-8 bg-blue-50/80 text-[#0B4EA2] border-blue-100 backdrop-blur-sm px-5 py-2 text-sm font-semibold"
             initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
           >
             <span className="h-2 w-2 rounded-full bg-[#0B4EA2] animate-pulse" />
             Licensed Insurance Brokerage
-          </motion.span>
+          </motion.span> */}
 
           {/* Heading */}
           <motion.h1
-            className="font-display text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-6"
+            className="font-display text-6xl sm:text-6xl lg:text-8xl font-extrabold leading-[1.05] mb-6"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
@@ -307,31 +307,7 @@ export default function Home() {
             </a>
           </motion.div>
 
-          {/* 4 license / credential pill badges */}
-          <motion.div
-            className="flex flex-wrap justify-center gap-3"
-            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.55 }}
-          >
-            {[
-              { label: "Estb: 1990" },
-              { label: "CB UAE N: 35" },
-              { label: "HAAD B012" },
-              { label: "DHA BRK-00067" },
-            ].map((item, i) => (
-              <motion.span
-                key={item.label}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-sm border border-blue-100 text-[#0B4EA2] text-sm font-bold shadow-sm"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.6 + i * 0.08, type: "spring" }}
-                whileHover={{ scale: 1.05, boxShadow: "0 4px 20px rgba(11,78,162,0.15)" }}
-              >
-                <span className="h-1.5 w-1.5 rounded-full bg-[#0B4EA2]" />
-                {item.label}
-              </motion.span>
-            ))}
-          </motion.div>
+
 
           {/* Trust signals */}
           <motion.div
@@ -347,6 +323,27 @@ export default function Home() {
             </span>
           </motion.div>
         </AnimatedSection>
+
+        {/* Floating Badges */}
+        {[
+          { label: "Establised in 1990", pos: "top-24 md:top-38 left-0 right-0 mx-auto w-max", init: { opacity: 0, y: -100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
+          { label: "CB UAE No: 35", pos: "bottom-12 md:bottom-30 left-0 right-0 mx-auto w-max", init: { opacity: 0, y: 100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
+          { label: "DHA BRK-00067", pos: "left-4 md:left-12 lg:left-[15%] xl:left-[20%] top-0 bottom-0 my-auto h-max hidden sm:flex", init: { opacity: 0, x: -100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
+          { label: "HAAD B012", pos: "right-4 md:right-12 lg:right-[15%] xl:right-[20%] top-0 bottom-0 my-auto h-max hidden sm:flex", init: { opacity: 0, x: 100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
+        ].map((item, i) => (
+          <motion.span
+            key={item.label}
+            className={`absolute z-20 flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 rounded-full bg-white/80 backdrop-blur-md border border-blue-200 text-[#0B4EA2] text-base md:text-lg font-extrabold shadow-md cursor-pointer ${item.pos}`}
+            initial={item.init}
+            whileInView={item.anim}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ type: "spring", bounce: 0.4, duration: 1.2, delay: 0.2 + i * 0.1 }}
+            whileHover={{ scale: 1.1, y: -5, boxShadow: "0 15px 30px rgba(11,78,162,0.25)" }}
+          >
+            <span className="h-2 w-2 rounded-full bg-[#0B4EA2]" />
+            {item.label}
+          </motion.span>
+        ))}
 
       </section>
 

@@ -10,8 +10,16 @@ import property2Img from "../assets/property2.png";
 import property3Img from "../assets/property3.png";
 import property4Img from "../assets/home2.png";
 import generalHeroBg from "../assets/engineering_hero_bg.png"; // reusing hero bg
-import homePageImg from "../assets/Home Page.png";
+import home1Img from "../assets/HOME 1.png";
 
+const propertyBenefits = [
+  { num: "01", title: "Property Damage Protection", desc: "Covers insured property against damage caused by events such as fire, storms, and other covered perils." },
+  { num: "02", title: "Contents Protection", desc: "Helps protect furniture, appliances, electronics, and other insured belongings against covered loss or damage." },
+  { num: "03", title: "Theft & Burglary Coverage", desc: "Provides financial protection for insured property or belongings in the event of theft or burglary, subject to policy terms." },
+  { num: "04", title: "Third-Party Liability", desc: "Can cover legal liability for accidental injury or property damage caused to third parties at the insured premises." },
+  { num: "05", title: "Alternative Accommodation", desc: "May cover temporary accommodation costs if the home becomes uninhabitable following an insured event." },
+  { num: "06", title: "Financial Security & Peace of Mind", desc: "Helps reduce the financial burden of unexpected property-related losses and provides greater security for homeowners and tenants." }
+];
 export default function Property() {
   return (
     <div className="relative min-h-screen">
@@ -19,7 +27,7 @@ export default function Property() {
       {/* HERO */}
       <section className="relative overflow-hidden min-h-screen w-full">
         <motion.img
-          src={homePageImg}
+          src={home1Img}
           alt="Property Hero"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
           initial={{ opacity: 0 }}
@@ -72,6 +80,55 @@ export default function Property() {
               ))}
             </ul>
           </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Property Insurance Benefits */}
+      <section className="relative z-10 py-20">
+        <div className="container-xl">
+          <AnimatedSection className="text-center max-w-2xl mx-auto mb-16" animation="slideUp">
+            <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink leading-tight">
+              <span className="block">What Are The Benefits Of A Property</span>
+              <span className="block">Insurance Policy?</span>
+            </h2>
+          </AnimatedSection>
+
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {propertyBenefits.map((b, i) => {
+              const isNavy = i % 2 === 0;
+              return (
+                <AnimatedSection
+                  key={i}
+                  delay={i * 0.1}
+                  className="relative bg-white border border-[#D8DEE6] p-[30px_28px_28px_96px] overflow-hidden hover:-translate-y-2 hover:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer"
+                >
+                  {/* Left side color bar */}
+                  <div className={`absolute left-0 top-0 bottom-0 w-[6px] ${isNavy ? 'bg-[#0B4EA2]' : 'bg-[#C81E2C]'}`} />
+                  
+                  {/* Number Box */}
+                  <div className={`absolute left-[26px] top-[26px] font-sans font-bold text-[13px] tracking-[0.04em] text-white w-10 h-10 flex items-center justify-center rounded-sm ${isNavy ? 'bg-[#0B4EA2]' : 'bg-[#C81E2C]'}`}>
+                    {b.num}
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-sans text-[19px] font-bold text-[#0A1830] mb-3 tracking-[-0.01em]">
+                    {b.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="font-sans text-[14.5px] leading-[1.55] text-[#4B5A6E] max-w-[34ch]">
+                    {b.desc}
+                  </p>
+
+                  {/* Divider in bottom right corner */}
+                  <div 
+                    className="absolute right-0 bottom-0 w-16 h-16" 
+                    style={{ background: isNavy ? 'linear-gradient(135deg, transparent 50%, rgba(11,78,162,0.035) 50%)' : 'linear-gradient(135deg, transparent 50%, rgba(200,30,44,0.05) 50%)' }}
+                  />
+                </AnimatedSection>
+              );
+            })}
+          </div>
         </div>
       </section>
 

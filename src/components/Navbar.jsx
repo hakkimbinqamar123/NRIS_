@@ -6,14 +6,15 @@ import nrisIcon from "../assets/NRiS without Background.png";
 
 const links = [
   { to: "/", label: "Home" },
-  { to: "/health-insurance", label: "Health Insurance" },
-  { to: "/motor-insurance", label: "Motor Insurance" },
+  { to: "/motor-insurance", label: "Motor" },
+  { to: "/health-insurance", label: "Health" },
+
   { to: "/engineering", label: "Engineering" },
   { to: "/property", label: "Property" },
   { to: "/marine", label: "Marine" },
-  { to: "/news", label: "News" },
+  // { to: "/news", label: "News" },
   { to: "/contact", label: "Contact Us" },
-  // { to: "/about", label: "About Us" },
+  { to: "/about", label: "About Us" },
 ];
 
 export default function Navbar() {
@@ -43,13 +44,13 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav className="hidden xl:flex items-center gap-4 2xl:gap-8">
+        <nav className="hidden xl:flex items-center gap-10 2xl:gap-16">
           {links.map((l) =>
             l.dropdown ? (
               <div key={l.to} className="relative group">
                 <Link
                   to={l.to}
-                  className="relative flex items-center gap-1 text-base font-semibold transition-colors text-[#0B4EA2] hover:text-black py-2"
+                  className="relative flex items-center gap-1 text-lg font-semibold transition-colors text-[#0B4EA2] hover:text-black py-2"
                 >
                   {l.label}{" "}
                   <ChevronDown
@@ -76,7 +77,7 @@ export default function Navbar() {
                 to={l.to}
                 end={l.to === "/"}
                 className={({ isActive }) =>
-                  `relative text-base font-semibold transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-black after:transition-all ${isActive
+                  `relative text-lg font-semibold transition-colors after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:bg-black after:transition-all ${isActive
                     ? "text-black after:w-full"
                     : "text-[#0B4EA2] after:w-0 hover:text-black hover:after:w-full"
                   }`

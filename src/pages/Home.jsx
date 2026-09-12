@@ -270,7 +270,7 @@ export default function Home() {
 
           {/* Heading */}
           <motion.h1
-            className="font-display text-6xl sm:text-6xl lg:text-8xl font-extrabold leading-[1.05] mb-6"
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-extrabold leading-[1.05] mb-4 md:mb-6"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
@@ -280,7 +280,7 @@ export default function Home() {
 
           {/* Sub-text */}
           <motion.p
-            className="text-slate-700 text-lg md:text-xl max-w-xl mx-auto mb-8 leading-relaxed font-medium"
+            className="text-slate-700 text-sm sm:text-base md:text-lg lg:text-xl max-w-xl mx-auto mb-6 md:mb-8 leading-relaxed font-medium px-4 sm:px-0"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
           >
@@ -289,19 +289,19 @@ export default function Home() {
 
           {/* Buttons */}
           <motion.div
-            className="flex flex-wrap justify-center gap-4 mb-10"
+            className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8 md:mb-10"
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
             <Link
               to="/contact"
-              className="btn-primary bg-[#0B4EA2] hover:bg-blue-800 border-[#0B4EA2] text-white px-8 py-3 text-base rounded-full shadow-lg"
+              className="btn-primary bg-[#0B4EA2] hover:bg-blue-800 border-[#0B4EA2] text-white px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base rounded-full shadow-lg"
             >
-              Get a Quote <ArrowRight size={18} />
+              Get a Quote <ArrowRight size={16} />
             </Link>
             <a
               href="#services"
-              className="btn-outline border-[#0B4EA2] text-[#0B4EA2] hover:bg-blue-50 px-8 py-3 text-base rounded-full"
+              className="btn-outline border-[#0B4EA2] text-[#0B4EA2] hover:bg-blue-50 px-6 md:px-8 py-2.5 md:py-3 text-sm md:text-base rounded-full"
             >
               Explore Services
             </a>
@@ -311,7 +311,7 @@ export default function Home() {
 
           {/* Trust signals */}
           <motion.div
-            className="flex flex-wrap justify-center items-center gap-6 text-xs text-slate-600 mt-8"
+            className="flex flex-wrap justify-center items-center gap-6 text-xs text-slate-600 mt-6 md:mt-8"
             initial={{ opacity: 0 }} animate={{ opacity: 1 }}
             transition={{ delay: 0.8 }}
           >
@@ -322,25 +322,42 @@ export default function Home() {
               <Clock size={15} className="text-[#0B4EA2]" /> 24/7 claims support
             </span>
           </motion.div>
+
+          {/* Badges — inline row on small screens */}
+          <motion.div
+            className="flex lg:hidden flex-wrap justify-center gap-2 mt-6"
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1 }}
+          >
+            {["Establised in 1990", "DHA BRK-00067", "HAAD B012", "CB UAE No: 35"].map((label) => (
+              <span
+                key={label}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-blue-200 text-[#0B4EA2] text-[11px] font-extrabold shadow-sm"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-[#0B4EA2] shrink-0" />
+                {label}
+              </span>
+            ))}
+          </motion.div>
         </AnimatedSection>
 
-        {/* Floating Badges */}
+        {/* Floating Badges — lg+ only, absolutely positioned */}
         {[
-          { label: "Establised in 1990", pos: "top-24 md:top-38 left-0 right-0 mx-auto w-max", init: { opacity: 0, y: -100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
-          { label: "CB UAE No: 35", pos: "bottom-12 md:bottom-30 left-0 right-0 mx-auto w-max", init: { opacity: 0, y: 100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
-          { label: "DHA BRK-00067", pos: "left-4 md:left-12 lg:left-[15%] xl:left-[20%] top-0 bottom-0 my-auto h-max hidden sm:flex", init: { opacity: 0, x: -100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
-          { label: "HAAD B012", pos: "right-4 md:right-12 lg:right-[15%] xl:right-[20%] top-0 bottom-0 my-auto h-max hidden sm:flex", init: { opacity: 0, x: 100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
+          { label: "Establised in 1990", pos: "top-[10%] left-0 right-0 mx-auto w-max", init: { opacity: 0, y: -100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
+          { label: "CB UAE No: 35", pos: "bottom-[10%] left-0 right-0 mx-auto w-max", init: { opacity: 0, y: 100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
+          { label: "DHA BRK-00067", pos: "left-[10%] xl:left-[10%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: -100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
+          { label: "HAAD B012", pos: "right-[10%] xl:right-[10%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: 100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
         ].map((item, i) => (
           <motion.span
             key={item.label}
-            className={`absolute z-20 flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 rounded-full bg-white/80 backdrop-blur-md border border-blue-200 text-[#0B4EA2] text-base md:text-lg font-extrabold shadow-md cursor-pointer ${item.pos}`}
+            className={`absolute z-20 hidden lg:flex items-center gap-2 px-5 py-2.5 xl:px-8 xl:py-4 rounded-full bg-white/80 backdrop-blur-md border border-blue-200 text-[#0B4EA2] text-sm xl:text-base font-extrabold shadow-md cursor-pointer ${item.pos}`}
             initial={item.init}
             whileInView={item.anim}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ type: "spring", bounce: 0.4, duration: 1.2, delay: 0.2 + i * 0.1 }}
-            whileHover={{ scale: 1.1, y: -5, boxShadow: "0 15px 30px rgba(11,78,162,0.25)" }}
+            whileHover={{ scale: 1.05, y: -3, boxShadow: "0 15px 30px rgba(11,78,162,0.25)" }}
           >
-            <span className="h-2 w-2 rounded-full bg-[#0B4EA2]" />
+            <span className="h-2 w-2 rounded-full bg-[#0B4EA2] shrink-0" />
             {item.label}
           </motion.span>
         ))}
@@ -439,7 +456,7 @@ export default function Home() {
         </div>
       </section>
 
-      <CTASection />
+      {/* <CTASection /> */}
     </div>
   );
 }

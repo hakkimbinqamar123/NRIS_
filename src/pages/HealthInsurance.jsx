@@ -93,7 +93,7 @@ export default function HealthInsurance() {
               From personal plans to enterprise-wide group medical schemes — <span className="text-[#0B4EA2] font-bold">NRiS</span> builds programs that keep employees, families, and individuals healthy and protected.
             </p>
             <Link to="/contact" className="btn-primary bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/20 text-white w-max px-8 py-3.5 rounded-full text-base transition-transform hover:scale-105">
-              Request a health quote <ArrowRight size={18} />
+              Request a quote <ArrowRight size={18} />
             </Link>
           </AnimatedSection>
           <AnimatedSection delay={0.2} animation="slideRight">
@@ -124,22 +124,14 @@ export default function HealthInsurance() {
 
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {policyReasons.map((r, i) => {
-              const isNavy = i % 2 === 0;
               return (
                 <AnimatedSection
                   key={i}
                   delay={i * 0.1}
-                  className="relative bg-white border border-[#D8DEE6] p-[30px_28px_28px_96px] overflow-hidden hover:-translate-y-2 hover:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer"
+                  className="relative bg-white border border-[#D8DEE6] p-6 overflow-hidden hover:-translate-y-2 hover:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer"
                 >
                   {/* Left side color bar */}
-                  <div className={`absolute left-0 top-0 bottom-0 w-[6px] ${isNavy ? 'bg-[#0B4EA2]' : 'bg-[#C81E2C]'}`} />
-                  
-                  {/* Number Box */}
-                  <div className={`absolute left-[26px] top-[26px] font-sans font-bold text-[13px] tracking-[0.04em] text-white w-10 h-10 flex items-center justify-center rounded-sm ${isNavy ? 'bg-[#0B4EA2]' : 'bg-[#C81E2C]'}`}>
-                    {r.num}
-                  </div>
-
-
+                  <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#0B4EA2]" />
 
                   {/* Title */}
                   <h3 className="font-sans text-[19px] font-bold text-[#0A1830] mb-3 tracking-[-0.01em]">
@@ -147,14 +139,14 @@ export default function HealthInsurance() {
                   </h3>
 
                   {/* Description */}
-                  <p className="font-sans text-[14.5px] leading-[1.55] text-[#4B5A6E] max-w-[34ch]">
+                  <p className="font-sans text-[14.5px] leading-[1.55] text-[#4B5A6E]">
                     {r.desc}
                   </p>
 
                   {/* Divider in bottom right corner */}
-                  <div 
-                    className="absolute right-0 bottom-0 w-16 h-16" 
-                    style={{ background: isNavy ? 'linear-gradient(135deg, transparent 50%, rgba(11,78,162,0.035) 50%)' : 'linear-gradient(135deg, transparent 50%, rgba(200,30,44,0.05) 50%)' }}
+                  <div
+                    className="absolute right-0 bottom-0 w-16 h-16"
+                    style={{ background: 'linear-gradient(135deg, transparent 50%, rgba(11,78,162,0.035) 50%)' }}
                   />
                 </AnimatedSection>
               );
@@ -216,7 +208,7 @@ export default function HealthInsurance() {
         </div>
       </section>
 
-      <CTASection />
+      {/* <CTASection /> */}
     </div>
   );
 }

@@ -40,7 +40,7 @@ export default function Footer() {
           <ul className="space-y-3 text-base">
             <li><Link to="/" className="hover:text-black/70 transition-colors">Home</Link></li>
             <li><Link to="/about" className="hover:text-black/70 transition-colors">About Us</Link></li>
-            <li><Link to="/news" className="hover:text-black/70 transition-colors">News & Insights</Link></li>
+            {/* <li><Link to="/news" className="hover:text-black/70 transition-colors">News & Insights</Link></li> */}
             <li><Link to="/contact" className="hover:text-black/70 transition-colors">Contact Us</Link></li>
             <li><Link to="/contact" className="hover:text-black/70 transition-colors">Get a Quote</Link></li>
           </ul>
@@ -51,8 +51,9 @@ export default function Footer() {
             Services
           </h4>
           <ul className="space-y-3 text-base">
-            <li><Link to="/health-insurance" className="hover:text-black/70 transition-colors">Health Insurance</Link></li>
             <li><Link to="/motor-insurance" className="hover:text-black/70 transition-colors">Motor Insurance</Link></li>
+            <li><Link to="/health-insurance" className="hover:text-black/70 transition-colors">Health Insurance</Link></li>
+
             <li><Link to="/engineering-insurance" className="hover:text-black/70 transition-colors">Engineering Insurance</Link></li>
             <li><Link to="/property-insurance" className="hover:text-black/70 transition-colors">Property Insurance</Link></li>
             <li><Link to="/marine-insurance" className="hover:text-black/70 transition-colors">Marine Insurance</Link></li>

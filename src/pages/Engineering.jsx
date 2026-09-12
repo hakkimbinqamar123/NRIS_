@@ -80,22 +80,14 @@ export default function Engineering() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {engineeringCards.map((b, i) => {
-              const isNavy = i % 2 === 0;
               return (
                 <AnimatedSection
                   key={b.num}
                   delay={i * 0.1}
-                  className="relative bg-white border border-[#D8DEE6] p-[30px_28px_28px_96px] overflow-hidden hover:-translate-y-2 hover:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer"
+                  className="relative bg-white border border-[#D8DEE6] p-6 overflow-hidden hover:-translate-y-2 hover:shadow-[0_12px_40px_-10px_rgba(0,0,0,0.15)] transition-all duration-300 cursor-pointer"
                 >
                   {/* Left side color bar */}
-                  <div className={`absolute left-0 top-0 bottom-0 w-[6px] ${isNavy ? 'bg-[#0B4EA2]' : 'bg-[#C81E2C]'}`} />
-
-                  {/* Number Box */}
-                  <div className={`absolute left-[26px] top-[26px] font-sans font-bold text-[13px] tracking-[0.04em] text-white w-10 h-10 flex items-center justify-center rounded-sm ${isNavy ? 'bg-[#0B4EA2]' : 'bg-[#C81E2C]'}`}>
-                    {b.num}
-                  </div>
-
-
+                  <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#0B4EA2]" />
 
                   {/* Title */}
                   <h3 className="font-sans text-[19px] font-bold text-[#0A1830] mb-3 tracking-[-0.01em]">
@@ -103,14 +95,14 @@ export default function Engineering() {
                   </h3>
 
                   {/* Description */}
-                  <p className="font-sans text-[14.5px] leading-[1.55] text-[#4B5A6E] max-w-[34ch]">
+                  <p className="font-sans text-[14.5px] leading-[1.55] text-[#4B5A6E]">
                     {b.desc}
                   </p>
 
                   {/* Divider in bottom right corner */}
                   <div
                     className="absolute right-0 bottom-0 w-16 h-16"
-                    style={{ background: isNavy ? 'linear-gradient(135deg, transparent 50%, rgba(11,78,162,0.035) 50%)' : 'linear-gradient(135deg, transparent 50%, rgba(200,30,44,0.05) 50%)' }}
+                    style={{ background: 'linear-gradient(135deg, transparent 50%, rgba(11,78,162,0.035) 50%)' }}
                   />
                 </AnimatedSection>
               );
@@ -118,7 +110,7 @@ export default function Engineering() {
           </div>
         </div>
       </section>
-      <CTASection />
+      {/* <CTASection /> */}
     </div>
   );
 }

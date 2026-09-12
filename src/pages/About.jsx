@@ -50,7 +50,7 @@ export default function About() {
             <span className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm font-semibold text-[#0B4EA2] shadow-sm border border-blue-100/50 mb-8 backdrop-blur-sm">
               <span className="h-2 w-2 rounded-full bg-red-600"></span> About NRiS
             </span>
-            
+
             <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.05] tracking-tight mb-6">
               <span className="block text-[#0B4EA2] mb-1">Our Story And</span>
               <span className="block text-red-600">Our Commitment</span>
@@ -163,8 +163,8 @@ export default function About() {
           </div>
         </div>
       </section>
-      
-      <CTASection />
+
+      {/* <CTASection /> */}
     </div>
   );
 }

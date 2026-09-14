@@ -38,7 +38,7 @@ import propertyImg from "../assets/Home.png";
 import whyChooseUsImg from "../assets/why_choose_us.png";
 import heroBannerImg from "../assets/hero_banner_image.png";
 import homePageImg from "../assets/Home Page.png";
-import wc1 from "../assets/image1.1.png";
+import wc1 from "../assets/image7.png";
 import wc2 from "../assets/image2.1.png";
 import wc3 from "../assets/image3.png";
 import wc4 from "../assets/image4.png";

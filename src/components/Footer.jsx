@@ -57,7 +57,7 @@ export default function Footer() {
             <li><Link to="/engineering-insurance" className="hover:text-black/70 transition-colors">Engineering Insurance</Link></li>
             <li><Link to="/property-insurance" className="hover:text-black/70 transition-colors">Property Insurance</Link></li>
             <li><Link to="/marine-insurance" className="hover:text-black/70 transition-colors">Marine Insurance</Link></li>
-            <li><Link to="/liability-insurance" className="hover:text-black/70 transition-colors">Public Liability</Link></li>
+
           </ul>
         </div>
 

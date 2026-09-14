@@ -114,9 +114,10 @@ export default function Contact() {
                 </div>
                 <div className="sm:col-span-1">
                   <label className="mb-2 block text-sm font-medium text-ink">
-                    Phone
+                    Phone *
                   </label>
                   <input
+                    required
                     name="phone"
                     value={form.phone}
                     onChange={handleChange}
@@ -138,15 +139,16 @@ export default function Contact() {
                     <option>Health Insurance</option>
                     <option>Motor Insurance</option>
                     <option>Engineering Insurance</option>
+                    <option>Marine Insurance</option>
+                    <option>Property Insurance</option>
                     <option>Other / Advisory</option>
                   </select>
                 </div>
                 <div className="sm:col-span-2">
                   <label className="mb-2 block text-sm font-medium text-ink">
-                    Message *
+                    Message
                   </label>
                   <textarea
-                    required
                     name="message"
                     value={form.message}
                     onChange={handleChange}

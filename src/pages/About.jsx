@@ -4,6 +4,7 @@ import PageHero from "../components/PageHero";
 import AnimatedSection from "../components/AnimatedSection";
 import CTASection from "../components/CTASection";
 import AnimatedBackground from "../components/AnimatedBackground";
+import aboutHeroImg from "../assets/About US.png";
 import aboutImg from "../assets/about_team.png";
 import { Smile, HeartHandshake, Zap, TrendingUp, UserCheck, Trophy, ArrowRight, Star, ShieldCheck, Clock } from "lucide-react";
 
@@ -44,38 +45,48 @@ export default function About() {
   return (
     <div className="relative min-h-screen">
       <AnimatedBackground />
-      <section className="relative overflow-hidden pt-16 pb-24 min-h-screen flex items-center">
-        <div className="container-xl relative z-10">
-          <AnimatedSection className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2 text-sm font-semibold text-[#0B4EA2] shadow-sm border border-blue-100/50 mb-8 backdrop-blur-sm">
-              <span className="h-2 w-2 rounded-full bg-red-600"></span> About NRiS
-            </span>
-
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.6rem] font-extrabold leading-[1.05] tracking-tight mb-6">
-              <span className="block text-[#0B4EA2] mb-1">Our Story And</span>
-              <span className="block text-red-600">Our Commitment</span>
-            </h1>
-
-            <p className="text-muted text-lg md:text-xl leading-relaxed font-medium mb-10 max-w-2xl">
-              At <span className="text-[#0B4EA2] font-bold">NRiS</span>, we understand that every client matters. Our comprehensive advisory gives you <span className="text-[#0B4EA2] font-semibold">peace of mind</span>, safeguarding your business and family's future.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <Link to="/contact" className="btn-primary bg-[#0B4EA2] hover:bg-blue-700 shadow-blue-500/30 text-white px-8 py-4 text-lg">
-                Get a Quote <ArrowRight size={20} />
-              </Link>
-              <a href="#services" className="btn-outline border-blue-200 text-[#0B4EA2] hover:bg-blue-50 px-8 py-4 text-lg bg-white">
-                Explore Services
-              </a>
-            </div>
-          </AnimatedSection>
-        </div>
+      {/* HERO */}
+      <section className="relative overflow-hidden min-h-screen w-full">
+        <motion.img
+          src={aboutHeroImg}
+          alt="About NRiS Hero"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+        />
       </section>
 
       {/* Who We Are */}
-      <section className="section bg-white">
+      <section className="section bg-white pt-24 pb-16">
         <div className="container-xl grid gap-12 lg:grid-cols-2 items-center">
-          <AnimatedSection className="order-2 lg:order-1">
+          {/* Left Column: Hero Text */}
+          <AnimatedSection>
+            <div className="mb-4">
+              <span className="badge-pill inline-flex items-center gap-2 bg-blue-50 text-blue-600 border-blue-100 px-4 py-1.5 font-semibold text-sm">
+                About NRiS
+              </span>
+            </div>
+            <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.2rem] font-extrabold leading-[1.1] mb-6">
+              <span className="block text-[#0B4EA2]">Our Story And</span>
+              <span className="block text-red-600">Our Commitment</span>
+            </h1>
+            <p className="text-slate-600 text-lg mb-8 leading-relaxed font-medium">
+              At <span className="text-[#0B4EA2] font-bold">NRiS</span>, we understand that every client matters. Our comprehensive advisory gives you <span className="text-[#0B4EA2] font-bold">peace of mind</span>, safeguarding your business and family's future.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <Link to="/contact" className="btn-primary bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/20 text-white w-max px-8 py-3.5 rounded-full text-base transition-transform hover:scale-105">
+                Get a Quote <ArrowRight size={18} />
+              </Link>
+              <Link to="/services" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-base font-semibold border-2 border-[#0B4EA2] text-[#0B4EA2] hover:bg-blue-50 transition-all">
+                Explore Services
+              </Link>
+            </div>
+          </AnimatedSection>
+
+          {/* Right Column: Detail Text */}
+
+          <AnimatedSection delay={0.2} animation="slideRight">
             <h2 className="font-display text-4xl font-bold text-ink mb-6">
               About <span className="text-[#0B4EA2]">NRiS</span>
             </h2>
@@ -92,17 +103,6 @@ export default function About() {
               <p>
                 Our reliable guidance, responsive assistance, and our proficient teams have led to our exponential growth, making us a recognizable force to reckon with. NRiS caters to your demands by providing individualized tailored action plans sheltering its customers against all kind of risks.
               </p>
-            </div>
-          </AnimatedSection>
-          <AnimatedSection className="order-1 lg:order-2" delay={0.2} animation="slideRight">
-            <div className="relative h-[500px] w-full overflow-hidden rounded-2xl shadow-lg transition-transform duration-500 hover:scale-[1.02] hover:shadow-2xl cursor-pointer">
-              <motion.img
-                src={aboutImg}
-                alt="About NRiS Team"
-                className="h-full w-full object-cover origin-center"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              />
             </div>
           </AnimatedSection>
         </div>

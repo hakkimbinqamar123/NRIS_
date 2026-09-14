@@ -68,19 +68,31 @@ export default function Footer() {
           <ul className="space-y-4 text-base">
             <li className="flex gap-3">
               <MapPin size={18} className="shrink-0 text-black/70 mt-0.5" />
-              <span>1201 Corporate Tower, Business Bay, Dubai, UAE</span>
-            </li>
-            <li className="flex gap-3">
-              <Mail size={18} className="shrink-0 text-black/70 mt-0.5" />
-              <a href="mailto:info@nris.com" className="hover:text-black/70 transition-colors">info@nris.com</a>
+              <span>
+                <span className="font-semibold">Abu Dhabi:</span> Airport Road, NBK Tower, Office 1304
+              </span>
             </li>
             <li className="flex gap-3">
               <Phone size={18} className="shrink-0 text-black/70 mt-0.5" />
-              <a href="tel:+97140000000" className="hover:text-black/70 transition-colors">+971 4 000 0000</a>
+              <a href="tel:+97124466234" className="hover:text-black/70 transition-colors">+971 2 446 6234 (Ext. 206)</a>
+            </li>
+            <li className="flex gap-3">
+              <MapPin size={18} className="shrink-0 text-black/70 mt-0.5" />
+              <span>
+                <span className="font-semibold">Dubai:</span> Business Bay, BaysWater Tower, Office 2205
+              </span>
+            </li>
+            <li className="flex gap-3">
+              <Phone size={18} className="shrink-0 text-black/70 mt-0.5" />
+              <a href="tel:+97145645452" className="hover:text-black/70 transition-colors">+971 4 564 5452</a>
+            </li>
+            <li className="flex gap-3">
+              <Mail size={18} className="shrink-0 text-black/70 mt-0.5" />
+              <a href="mailto:complaints@nris.ae" className="hover:text-black/70 transition-colors">complaints@nris.ae</a>
             </li>
             <li className="flex gap-3">
               <Clock size={18} className="shrink-0 text-black/70 mt-0.5" />
-              <span>Sun–Thu, 9:00 – 18:00</span>
+              <span>Mon–Fri, 8:30 – 18:00</span>
             </li>
           </ul>
         </div>

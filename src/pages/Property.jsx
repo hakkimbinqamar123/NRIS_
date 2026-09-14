@@ -72,7 +72,7 @@ export default function Property() {
                 "Business interruption", "Hotel Comprehensive"
               ].map((t) => (
                 <li key={t} className="flex items-center gap-3 text-ink font-medium text-[15px]">
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 border-[#f39c12] text-[#f39c12]">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 border-[#0B4EA2] text-[#0B4EA2]">
                     <Check size={12} strokeWidth={4} />
                   </span>
                   {t}

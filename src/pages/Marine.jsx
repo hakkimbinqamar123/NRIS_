@@ -72,8 +72,8 @@ export default function Marine() {
             <ul className="space-y-3">
               {["Marine Cargo (Single or Open Cover)", "Marine Hull & Machinery", "Freight Forwarders Liability", "Inland Transit"].map((t) => (
                 <li key={t} className="flex items-center gap-3 text-ink/80">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-100 text-blue-600">
-                    <Check size={14} />
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border-2 border-[#0B4EA2] text-[#0B4EA2]">
+                    <Check size={12} strokeWidth={4} />
                   </span>
                   {t}
                 </li>

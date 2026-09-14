@@ -56,7 +56,7 @@ const plans = [
   },
 ];
 
-import medImg from "../assets/Med.png";
+import medImg from "../assets/medical.png";
 
 export default function HealthInsurance() {
   return (
@@ -85,8 +85,8 @@ export default function HealthInsurance() {
               </span>
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.2rem] font-extrabold leading-[1.1] mb-6">
-              <span className="block text-[#0B4EA2]">Comprehensive</span>
-              <span className="block text-[#0B4EA2]">Medical Cover For</span>
+              <span className="block text-[#0B4EA2]">Comprehensive Medical Cover For</span>
+
               <span className="block text-red-600">Every Stage Of Life</span>
             </h1>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed font-medium">
@@ -159,7 +159,7 @@ export default function HealthInsurance() {
       <section className="section relative z-10">
         <div className="container-xl">
           <AnimatedSection className="text-center max-w-2xl mx-auto mb-16" animation="slideUp">
-            <span className="badge-pill mb-4 bg-blue-50 text-blue-600 border-blue-100">Plans</span>
+            {/* <span className="badge-pill mb-4 bg-blue-50 text-blue-600 border-blue-100">Plans</span> */}
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
               Choose The Coverage Model That Fits
             </h2>

@@ -64,7 +64,7 @@ export default function MotorInsurance() {
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.2rem] font-extrabold leading-[1.1] mb-6">
               <span className="block text-red-600 mb-2">Make Your Roads Shorter</span>
-              <span className="block text-[#0B4EA2]"><span className="text-red-600">Your Safety</span> Is Our Priority</span>
+              <span className="block text-[#0B4EA2]">Your Safety Is Our Priority</span>
             </h1>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed font-medium">
               From a single family car to nationwide fleets — <span className="text-[#0B4EA2] font-bold">NRiS</span> structures motor policies that keep you moving and settle claims fast when it matters.

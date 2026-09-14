@@ -38,6 +38,12 @@ import propertyImg from "../assets/Home.png";
 import whyChooseUsImg from "../assets/why_choose_us.png";
 import heroBannerImg from "../assets/hero_banner_image.png";
 import homePageImg from "../assets/Home Page.png";
+import wc1 from "../assets/image1.1.png";
+import wc2 from "../assets/image2.1.png";
+import wc3 from "../assets/image3.png";
+import wc4 from "../assets/image4.png";
+import wc5 from "../assets/image5.png";
+import wc6 from "../assets/image6.png";
 
 const goals = [
   { icon: LineChart, title: "Planning for retirement", iconColor: "text-red-500" },
@@ -51,31 +57,37 @@ const whyChoose = [
     icon: Smile,
     title: "Tailored Solutions",
     desc: "Coverage engineered around your risk profile — never off-the-shelf.",
+    img: wc1,
   },
   {
     icon: Users,
     title: "Partnership with World Class Insurers",
     desc: "Access to a curated network of A-rated regional and global insurers.",
+    img: wc2,
   },
   {
     icon: ShieldCheck,
     title: "Risk Management",
     desc: "Proactive risk identification and mitigation strategies.",
+    img: wc3,
   },
   {
     icon: Smartphone,
     title: "Consultancy You Can Trust",
     desc: "Expert advisory services tailored to your specific needs.",
+    img: wc4,
   },
   {
     icon: Wallet,
     title: "Up To Date Business Insights",
     desc: "Data-driven market analytics to inform your insurance decisions.",
+    img: wc5,
   },
   {
     icon: Car,
     title: "Claim Assistance",
     desc: "Dedicated claims managers with 24/7 response and end-to-end tracking.",
+    img: wc6,
   },
 ];
 
@@ -329,7 +341,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
           >
-            {["Establised in 1990", "DHA BRK-00067", "HAAD B012", "CB UAE No: 35"].map((label) => (
+            {["Establised in 1990", "DHA No: 00067", "HAAD No: B012", "CB UAE No: 35"].map((label) => (
               <span
                 key={label}
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-blue-200 text-[#0B4EA2] text-[11px] font-extrabold shadow-sm"
@@ -345,8 +357,8 @@ export default function Home() {
         {[
           { label: "Establised in 1990", pos: "top-[10%] left-0 right-0 mx-auto w-max", init: { opacity: 0, y: -100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
           { label: "CB UAE No: 35", pos: "bottom-[10%] left-0 right-0 mx-auto w-max", init: { opacity: 0, y: 100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
-          { label: "DHA BRK-00067", pos: "left-[10%] xl:left-[10%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: -100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
-          { label: "HAAD B012", pos: "right-[10%] xl:right-[10%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: 100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
+          { label: "DHA No: 00067", pos: "left-[10%] xl:left-[10%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: -100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
+          { label: "HAAD No: B012", pos: "right-[10%] xl:right-[10%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: 100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
         ].map((item, i) => (
           <motion.span
             key={item.label}
@@ -395,8 +407,8 @@ export default function Home() {
                         {item.title}
                       </h3>
                     </div>
-                    <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl bg-red-600 p-4 sm:p-6 text-center text-white [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                      <p className="text-sm xl:text-base leading-relaxed">{item.desc}</p>
+                    <div className="absolute inset-0 rounded-2xl overflow-hidden [transform:rotateY(180deg)] [backface-visibility:hidden]">
+                      <img src={item.img} alt={item.title} className="h-full w-full object-cover" />
                     </div>
                   </div>
                 </div>

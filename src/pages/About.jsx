@@ -76,7 +76,7 @@ export default function About() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/contact" className="btn-primary bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/20 text-white w-max px-8 py-3.5 rounded-full text-base transition-transform hover:scale-105">
-                Get a Quote <ArrowRight size={18} />
+                Request a Quote <ArrowRight size={18} />
               </Link>
               <Link to="/services" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-base font-semibold border-2 border-[#0B4EA2] text-[#0B4EA2] hover:bg-blue-50 transition-all">
                 Explore Services

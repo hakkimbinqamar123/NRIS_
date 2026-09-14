@@ -341,7 +341,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
           >
-            {["Establised in 1990", "DHA No: 00067", "HAAD No: B012", "CB UAE No: 35"].map((label) => (
+            {["Established in 1990", "DHA No: 00067", "HAAD No: B012", "CB UAE No: 35"].map((label) => (
               <span
                 key={label}
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/80 backdrop-blur-md border border-blue-200 text-[#0B4EA2] text-[11px] font-extrabold shadow-sm"

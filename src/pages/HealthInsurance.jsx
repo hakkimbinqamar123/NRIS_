@@ -56,7 +56,7 @@ const plans = [
   },
 ];
 
-import medImg from "../assets/health.png";
+import medImg from "../assets/Medical.png";
 
 export default function HealthInsurance() {
   return (

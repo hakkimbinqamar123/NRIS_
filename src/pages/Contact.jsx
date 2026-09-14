@@ -5,7 +5,7 @@ import { LinkedInIcon, TwitterIcon, FacebookIcon, InstagramIcon } from "../compo
 
 const infoItems = [
   { icon: MapPin, label: "Abu Dhabi", value: "Airport Road, NBK Tower, Office 1304" },
-  { icon: Phone, label: "Abu Dhabi Phone", value: "+971 2 446 6234 (Ext. 206)" },
+  { icon: Phone, label: "Abu Dhabi Phone", value: "+971 2 446 6234" },
   { icon: MapPin, label: "Dubai", value: "Business Bay, BaysWater Tower, Office 2205" },
   { icon: Phone, label: "Dubai Phone", value: "+971 4 564 5452" },
   { icon: Mail, label: "Email", value: "complaints@nris.ae" },

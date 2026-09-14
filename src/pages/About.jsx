@@ -63,9 +63,9 @@ export default function About() {
           {/* Left Column: Hero Text */}
           <AnimatedSection>
             <div className="mb-4">
-              <span className="badge-pill inline-flex items-center gap-2 bg-blue-50 text-blue-600 border-blue-100 px-4 py-1.5 font-semibold text-sm">
+              {/* <span className="badge-pill inline-flex items-center gap-2 bg-blue-50 text-blue-600 border-blue-100 px-4 py-1.5 font-semibold text-sm">
                 About NRiS
-              </span>
+              </span> */}
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.2rem] font-extrabold leading-[1.1] mb-6">
               <span className="block text-[#0B4EA2]">Our Story And</span>
@@ -113,7 +113,7 @@ export default function About() {
         <div className="container-xl max-w-5xl mx-auto">
           <div className="grid gap-12 md:grid-cols-2">
             <AnimatedSection className="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-[#0B4EA2] hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1">
-              <div className="h-1 w-12 bg-[#ffb800] mb-6"></div>
+              <div className="h-1 w-12 bg-[#0B4EA2] mb-6"></div>
               <h2 className="font-display text-4xl font-bold text-ink mb-6">
                 Our Vision
               </h2>
@@ -123,7 +123,7 @@ export default function About() {
             </AnimatedSection>
 
             <AnimatedSection delay={0.2} className="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-[#0B4EA2] hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1">
-              <div className="h-1 w-12 bg-[#ffb800] mb-6"></div>
+              <div className="h-1 w-12 bg-[#0B4EA2] mb-6"></div>
               <h2 className="font-display text-4xl font-bold text-ink mb-6">
                 Our Mission
               </h2>

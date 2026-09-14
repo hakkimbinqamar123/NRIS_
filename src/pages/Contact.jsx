@@ -4,10 +4,12 @@ import AnimatedSection from "../components/AnimatedSection";
 import { LinkedInIcon, TwitterIcon, FacebookIcon, InstagramIcon } from "../components/SocialIcons";
 
 const infoItems = [
-  { icon: MapPin, label: "Address", value: "1201 Corporate Tower, Business Bay, Dubai, UAE" },
-  { icon: Phone, label: "Phone", value: "+971 4 000 0000" },
-  { icon: Mail, label: "Email", value: "info@nris.com" },
-  { icon: Clock, label: "Office Hours", value: "Sunday – Thursday, 9:00 – 18:00" },
+  { icon: MapPin, label: "Abu Dhabi", value: "Airport Road, NBK Tower, Office 1304" },
+  { icon: Phone, label: "Abu Dhabi Phone", value: "+971 2 446 6234 (Ext. 206)" },
+  { icon: MapPin, label: "Dubai", value: "Business Bay, BaysWater Tower, Office 2205" },
+  { icon: Phone, label: "Dubai Phone", value: "+971 4 564 5452" },
+  { icon: Mail, label: "Email", value: "complaints@nris.ae" },
+  { icon: Clock, label: "Office Hours", value: "Mon – Fri, 8:30 – 18:00" },
 ];
 
 export default function Contact() {

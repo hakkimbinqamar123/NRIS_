@@ -58,7 +58,7 @@ export default function About() {
       </section>
 
       {/* Who We Are */}
-      <section className="section bg-white pt-24 pb-16">
+      <section className="section bg-white relative z-10 pt-24 pb-16">
         <div className="container-xl grid gap-12 lg:grid-cols-2 items-center">
           {/* Left Column: Hero Text */}
           <AnimatedSection>
@@ -109,7 +109,7 @@ export default function About() {
       </section>
 
       {/* Mission & Vision */}
-      <section className="section bg-[#fcfdfd]">
+      <section className="section relative z-10">
         <div className="container-xl max-w-5xl mx-auto">
           <div className="grid gap-12 md:grid-cols-2">
             <AnimatedSection className="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-[#0B4EA2] hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1">
@@ -136,28 +136,36 @@ export default function About() {
       </section>
 
       {/* Core Values */}
-      <section className="section bg-gradient-to-br from-[#0B4EA2] to-[#2b90d9] text-white">
+      <section className="section bg-white/80 backdrop-blur-sm">
         <div className="container-xl">
           <AnimatedSection className="text-center mb-12" animation="slideUp">
-            <h2 className="font-display text-4xl font-bold mb-4">
+            <h2 className="font-display text-4xl font-bold mb-4 text-[#0B4EA2]">
               Our Core Values
             </h2>
           </AnimatedSection>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
+          <div className="flex flex-wrap justify-center gap-8">
             {coreValues.map((v, i) => (
               <AnimatedSection
                 key={i}
                 delay={i * 0.1}
-                className="group bg-white rounded-lg p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer flex flex-col h-full"
+                className="group cursor-pointer"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="flex h-12 w-12 items-center justify-center rounded bg-[#e61919] text-white group-hover:scale-110 group-hover:bg-[#cc1616] transition-all duration-300">
-                    <v.icon size={24} />
-                  </span>
-                  <h3 className="font-bold text-ink text-lg group-hover:text-[#0B4EA2] transition-colors">{v.title}</h3>
+                {/* Shadow wrapper — clip-path clips box-shadow so we use filter drop-shadow */}
+                <div
+                  className="transition-all duration-300 group-hover:scale-110"
+                  style={{ filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.18))" }}
+                >
+                  <div
+                    className="w-52 h-60 bg-white flex flex-col items-center justify-center text-center px-6 transition-all duration-300"
+                    style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+                  >
+                    <span className="mb-3 flex h-12 w-12 items-center justify-center rounded bg-[#e61919] text-white group-hover:bg-[#cc1616] transition-all duration-300">
+                      <v.icon size={24} />
+                    </span>
+                    <h3 className="font-bold text-[#0A1830] text-base leading-tight group-hover:text-[#0B4EA2] transition-colors">{v.title}</h3>
+                  </div>
                 </div>
-                <p className="text-muted text-sm leading-relaxed">{v.desc}</p>
               </AnimatedSection>
             ))}
           </div>

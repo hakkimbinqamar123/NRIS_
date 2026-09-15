@@ -44,7 +44,7 @@ export default function Engineering() {
               </span>
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.2rem] font-extrabold leading-[1.1] mb-6">
-              <span className="block text-[#0B4EA2]">Protection Built For</span>
+              <span className="block text-[#0B4EA2]">Protection Security</span>
               <span className="block text-red-600">Complex Projects</span>
             </h1>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed font-medium">
@@ -90,12 +90,12 @@ export default function Engineering() {
                   <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#0B4EA2]" />
 
                   {/* Title */}
-                  <h3 className="font-sans text-[19px] font-bold text-[#0A1830] mb-3 tracking-[-0.01em]">
+                  <h3 className="font-sans text-[23px] font-bold text-[#0A1830] mb-3 tracking-[-0.01em]">
                     {b.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="font-sans text-[14.5px] leading-[1.55] text-[#4B5A6E]">
+                  <p className="font-sans text-[17px] leading-[1.55] text-[#4B5A6E]">
                     {b.desc}
                   </p>
 

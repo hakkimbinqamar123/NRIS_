@@ -357,8 +357,8 @@ export default function Home() {
         {[
           { label: "Established in 1990", pos: "top-[10%] left-0 right-0 mx-auto w-max", init: { opacity: 0, y: -100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
           { label: "CB UAE No: 35", pos: "bottom-[10%] left-0 right-0 mx-auto w-max", init: { opacity: 0, y: 100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
-          { label: "DHA No: 00067", pos: "left-[10%] xl:left-[10%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: -100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
-          { label: "HAAD No: B012", pos: "right-[10%] xl:right-[10%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: 100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
+          { label: "DHA No: 00067", pos: "left-[10%] xl:left-[14%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: -100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
+          { label: "HAAD No: B012", pos: "right-[10%] xl:right-[14%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: 100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
         ].map((item, i) => (
           <motion.span
             key={item.label}
@@ -396,14 +396,14 @@ export default function Home() {
               {whyChoose.map((item, i) => (
                 <div
                   key={i}
-                  className="group h-[320px] w-full [perspective:1000px] relative transition-transform duration-500 hover:scale-125 hover:z-10"
+                  className="group h-[380px] w-full [perspective:1000px] relative transition-transform duration-500 hover:scale-125 hover:z-10"
                 >
                   <div className="relative h-full w-full rounded-2xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-md hover:shadow-xl">
                     <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border border-red-100 bg-white/90 backdrop-blur-sm p-4 sm:p-6 text-center [backface-visibility:hidden]">
                       <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-600 text-white shadow-lg shadow-red-600/30">
                         <item.icon size={24} />
                       </span>
-                      <h3 className="font-display text-base lg:text-sm xl:text-base font-semibold text-ink">
+                      <h3 className="font-display text-lg lg:text-base xl:text-lg font-semibold text-ink">
                         {item.title}
                       </h3>
                     </div>

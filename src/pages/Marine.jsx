@@ -105,12 +105,12 @@ export default function Marine() {
                   <div className="absolute left-0 top-0 bottom-0 w-[6px] bg-[#0B4EA2]" />
 
                   {/* Title */}
-                  <h3 className="font-sans text-[19px] font-bold text-[#0A1830] mb-3 tracking-[-0.01em]">
+                  <h3 className="font-sans text-[23px] font-bold text-[#0A1830] mb-3 tracking-[-0.01em]">
                     {b.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="font-sans text-[14.5px] leading-[1.55] text-[#4B5A6E]">
+                  <p className="font-sans text-[17px] leading-[1.55] text-[#4B5A6E]">
                     {b.desc}
                   </p>
 

@@ -13,8 +13,9 @@ const links = [
   { to: "/property", label: "Property" },
   { to: "/marine", label: "Marine" },
   // { to: "/news", label: "News" },
-  { to: "/contact", label: "Contact Us" },
   { to: "/about", label: "About Us" },
+  { to: "/contact", label: "Contact Us" },
+
 ];
 
 export default function Navbar() {

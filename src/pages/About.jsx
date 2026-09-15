@@ -68,7 +68,7 @@ export default function About() {
               </span> */}
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.2rem] font-extrabold leading-[1.1] mb-6">
-              <span className="block text-[#0B4EA2]">Our Story And</span>
+              <span className="block text-[#0B4EA2]">Our Story</span>
               <span className="block text-red-600">Our Commitment</span>
             </h1>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed font-medium">

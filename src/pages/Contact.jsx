@@ -8,7 +8,8 @@ const infoItems = [
   { icon: Phone, label: "Abu Dhabi Phone", value: "+971 2 446 6234" },
   { icon: MapPin, label: "Dubai", value: "Business Bay, BaysWater Tower, Office 2205" },
   { icon: Phone, label: "Dubai Phone", value: "+971 4 564 5452" },
-  { icon: Mail, label: "Email", value: "complaints@nris.ae" },
+  { icon: Mail, label: "Email", value: "info@nris.ae" },
+  { icon: Mail, label: "Complaints Email", value: "complaints@nris.ae" },
   { icon: Clock, label: "Office Hours", value: "Mon – Fri, 8:30 – 18:00" },
 ];
 

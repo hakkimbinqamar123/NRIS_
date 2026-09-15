@@ -95,6 +95,10 @@ export default function Footer() {
             </li>
             <li className="flex gap-3">
               <Mail size={22} className="shrink-0 text-black/70 mt-0.5" />
+              <a href="mailto:info@nris.ae" className="hover:text-black/70 transition-colors">info@nris.ae</a>
+            </li>
+            <li className="flex gap-3">
+              <Mail size={22} className="shrink-0 text-black/70 mt-0.5" />
               <a href="mailto:complaints@nris.ae" className="hover:text-black/70 transition-colors">complaints@nris.ae</a>
             </li>
             <li className="flex gap-3">

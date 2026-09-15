@@ -355,7 +355,7 @@ export default function Home() {
 
         {/* Floating Badges — lg+ only, absolutely positioned */}
         {[
-          { label: "Establised in 1990", pos: "top-[10%] left-0 right-0 mx-auto w-max", init: { opacity: 0, y: -100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
+          { label: "Established in 1990", pos: "top-[10%] left-0 right-0 mx-auto w-max", init: { opacity: 0, y: -100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
           { label: "CB UAE No: 35", pos: "bottom-[10%] left-0 right-0 mx-auto w-max", init: { opacity: 0, y: 100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
           { label: "DHA No: 00067", pos: "left-[10%] xl:left-[10%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: -100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
           { label: "HAAD No: B012", pos: "right-[10%] xl:right-[10%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: 100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },

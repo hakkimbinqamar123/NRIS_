@@ -385,7 +385,7 @@ export default function Home() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
               Advisory That Goes Beyond The Policy
             </h2>
-            <p className="text-ink/70 text-lg">
+            <p className="text-[#0B4EA2] text-lg">
               Six commitments that define the way we protect our clients — from
               the first quote to the final claim.
             </p>
@@ -396,7 +396,7 @@ export default function Home() {
               {whyChoose.map((item, i) => (
                 <div
                   key={i}
-                  className="group h-[320px] w-full [perspective:1000px]"
+                  className="group h-[320px] w-full [perspective:1000px] relative transition-transform duration-500 hover:scale-125 hover:z-10"
                 >
                   <div className="relative h-full w-full rounded-2xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)] shadow-md hover:shadow-xl">
                     <div className="absolute inset-0 flex flex-col items-center justify-center rounded-2xl border border-red-100 bg-white/90 backdrop-blur-sm p-4 sm:p-6 text-center [backface-visibility:hidden]">
@@ -426,8 +426,8 @@ export default function Home() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
               Coverage Across Every Risk You Carry
             </h2>
-            <p className="text-ink/70 text-lg">
-              Three flagship practices, each led by specialists dedicated to
+            <p className="text-[#0B4EA2] text-lg">
+              Four flagship practices, each led by specialists dedicated to
               your industry.
             </p>
           </AnimatedSection>

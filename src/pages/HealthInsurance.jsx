@@ -85,7 +85,7 @@ export default function HealthInsurance() {
               </span>
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.2rem] font-extrabold leading-[1.1] mb-6">
-              <span className="block text-[#0B4EA2]">Comprehensive Medical Cover For</span>
+              <span className="block text-[#0B4EA2]">Comprehensive Medical Cover</span>
 
               <span className="block text-red-600">Every Stage Of Life</span>
             </h1>

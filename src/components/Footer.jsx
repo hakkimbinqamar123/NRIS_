@@ -20,10 +20,17 @@ export default function Footer() {
             individuals, businesses, and enterprises.
           </p>
           <div className="flex gap-3 mt-6">
-            {[LinkedInIcon, TwitterIcon, FacebookIcon, InstagramIcon].map((Icon, i) => (
+            {[
+              { Icon: LinkedInIcon, href: "https://www.linkedin.com/company/nrisinsurance/" },
+              { Icon: TwitterIcon, href: "https://x.com/nrisinsurance?s=11" },
+              { Icon: FacebookIcon, href: "https://www.facebook.com/share/1HCVFMz484/?mibextid=wwXIfr" },
+              { Icon: InstagramIcon, href: "https://www.instagram.com/nrisinsurance?stkn=dHZ5bzhkY204ZmR6" },
+            ].map(({ Icon, href }, i) => (
               <a
                 key={i}
-                href="#"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-full bg-black/10 hover:bg-black/20 transition-colors"
                 aria-label="social link"
               >

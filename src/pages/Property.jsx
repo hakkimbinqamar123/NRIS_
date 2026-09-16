@@ -62,7 +62,7 @@ export default function Property() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-5">
               Secure Your Real Estate Assets
             </h2>
-            <p className="text-muted text-[15px] leading-relaxed mb-8">
+            <p className="text-muted text-lg leading-relaxed mb-8">
               We understand the emotional and financial importance of a home and therefore commit ourselves to providing the best coverage plans that will give protection against any unforeseeable risk. It can be quite difficult to navigate through a myriad of policies and decide which one would be ideal. <span className="text-[#0B4EA2] font-semibold">NRiS</span> offers complete assistance from selecting the right policy for their home till processing any claim. We give counseling in obtaining comprehensive protection from unforeseen events that can cause damage to houses and provide overall coverage to Assets, Interests, Liabilities and the residents.
             </p>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">

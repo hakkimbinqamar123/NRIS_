@@ -90,7 +90,7 @@ export default function About() {
             <h2 className="font-display text-4xl font-bold text-ink mb-6">
               About <span className="text-[#0B4EA2]">NRiS</span>
             </h2>
-            <div className="text-muted text-[15px] space-y-4 leading-relaxed font-medium">
+            <div className="text-muted text-lg space-y-4 leading-relaxed font-medium">
               <p>
                 National Resources Insurance Services stands as a prominent insurance brokerage company in the UAE, providing premium value, prompt services, and maximum satisfaction to its clientele.
               </p>

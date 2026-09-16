@@ -100,7 +100,7 @@ export default function HealthInsurance() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-8 leading-tight">
               Providing Access To Quality And Affordable <span className="text-[#0B4EA2]">Healthcare</span> In The UAE
             </h2>
-            <div className="text-left space-y-6 text-muted text-[16px] leading-[1.8] font-medium">
+            <div className="text-left space-y-6 text-muted text-lg leading-[1.8] font-medium">
               <p>
                 At NRiS, we make the optimum use of our long year's of experience, expertise and research in health sector by offering you a whole spectrum of health insurance benefits and providing insights in forming a unique health plan based on your needs and resources. We offer tailor made individual and Group medical health insurance plans & other general insurances as per your specific requirements. Whether you are an individual seeking insurance plans for your family or a mid or large level organization or employer in need of insuring your workforce, we have market metrics and our industry experience to bring you the best solutions.
               </p>

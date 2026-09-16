@@ -62,6 +62,7 @@ export default function Footer() {
             <li><Link to="/health-insurance" className="hover:text-black/70 transition-colors">Health Insurance</Link></li>
 
             <li><Link to="/engineering-insurance" className="hover:text-black/70 transition-colors">Engineering Insurance</Link></li>
+            <li><Link to="/cyber-insurance" className="hover:text-black/70 transition-colors">Cyber Insurance</Link></li>
             <li><Link to="/property-insurance" className="hover:text-black/70 transition-colors">Property Insurance</Link></li>
             <li><Link to="/marine-insurance" className="hover:text-black/70 transition-colors">Marine Insurance</Link></li>
 

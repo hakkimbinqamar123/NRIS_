@@ -66,7 +66,7 @@ export default function Marine() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-5">
               Comprehensive Marine Coverage
             </h2>
-            <p className="text-muted leading-relaxed mb-6">
+            <p className="text-muted text-lg leading-relaxed mb-6">
               Whether you are importing raw materials, exporting finished goods, or operating a commercial vessel, our marine specialists tailor coverage for all forms of transit—by sea, air, and land.
             </p>
             <ul className="space-y-3">

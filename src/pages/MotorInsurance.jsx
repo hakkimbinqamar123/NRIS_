@@ -82,7 +82,7 @@ export default function MotorInsurance() {
               </h2>
             </div>
 
-            <div className="space-y-6 text-ink/80 text-[16px] leading-[1.8] font-medium">
+            <div className="space-y-6 text-ink/80 text-lg leading-[1.8] font-medium">
               <p>
                 Car insurance is as important as buying the car itself. At <span className="text-[#0B4EA2] font-semibold">NRiS</span> we make sure that our clients' investments are protected against accidental damage. <span className="text-[#0B4EA2] font-semibold">NRiS</span> guides them through the complex options and confusing insurance jargons to select the best type of car Insurance suited to their specific needs. Based on the requirements we contrive the best solutions that provide the greatest value. We provide our client the best protection by evaluating their needs, understanding the available options and then matching them with the right coverage plan at a competitive price.
               </p>

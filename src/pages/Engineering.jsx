@@ -13,7 +13,7 @@ const engineeringCards = [
   { num: "03", title: "Contractors' Plant & Machinery", desc: "Protection for loss or damage to machinery/plant. A wide range of risks and damage cases covered" },
   { num: "04", title: "Third Party Liability", desc: "Covers accidental damage to third party property or accidental death or bodily injury to third party" },
   { num: "05", title: "Machinery Breakdown", desc: "Covers loss or damage to machinery caused by defects in casting and material, faulty design, bad workmanship etc" },
-  { num: "06", title: "Owner's Controlled Insurance Program (OCIP)", desc: "OCIP is an insurance policy held by a property owner during the construction or renovation of a property" }
+  { num: "06", title: "Professional Indemnity", desc: "Protects professionals and businesses against claims arising from errors, omissions, negligence, or inadequate professional services" }
 ];
 
 import homePageImg from "../assets/Engineerig.png";
@@ -60,7 +60,7 @@ export default function Engineering() {
             <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
               Comprehensive Engineering Coverage
             </h2>
-            <p className="text-muted leading-relaxed text-[16px]">
+            <p className="text-muted leading-relaxed text-lg">
               We specialize in evaluating complex exposures and aligning them with robust insurance products from A-rated international markets.
             </p>
           </AnimatedSection>

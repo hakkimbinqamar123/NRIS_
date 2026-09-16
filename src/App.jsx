@@ -9,6 +9,7 @@ import Property from "./pages/Property";
 import Marine from "./pages/Marine";
 import News from "./pages/News";
 import Contact from "./pages/Contact";
+import CyberInsurance from "./pages/CyberInsurance";
 
 export default function App() {
   return (
@@ -24,6 +25,8 @@ export default function App() {
           <Route path="/marine" element={<Marine />} />
           <Route path="/news" element={<News />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/cyber" element={<CyberInsurance />} />
+          <Route path="/cyber-insurance" element={<CyberInsurance />} />
         </Route>
       </Routes>
     </BrowserRouter>

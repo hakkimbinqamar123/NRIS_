@@ -10,6 +10,7 @@ const links = [
   { to: "/health-insurance", label: "Health" },
 
   { to: "/engineering", label: "Engineering" },
+  { to: "/cyber", label: "Cyber" },
   { to: "/property", label: "Property" },
   { to: "/marine", label: "Marine" },
   // { to: "/news", label: "News" },
@@ -45,7 +46,7 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav className="hidden xl:flex items-center gap-10 2xl:gap-16">
+        <nav className="hidden xl:flex items-center gap-8 2xl:gap-14">
           {links.map((l) =>
             l.dropdown ? (
               <div key={l.to} className="relative group">

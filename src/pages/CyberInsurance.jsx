@@ -32,9 +32,9 @@ export default function CyberInsurance() {
               </span>
             </div>
             <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.2rem] font-extrabold leading-[1.1] mb-6">
-              <span className="block text-red-600 mb-2">Protect Your Business</span>
-              <span className="block text-[#0B4EA2] mb-2">From Digital Threats</span>
-              <span className="block text-[#0B4EA2]">And Cyber Risks</span>
+              <span className="block text-[#0B4EA2] mb-2">Protect Your Business</span>
+              <span className="block text-red-600 mb-2"><span className="text-[#0B4EA2]">From</span> Digital Threats</span>
+              <span className="block text-red-600"><span className="text-[#0B4EA2]">And</span> Cyber Risks</span>
             </h1>
             <p className="text-slate-600 text-lg mb-8 leading-relaxed font-medium">
               From small startups to large enterprises — <span className="text-[#0B4EA2] font-bold">NRiS</span> structures cyber policies that keep your digital assets safe and settle claims fast when it matters.

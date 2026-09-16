@@ -3,16 +3,48 @@ import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, MessageCircle } from "l
 import AnimatedSection from "../components/AnimatedSection";
 import { LinkedInIcon, TwitterIcon, FacebookIcon, InstagramIcon } from "../components/SocialIcons";
 
-const infoItems = [
-  { icon: MapPin, label: "Abu Dhabi", value: "Airport Road, NBK Tower, Office 1304" },
-  { icon: Phone, label: "Abu Dhabi Phone", value: "+971 2 446 6234", href: "tel:+97124466234" },
-  { icon: MapPin, label: "Dubai", value: "Business Bay, BaysWater Tower, Office 2205" },
-  { icon: Phone, label: "Dubai Phone", value: "+971 4 564 5452", href: "tel:+97145645452" },
+const abuDhabiItems = [
+  { icon: MapPin, label: "Address", value: "Airport Road, NBK Tower, Office 1304" },
+  { icon: Phone, label: "Phone", value: "+971 2 446 6234", href: "tel:+97124466234" },
   { icon: MessageCircle, label: "WhatsApp", value: "+971 56 402 1161", href: "https://wa.me/971564021161" },
   { icon: Mail, label: "Email", value: "info@nris.ae", href: "mailto:info@nris.ae" },
-  { icon: Mail, label: "Complaints Email", value: "complaints@nris.ae", href: "mailto:complaints@nris.ae" },
+];
+
+const dubaiItems = [
+  { icon: MapPin, label: "Address", value: "Business Bay, BaysWater Tower, Office 2205" },
+  { icon: Phone, label: "Phone", value: "+971 4 564 5452", href: "tel:+97145645452" },
+  { icon: Mail, label: "Complaints", value: "complaints@nris.ae", href: "mailto:complaints@nris.ae" },
   { icon: Clock, label: "Office Hours", value: "Mon – Fri, 8:30 – 18:00" },
 ];
+
+const InfoList = ({ items }) => (
+  <ul className="space-y-6">
+    {items.map((it) => (
+      <li key={it.label} className="flex gap-4">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+          <it.icon size={20} />
+        </span>
+        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 mt-2">
+          <p className="text-xs uppercase tracking-wide text-muted shrink-0">
+            {it.label}:
+          </p>
+          {it.href ? (
+            <a
+              href={it.href}
+              target={it.label === "WhatsApp" ? "_blank" : undefined}
+              rel={it.label === "WhatsApp" ? "noopener noreferrer" : undefined}
+              className="text-sm font-medium text-ink hover:text-primary transition-colors"
+            >
+              {it.value}
+            </a>
+          ) : (
+            <p className="text-sm font-medium text-ink">{it.value}</p>
+          )}
+        </div>
+      </li>
+    ))}
+  </ul>
+);
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -35,7 +67,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="section pt-32">
+      <section className="section pt-32 pb-24">
         <div className="container-xl">
           <div className="mb-12 text-center lg:text-left">
             <span className="badge-pill mb-4 inline-block">Contact</span>
@@ -46,10 +78,9 @@ export default function Contact() {
               Tell us about your coverage needs and a licensed advisor will respond within one business day.
             </p>
           </div>
-          <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr]">
-          {/* Form Column */}
-          <div className="flex flex-col gap-8 h-full">
-            <AnimatedSection className="flex-1 rounded-2xl border border-black/5 bg-white p-8 sm:p-10 shadow-sm">
+
+          {/* Top Row: Form */}
+          <AnimatedSection className="rounded-2xl border border-black/5 bg-white p-8 sm:p-10 shadow-sm mb-12">
             <h2 className="font-display text-2xl font-bold text-ink mb-1">
               Request A Quote
             </h2>
@@ -130,7 +161,7 @@ export default function Contact() {
                     placeholder="+971 ..."
                   />
                 </div>
-                <div className="sm:col-span-2">
+                <div className="sm:col-span-1">
                   <label className="mb-2 block text-sm font-medium text-ink">
                     Insurance Type *
                   </label>
@@ -141,15 +172,17 @@ export default function Contact() {
                     onChange={handleChange}
                     className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-primary bg-white"
                   >
-                    <option>Health Insurance</option>
+
                     <option>Motor Insurance</option>
+                    <option>Health Insurance</option>
                     <option>Engineering Insurance</option>
+                    <option>Cyber Insurance</option>
                     <option>Marine Insurance</option>
                     <option>Property Insurance</option>
                     <option>Other / Advisory</option>
                   </select>
                 </div>
-                <div className="sm:col-span-2">
+                <div className="sm:col-span-1">
                   <label className="mb-2 block text-sm font-medium text-ink">
                     Message
                   </label>
@@ -157,7 +190,7 @@ export default function Contact() {
                     name="message"
                     value={form.message}
                     onChange={handleChange}
-                    rows={5}
+                    rows={1}
                     className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
                     placeholder="Tell us about your coverage needs..."
                   />
@@ -170,58 +203,42 @@ export default function Contact() {
               </form>
             )}
           </AnimatedSection>
-          
-          <AnimatedSection delay={0.2} className="rounded-2xl border border-black/5 bg-white p-8 shadow-sm">
-            <h3 className="font-display text-lg font-semibold text-ink mb-6">Abu Dhabi Office</h3>
-            <div className="relative overflow-hidden rounded-xl border border-black/5 bg-surface h-48 sm:h-56">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.7448550929444!2d54.37725487568396!3d24.459635961178737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e6882cc076b7f%3A0x4c364f985ea748ea!2sNational%20Bank%20of%20Kuwait!5e0!3m2!1sen!2sae!4v1789542201808!5m2!1sen!2sae" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen="" 
-                loading="lazy" 
-                referrerPolicy="strict-origin-when-cross-origin"
-                className="absolute inset-0"
-                title="NRIS Abu Dhabi Map"
-              ></iframe>
-            </div>
-          </AnimatedSection>
-          </div>
 
-          {/* Info Column */}
-          <div className="flex flex-col gap-8 h-full">
-            <AnimatedSection delay={0.1} className="flex-1 rounded-2xl border border-black/5 bg-white p-8 shadow-sm">
-              <h3 className="font-display text-lg font-semibold text-ink mb-6">
-                Company Information
-              </h3>
-              <ul className="space-y-6">
-                {infoItems.map((it) => (
-                  <li key={it.label} className="flex gap-4">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                      <it.icon size={20} />
-                    </span>
-                    <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 mt-2">
-                      <p className="text-xs uppercase tracking-wide text-muted shrink-0">
-                        {it.label}:
-                      </p>
-                      {it.href ? (
-                        <a 
-                          href={it.href} 
-                          target={it.label === "WhatsApp" ? "_blank" : undefined} 
-                          rel={it.label === "WhatsApp" ? "noopener noreferrer" : undefined} 
-                          className="text-sm font-medium text-ink hover:text-primary transition-colors"
-                        >
-                          {it.value}
-                        </a>
-                      ) : (
-                        <p className="text-sm font-medium text-ink">{it.value}</p>
-                      )}
-                    </div>
-                  </li>
-                ))}
-              </ul>
-              <div className="flex gap-3 mt-8">
+          {/* Bottom Row: Locations */}
+          <div className="grid gap-8 lg:grid-cols-2">
+
+            {/* Abu Dhabi Office */}
+            <AnimatedSection delay={0.1} className="rounded-2xl border border-black/5 bg-white p-8 shadow-sm flex flex-col">
+              <h3 className="font-display text-xl font-semibold text-ink mb-8">Abu Dhabi Office</h3>
+
+              <div className="flex-1 mb-8">
+                <InfoList items={abuDhabiItems} />
+              </div>
+
+              <div className="relative overflow-hidden rounded-xl border border-black/5 bg-surface h-64 w-full mt-auto">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.7448550929444!2d54.37725487568396!3d24.459635961178737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e6882cc076b7f%3A0x4c364f985ea748ea!2sNational%20Bank%20of%20Kuwait!5e0!3m2!1sen!2sae!4v1789542201808!5m2!1sen!2sae"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  className="absolute inset-0"
+                  title="NRIS Abu Dhabi Map"
+                ></iframe>
+              </div>
+            </AnimatedSection>
+
+            {/* Dubai Office */}
+            <AnimatedSection delay={0.2} className="rounded-2xl border border-black/5 bg-white p-8 shadow-sm flex flex-col">
+              <h3 className="font-display text-xl font-semibold text-ink mb-8">Dubai Office</h3>
+
+              <div className="flex-1 mb-8">
+                <InfoList items={dubaiItems} />
+              </div>
+
+              <div className="flex gap-3 mb-8">
                 {[LinkedInIcon, TwitterIcon, FacebookIcon, InstagramIcon].map((Icon, i) => (
                   <a
                     key={i}
@@ -233,25 +250,22 @@ export default function Contact() {
                   </a>
                 ))}
               </div>
-            </AnimatedSection>
 
-            <AnimatedSection delay={0.2} className="rounded-2xl border border-black/5 bg-white p-8 shadow-sm">
-              <h3 className="font-display text-lg font-semibold text-ink mb-6">Dubai Office</h3>
-              <div className="relative overflow-hidden rounded-xl border border-black/5 bg-surface h-48 sm:h-56">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115573.07922423695!2d55.13019559394831!3d25.14722625523658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6932107277df%3A0x50d8e583be90f3e4!2sNational%20Resources%20Insurance%20Services%20Dubai!5e0!3m2!1sen!2sae!4v1789542247113!5m2!1sen!2sae" 
-                  width="100%" 
-                  height="100%" 
-                  style={{ border: 0 }} 
-                  allowFullScreen="" 
-                  loading="lazy" 
+              <div className="relative overflow-hidden rounded-xl border border-black/5 bg-surface h-64 w-full mt-auto">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115573.07922423695!2d55.13019559394831!3d25.14722625523658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6932107277df%3A0x50d8e583be90f3e4!2sNational%20Resources%20Insurance%20Services%20Dubai!5e0!3m2!1sen!2sae!4v1789542247113!5m2!1sen!2sae"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
                   referrerPolicy="strict-origin-when-cross-origin"
                   className="absolute inset-0"
                   title="NRIS Dubai Map"
                 ></iframe>
               </div>
             </AnimatedSection>
-          </div>
+
           </div>
         </div>
       </section>

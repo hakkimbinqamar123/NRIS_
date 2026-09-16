@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ShieldCheck, ArrowRight } from "lucide-react";
 import AnimatedSection from "../components/AnimatedSection";
 import AnimatedBackground from "../components/AnimatedBackground";
-import cyberImg from "../assets/cyber.png";
+import cyberImg from "../assets/Cyber.png";
 
 export default function CyberInsurance() {
   return (

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Mail, Phone, Clock } from "lucide-react";
+import { MapPin, Mail, Phone, Clock, MessageCircle } from "lucide-react";
 import { LinkedInIcon, TwitterIcon, FacebookIcon, InstagramIcon } from "./SocialIcons";
 import footerBg from "../assets/footer_bg.png";
 import Logo from "./Logo";
@@ -94,6 +94,10 @@ export default function Footer() {
               <a href="tel:+97145645452" className="hover:text-black/70 transition-colors">+971 4 564 5452</a>
             </li>
             <li className="flex gap-3">
+              <MessageCircle size={22} className="shrink-0 text-black/70 mt-0.5" />
+              <a href="https://wa.me/971564021161" className="hover:text-black/70 transition-colors" target="_blank" rel="noopener noreferrer">+971 56 402 1161 (WhatsApp)</a>
+            </li>
+            <li className="flex gap-3">
               <Mail size={22} className="shrink-0 text-black/70 mt-0.5" />
               <a href="mailto:info@nris.ae" className="hover:text-black/70 transition-colors">info@nris.ae</a>
             </li>
@@ -103,7 +107,7 @@ export default function Footer() {
             </li>
             <li className="flex gap-3">
               <Clock size={22} className="shrink-0 text-black/70 mt-0.5" />
-              <span>Mon–Fri, 08:30 – 18:00</span>
+              <span>Mon–Fri: 08:30 – 18:00</span>
             </li>
           </ul>
         </div>

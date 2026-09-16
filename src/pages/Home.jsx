@@ -38,12 +38,12 @@ import propertyImg from "../assets/Home.png";
 import whyChooseUsImg from "../assets/why_choose_us.png";
 import heroBannerImg from "../assets/hero_banner_image.png";
 import homePageImg from "../assets/Home Page.png";
-import wc1 from "../assets/image1.1.png";
-import wc2 from "../assets/image2.1.png";
-import wc3 from "../assets/image3.png";
-import wc4 from "../assets/image4.png";
-import wc5 from "../assets/image7.png";
-import wc6 from "../assets/image6.png";
+import wc1 from "../assets/Tailored Solutaions.png";
+import wc2 from "../assets/Partnership with world class insurers.png";
+import wc3 from "../assets/Risk Management.png";
+import wc4 from "../assets/Consultancy You Can Trust.png";
+import wc5 from "../assets/Up To Date Business Insights.png";
+import wc6 from "../assets/Claim Assistance.png";
 
 const goals = [
   { icon: LineChart, title: "Planning for retirement", iconColor: "text-red-500" },
@@ -357,8 +357,8 @@ export default function Home() {
         {[
           { label: "Established in 1990", pos: "top-[10%] left-0 right-0 mx-auto w-max", init: { opacity: 0, y: -100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
           { label: "CB UAE No: 35", pos: "bottom-[10%] left-0 right-0 mx-auto w-max", init: { opacity: 0, y: 100, scale: 0.8 }, anim: { opacity: 1, y: 0, scale: 1 } },
-          { label: "DHA No: 00067", pos: "left-[10%] xl:left-[14%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: -100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
-          { label: "HAAD No: B012", pos: "right-[10%] xl:right-[14%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: 100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
+          { label: "DHA No: 00067", pos: "left-[10%] xl:left-[13%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: -100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
+          { label: "HAAD No: B012", pos: "right-[10%] xl:right-[13%] top-0 bottom-0 my-auto h-max", init: { opacity: 0, x: 100, scale: 0.8 }, anim: { opacity: 1, x: 0, scale: 1 } },
         ].map((item, i) => (
           <motion.span
             key={item.label}

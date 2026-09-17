@@ -30,7 +30,7 @@ export default function Marine() {
         <motion.img loading="lazy"
           src={marImg}
           alt="Marine Hero"
-          className="w-full h-auto md:absolute md:inset-0 md:h-full object-cover object-center z-0"
+          className="w-full h-auto md:absolute md:inset-0 md:h-full object-cover object-top z-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}

@@ -6,7 +6,7 @@ import CTASection from "../components/CTASection";
 import AnimatedBackground from "../components/AnimatedBackground";
 import aboutHeroImg from "../assets/About US.png";
 import aboutImg from "../assets/about_team.png";
-import { Smile, HeartHandshake, Zap, TrendingUp, UserCheck, Trophy, ArrowRight, Star, ShieldCheck, Clock, Users, Smartphone, Wallet, Car } from "lucide-react";
+import { Smile, HeartHandshake, Zap, TrendingUp, UserCheck, Trophy, ArrowRight, Star, ShieldCheck, Clock, Users, Smartphone, Wallet, Car, Scale, Flame, Briefcase } from "lucide-react";
 
 const coreValues = [
   {
@@ -46,11 +46,11 @@ export default function About() {
     <div className="relative min-h-screen">
       <AnimatedBackground />
       {/* HERO */}
-      <section className="relative overflow-hidden h-[calc(100dvh-81px)] w-full">
+      <section className="relative overflow-hidden w-full md:h-[calc(100dvh-81px)]">
         <motion.img loading="lazy"
           src={aboutHeroImg}
           alt="About NRiS Hero"
-          className="absolute inset-0 w-full h-full object-cover object-center z-0"
+          className="w-full h-auto md:absolute md:inset-0 md:h-full object-cover object-center z-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -157,11 +157,11 @@ export default function About() {
                     style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
                     <div className="flex flex-col items-center -translate-y-[6px]">
-                      <div className="mb-4 text-[#FFC700]">
-                        <ShieldCheck size={48} strokeWidth={1.5} />
+                      <div className="mb-4 text-white">
+                        <Scale size={48} strokeWidth={1.5} />
                       </div>
                       <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                        Risk Management
+                        Ethics
                       </h3>
                     </div>
                   </div>
@@ -176,11 +176,11 @@ export default function About() {
                     style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
                     <div className="flex flex-col items-center -translate-y-[6px]">
-                      <div className="mb-4 text-[#FFC700]">
-                        <Users size={48} strokeWidth={1.5} />
+                      <div className="mb-4 text-white">
+                        <HeartHandshake size={48} strokeWidth={1.5} />
                       </div>
                       <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                        Partnership With<br/>World Class Insurers
+                        Empathy
                       </h3>
                     </div>
                   </div>
@@ -195,11 +195,11 @@ export default function About() {
                     style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
                     <div className="flex flex-col items-center -translate-y-[6px]">
-                      <div className="mb-4 text-[#FFC700]">
-                        <Smile size={48} strokeWidth={1.5} />
+                      <div className="mb-4 text-white">
+                        <ShieldCheck size={48} strokeWidth={1.5} />
                       </div>
                       <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                        Tailored Solutions
+                        Integrity
                       </h3>
                     </div>
                   </div>
@@ -210,11 +210,11 @@ export default function About() {
                     style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
                     <div className="flex flex-col items-center -translate-y-[6px]">
-                      <div className="mb-4 text-[#FFC700]">
-                        <Smartphone size={48} strokeWidth={1.5} />
+                      <div className="mb-4 text-white">
+                        <Flame size={48} strokeWidth={1.5} />
                       </div>
                       <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                        Consultancy You Can<br/>Trust
+                        Passion
                       </h3>
                     </div>
                   </div>
@@ -229,11 +229,11 @@ export default function About() {
                     style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
                     <div className="flex flex-col items-center -translate-y-[6px]">
-                      <div className="mb-4 text-[#FFC700]">
-                        <Wallet size={48} strokeWidth={1.5} />
+                      <div className="mb-4 text-white">
+                        <Briefcase size={48} strokeWidth={1.5} />
                       </div>
                       <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                        Up To Date Business<br/>Insights
+                        Professionalism
                       </h3>
                     </div>
                   </div>
@@ -252,11 +252,11 @@ export default function About() {
                     style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
                     <div className="flex flex-col items-center -translate-y-[6px]">
-                      <div className="mb-4 text-[#FFC700]">
-                        <Car size={48} strokeWidth={1.5} />
+                      <div className="mb-4 text-white">
+                        <Trophy size={48} strokeWidth={1.5} />
                       </div>
                       <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                        Claim Assistance
+                        Accomplishment
                       </h3>
                     </div>
                   </div>

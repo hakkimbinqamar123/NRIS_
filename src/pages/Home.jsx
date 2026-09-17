@@ -230,11 +230,11 @@ export default function Home() {
     <div className="relative min-h-screen">
       <AnimatedBackground />
       {/* HERO */}
-      <section className="relative overflow-hidden h-[calc(100dvh-81px)] w-full">
+      <section className="relative overflow-hidden w-full md:h-[calc(100dvh-81px)]">
         <motion.img loading="lazy"
           src={homePageImg}
           alt="Home Page Hero"
-          className="absolute inset-0 w-full h-full object-cover object-center z-0"
+          className="w-full h-auto md:absolute md:inset-0 md:h-full object-cover object-center z-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -262,7 +262,7 @@ export default function Home() {
       </section>
 
       {/* GOALS SECTION — centered hero */}
-      <section className="relative overflow-hidden min-h-screen flex flex-col items-center justify-center text-center px-4">
+      <section className="relative overflow-hidden py-24 lg:min-h-screen flex flex-col items-center justify-center text-center px-4">
 
         {/* Subtle radial glow behind content */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">

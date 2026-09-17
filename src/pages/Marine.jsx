@@ -26,11 +26,11 @@ export default function Marine() {
     <div className="relative min-h-screen">
       <AnimatedBackground />
       {/* HERO */}
-      <section className="relative w-full bg-black/5">
+      <section className="relative overflow-hidden w-full h-[calc(100dvh-64px)] xl:h-[calc(100dvh-80px)]">
         <motion.img loading="lazy"
           src={marImg}
           alt="Marine Hero"
-          className="w-full h-auto block z-0"
+          className="absolute inset-0 w-full h-full object-cover object-center z-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}

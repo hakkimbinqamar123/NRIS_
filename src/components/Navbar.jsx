@@ -37,12 +37,12 @@ export default function Navbar() {
     <header
       className="sticky top-0 w-full z-50 bg-white shadow-[0_2px_20px_-4px_rgba(11,78,162,0.1)] border-b border-gray-100"
     >
-      <div className="container-xl flex items-center justify-between py-2">
+      <div className="container-xl flex items-center justify-between py-1.5 md:py-2">
         <Link to="/" className="flex items-center gap-2 group">
           <img loading="lazy"
             src={nrisIcon}
             alt="NRIS Logo"
-            className="h-16 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-10 md:h-16 w-auto object-contain transition-transform group-hover:scale-105"
           />
         </Link>
 

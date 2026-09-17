@@ -85,7 +85,7 @@ export default function News() {
             {/* Left Column - Featured */}
             <AnimatedSection className="group cursor-pointer flex flex-col hover:-translate-y-1 transition-transform duration-300">
               <div className="w-full rounded-[12px] overflow-hidden mb-6 shadow-[0_4px_24px_-8px_rgba(0,0,0,0.12)]">
-                <img 
+                <img loading="lazy" 
                   src={featured.image} 
                   alt={featured.title} 
                   className="w-full aspect-[4/3] sm:aspect-[16/10] object-cover transition-transform duration-500 group-hover:scale-105"
@@ -131,7 +131,7 @@ export default function News() {
                     className="group cursor-pointer flex gap-5 py-4 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 transition-colors -mx-4 px-4 rounded-lg"
                   >
                     <div className="shrink-0 w-[110px] h-[75px] rounded-lg overflow-hidden shadow-sm">
-                      <img src={n.image} alt={n.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <img loading="lazy" src={n.image} alt={n.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>
                     <div className="flex flex-col justify-center flex-1 min-w-0">
                       <div className="flex items-center gap-2 text-[12px] text-gray-500 mb-1.5">

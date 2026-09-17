@@ -20,7 +20,7 @@ export default function CyberInsurance() {
       <AnimatedBackground />
       {/* HERO */}
       <section className="relative overflow-hidden h-[calc(100dvh-81px)] w-full">
-        <motion.img
+        <motion.img loading="lazy"
           src={cyberImg}
           alt="Cyber Insurance Hero"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"

@@ -39,7 +39,7 @@ export default function Navbar() {
     >
       <div className="container-xl flex items-center justify-between py-2">
         <Link to="/" className="flex items-center gap-2 group">
-          <img
+          <img loading="lazy"
             src={nrisIcon}
             alt="NRIS Logo"
             className="h-16 w-auto object-contain transition-transform group-hover:scale-105"

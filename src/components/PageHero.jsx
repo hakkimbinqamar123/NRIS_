@@ -16,7 +16,7 @@ export default function PageHero({ eyebrow, title, subtitle, crumb, cta, bgImage
       {!transparentBg && bgImage && (
         <>
           <motion.div style={{ y: yBg }} className="absolute -inset-y-[10%] inset-x-0 z-0">
-            <motion.img
+            <motion.img loading="lazy"
               src={bgImage}
               alt=""
               className="w-full h-full object-cover origin-center"

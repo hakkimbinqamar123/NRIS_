@@ -231,7 +231,7 @@ export default function Home() {
       <AnimatedBackground />
       {/* HERO */}
       <section className="relative overflow-hidden h-[calc(100dvh-81px)] w-full">
-        <motion.img
+        <motion.img loading="lazy"
           src={homePageImg}
           alt="Home Page Hero"
           className="absolute inset-0 w-full h-full object-cover object-center z-0"
@@ -408,7 +408,7 @@ export default function Home() {
                       </h3>
                     </div>
                     <div className="absolute inset-0 rounded-2xl overflow-hidden [transform:rotateY(180deg)] [backface-visibility:hidden]">
-                      <img src={item.img} alt={item.title} className="h-full w-full object-cover" />
+                      <img loading="lazy" src={item.img} alt={item.title} className="h-full w-full object-cover" />
                     </div>
                   </div>
                 </div>
@@ -443,7 +443,7 @@ export default function Home() {
                   <span className="absolute top-3 left-3 z-10 rounded-full bg-red-600 px-3 py-1 text-[11px] font-bold text-white uppercase tracking-wider shadow-md">
                     {s.tag}
                   </span>
-                  <img
+                  <img loading="lazy"
                     src={s.img}
                     alt={s.title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"

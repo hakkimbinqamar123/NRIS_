@@ -41,7 +41,7 @@ export default function MotorInsurance() {
     <div className="relative min-h-screen">
       <AnimatedBackground />
       {/* HERO */}
-      <section className="relative overflow-hidden min-h-screen w-full">
+      <section className="relative overflow-hidden h-[calc(100dvh-81px)] w-full">
         <motion.img
           src={motImg}
           alt="Motor Insurance Hero"

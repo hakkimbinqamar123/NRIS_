@@ -13,6 +13,10 @@ import {
   Brain,
   Globe2,
   ArrowRight,
+  ShieldCheck,
+  Smile,
+  Smartphone,
+  Car,
 } from "lucide-react";
 import PageHero from "../components/PageHero";
 import AnimatedSection from "../components/AnimatedSection";
@@ -63,7 +67,7 @@ export default function HealthInsurance() {
     <div className="relative min-h-screen">
       <AnimatedBackground />
       {/* HERO */}
-      <section className="relative overflow-hidden min-h-screen w-full">
+      <section className="relative overflow-hidden h-[calc(100dvh-81px)] w-full">
         <motion.img
           src={medImg}
           alt="Health Insurance Hero"
@@ -193,7 +197,7 @@ export default function HealthInsurance() {
       </section>
 
       {/* Why NRIS */}
-      <section className="section bg-gradient-to-br from-red-50 to-blue-50 border-t border-white">
+      {/* <section className="section bg-gradient-to-br from-red-50 to-blue-50 border-t border-white">
         <div className="container-xl text-center max-w-2xl mx-auto">
           <AnimatedSection animation="scaleUp">
             <span className="badge-pill mb-4 bg-red-100 text-red-700 border-red-200">Why NRiS</span>
@@ -206,7 +210,7 @@ export default function HealthInsurance() {
             </p>
           </AnimatedSection>
         </div>
-      </section>
+      </section> */}
 
       {/* <CTASection /> */}
     </div>

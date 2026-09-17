@@ -5,14 +5,14 @@ import { LinkedInIcon, TwitterIcon, FacebookIcon, InstagramIcon } from "../compo
 
 const abuDhabiItems = [
   { icon: MapPin, label: "Address", value: "Airport Road, NBK Tower, Office 1304" },
-  { icon: Phone, label: "Phone", value: "+971 2 446 6234", href: "tel:+97124466234" },
-  { icon: MessageCircle, label: "WhatsApp", value: "+971 56 402 1161", href: "https://wa.me/971564021161" },
+  { icon: Phone, label: "Phone", value: "+971 2 446 6234" },
+  { icon: Phone, label: "Mobile", value: "+971 56 402 1161" },
   { icon: Mail, label: "Email", value: "info@nris.ae", href: "mailto:info@nris.ae" },
 ];
 
 const dubaiItems = [
   { icon: MapPin, label: "Address", value: "Business Bay, BaysWater Tower, Office 2205" },
-  { icon: Phone, label: "Phone", value: "+971 4 564 5452", href: "tel:+97145645452" },
+  { icon: Phone, label: "Phone", value: "+971 4 564 5452" },
   { icon: Mail, label: "Complaints", value: "complaints@nris.ae", href: "mailto:complaints@nris.ae" },
   { icon: Clock, label: "Office Hours", value: "Mon – Fri, 8:30 – 18:00" },
 ];
@@ -217,7 +217,7 @@ export default function Contact() {
 
               <div className="relative overflow-hidden rounded-xl border border-black/5 bg-surface h-64 w-full mt-auto">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.7448550929444!2d54.37725487568396!3d24.459635961178737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e6882cc076b7f%3A0x4c364f985ea748ea!2sNational%20Bank%20of%20Kuwait!5e0!3m2!1sen!2sae!4v1789542201808!5m2!1sen!2sae"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3631.5770432845425!2d54.3761406!3d24.465455499999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e67d99bb72299%3A0x5e38ad64256bd255!2sNational%20Resources%20Insurance%20Services%20Company%20L.L.C!5e0!3m2!1sen!2sae!4v1789644572259!5m2!1sen!2sae"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

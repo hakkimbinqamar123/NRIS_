@@ -6,7 +6,7 @@ import CTASection from "../components/CTASection";
 import AnimatedBackground from "../components/AnimatedBackground";
 import aboutHeroImg from "../assets/About US.png";
 import aboutImg from "../assets/about_team.png";
-import { Smile, HeartHandshake, Zap, TrendingUp, UserCheck, Trophy, ArrowRight, Star, ShieldCheck, Clock } from "lucide-react";
+import { Smile, HeartHandshake, Zap, TrendingUp, UserCheck, Trophy, ArrowRight, Star, ShieldCheck, Clock, Users, Smartphone, Wallet, Car } from "lucide-react";
 
 const coreValues = [
   {
@@ -46,7 +46,7 @@ export default function About() {
     <div className="relative min-h-screen">
       <AnimatedBackground />
       {/* HERO */}
-      <section className="relative overflow-hidden min-h-screen w-full">
+      <section className="relative overflow-hidden h-[calc(100dvh-81px)] w-full">
         <motion.img
           src={aboutHeroImg}
           alt="About NRiS Hero"
@@ -135,39 +135,135 @@ export default function About() {
         </div>
       </section>
 
-      {/* Core Values */}
-      <section className="section bg-white/80 backdrop-blur-sm">
-        <div className="container-xl">
-          <AnimatedSection className="text-center mb-12" animation="slideUp">
-            <h2 className="font-display text-4xl font-bold mb-4 text-[#0B4EA2]">
-              Our Core Values
-            </h2>
-          </AnimatedSection>
+      {/* Our Core Values (Honeycomb) */}
+      <section className="section bg-white/30 backdrop-blur-sm relative overflow-hidden py-24">
+        <div className="container-xl relative z-10">
+          <h2 className="font-display text-4xl sm:text-5xl font-bold mb-16 text-[#0B4EA2] text-center">
+            Our Core Values
+          </h2>
 
-          <div className="flex flex-wrap justify-center gap-8">
-            {coreValues.map((v, i) => (
-              <AnimatedSection
-                key={i}
-                delay={i * 0.1}
-                className="group cursor-pointer"
-              >
-                {/* Shadow wrapper — clip-path clips box-shadow so we use filter drop-shadow */}
-                <div
-                  className="transition-all duration-300 group-hover:scale-110"
-                  style={{ filter: "drop-shadow(0 8px 24px rgba(0,0,0,0.18))" }}
-                >
-                  <div
-                    className="w-52 h-60 bg-white flex flex-col items-center justify-center text-center px-6 transition-all duration-300"
-                    style={{ clipPath: "polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)" }}
+          <div className="w-full overflow-x-auto pb-12 pt-4 flex justify-start lg:justify-center hide-scrollbar">
+            <div className="flex justify-center items-start min-w-[1100px] lg:min-w-0 pl-4 pr-4">
+              
+              {/* Column 1 */}
+              <div className="flex flex-col gap-2">
+                <div 
+                  className="w-[260px] h-[225px] opacity-0 pointer-events-none"
+                  style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                />
+                <AnimatedSection delay={0.3}>
+                  <div 
+                    className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center hover:scale-105 transition-transform duration-300"
+                    style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
-                    <span className="mb-3 flex h-12 w-12 items-center justify-center rounded bg-[#e61919] text-white group-hover:bg-[#cc1616] transition-all duration-300">
-                      <v.icon size={24} />
-                    </span>
-                    <h3 className="font-bold text-[#0A1830] text-base leading-tight group-hover:text-[#0B4EA2] transition-colors">{v.title}</h3>
+                    <div className="flex flex-col items-center -translate-y-[6px]">
+                      <div className="mb-4 text-[#FFC700]">
+                        <ShieldCheck size={48} strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
+                        Risk Management
+                      </h3>
+                    </div>
                   </div>
-                </div>
-              </AnimatedSection>
-            ))}
+                </AnimatedSection>
+              </div>
+
+              {/* Column 2 */}
+              <div className="flex flex-col gap-2 -ml-[57px] mt-[116px]">
+                <AnimatedSection delay={0.2}>
+                  <div 
+                    className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center hover:scale-105 transition-transform duration-300"
+                    style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                  >
+                    <div className="flex flex-col items-center -translate-y-[6px]">
+                      <div className="mb-4 text-[#FFC700]">
+                        <Users size={48} strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
+                        Partnership With<br/>World Class Insurers
+                      </h3>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              </div>
+
+              {/* Column 3 */}
+              <div className="flex flex-col gap-2 -ml-[57px]">
+                <AnimatedSection delay={0.1}>
+                  <div 
+                    className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center hover:scale-105 transition-transform duration-300"
+                    style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                  >
+                    <div className="flex flex-col items-center -translate-y-[6px]">
+                      <div className="mb-4 text-[#FFC700]">
+                        <Smile size={48} strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
+                        Tailored Solutions
+                      </h3>
+                    </div>
+                  </div>
+                </AnimatedSection>
+                <AnimatedSection delay={0.4}>
+                  <div 
+                    className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center hover:scale-105 transition-transform duration-300"
+                    style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                  >
+                    <div className="flex flex-col items-center -translate-y-[6px]">
+                      <div className="mb-4 text-[#FFC700]">
+                        <Smartphone size={48} strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
+                        Consultancy You Can<br/>Trust
+                      </h3>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              </div>
+
+              {/* Column 4 */}
+              <div className="flex flex-col gap-2 -ml-[57px] mt-[116px]">
+                <AnimatedSection delay={0.3}>
+                  <div 
+                    className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center hover:scale-105 transition-transform duration-300"
+                    style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                  >
+                    <div className="flex flex-col items-center -translate-y-[6px]">
+                      <div className="mb-4 text-[#FFC700]">
+                        <Wallet size={48} strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
+                        Up To Date Business<br/>Insights
+                      </h3>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              </div>
+
+              {/* Column 5 */}
+              <div className="flex flex-col gap-2 -ml-[57px]">
+                <div 
+                  className="w-[260px] h-[225px] opacity-0 pointer-events-none"
+                  style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                />
+                <AnimatedSection delay={0.5}>
+                  <div 
+                    className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center hover:scale-105 transition-transform duration-300"
+                    style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                  >
+                    <div className="flex flex-col items-center -translate-y-[6px]">
+                      <div className="mb-4 text-[#FFC700]">
+                        <Car size={48} strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
+                        Claim Assistance
+                      </h3>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>

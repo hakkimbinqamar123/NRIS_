@@ -82,7 +82,7 @@ export default function Footer() {
             </li>
             <li className="flex gap-3">
               <Phone size={22} className="shrink-0 text-black/70 mt-0.5" />
-              <a href="tel:+97124466234" className="hover:text-black/70 transition-colors">+971 2 446 6234</a>
+              <span>+971 2 446 6234</span>
             </li>
             <li className="flex gap-3">
               <MapPin size={22} className="shrink-0 text-black/70 mt-0.5" />
@@ -92,11 +92,11 @@ export default function Footer() {
             </li>
             <li className="flex gap-3">
               <Phone size={22} className="shrink-0 text-black/70 mt-0.5" />
-              <a href="tel:+97145645452" className="hover:text-black/70 transition-colors">+971 4 564 5452</a>
+              <span>+971 4 564 5452</span>
             </li>
             <li className="flex gap-3">
-              <MessageCircle size={22} className="shrink-0 text-black/70 mt-0.5" />
-              <a href="https://wa.me/971564021161" className="hover:text-black/70 transition-colors" target="_blank" rel="noopener noreferrer">+971 56 402 1161 (WhatsApp)</a>
+              <Phone size={22} className="shrink-0 text-black/70 mt-0.5" />
+              <span>+971 56 402 1161</span>
             </li>
             <li className="flex gap-3">
               <Mail size={22} className="shrink-0 text-black/70 mt-0.5" />

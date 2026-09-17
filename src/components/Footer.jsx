@@ -85,13 +85,13 @@ export default function Footer() {
               <a href="tel:+97124466234" className="hover:text-black/70 transition-colors">+971 2 446 6234</a>
             </li>
             <li className="flex gap-3">
-              <MapPin size={18} className="shrink-0 text-black/70 mt-0.5" />
+              <MapPin size={22} className="shrink-0 text-black/70 mt-0.5" />
               <span>
                 <span className="font-semibold">Dubai:</span> Business Bay, BaysWater Tower, Office 2205
               </span>
             </li>
             <li className="flex gap-3">
-              <Phone size={18} className="shrink-0 text-black/70 mt-0.5" />
+              <Phone size={22} className="shrink-0 text-black/70 mt-0.5" />
               <a href="tel:+97145645452" className="hover:text-black/70 transition-colors">+971 4 564 5452</a>
             </li>
             <li className="flex gap-3">

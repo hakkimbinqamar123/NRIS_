@@ -35,18 +35,14 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky z-50 bg-white shadow-[0_8px_30px_-4px_rgba(11,78,162,0.15)] transition-all duration-300
-        top-3 w-[calc(100%-1.5rem)] mx-auto border border-gray-100 overflow-hidden
-        ${open ? "rounded-3xl" : "rounded-[2.5rem]"}
-        xl:top-0 xl:w-full xl:rounded-none xl:border-x-0 xl:border-t-0 xl:border-b xl:overflow-visible xl:shadow-[0_2px_20px_-4px_rgba(11,78,162,0.1)]
-      `}
+      className="sticky top-0 w-full z-50 bg-white shadow-[0_2px_20px_-4px_rgba(11,78,162,0.1)] border-b border-gray-100"
     >
-      <div className="container-xl flex items-center justify-between py-1.5 xl:py-2">
+      <div className="container-xl flex items-center justify-between py-2">
         <Link to="/" className="flex items-center gap-2 group">
           <img loading="lazy"
             src={nrisIcon}
             alt="NRIS Logo"
-            className="h-10 xl:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+            className="h-16 w-auto object-contain transition-transform group-hover:scale-105"
           />
         </Link>
 

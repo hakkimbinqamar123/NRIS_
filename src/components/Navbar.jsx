@@ -112,52 +112,74 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.25 }}
-            className="xl:hidden overflow-hidden bg-white border-t border-black/5"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="xl:hidden fixed inset-0 z-[100] flex justify-center items-center p-4"
           >
-            <div className="container-xl flex flex-col py-4 gap-4">
-              {links.map((l) => (
-                <div key={l.to} className="flex flex-col gap-2">
-                  <NavLink
-                    to={l.to}
-                    end={l.to === "/"}
-                    onClick={() => !l.dropdown && setOpen(false)}
-                    className={({ isActive }) =>
-                      `text-sm font-medium ${isActive ? "text-primary" : "text-ink/80"
-                      }`
-                    }
-                  >
-                    {l.label}
-                  </NavLink>
+            {/* Clickable Backdrop to close */}
+            <div 
+              className="absolute inset-0 bg-black/10 backdrop-blur-[2px]" 
+              onClick={() => setOpen(false)}
+            />
 
-                  {l.dropdown && (
-                    <div className="flex flex-col pl-4 gap-2 border-l-2 border-red-100 ml-2 mt-1">
-                      {l.dropdown.map((dl) => (
-                        <Link
-                          key={dl.to}
-                          to={dl.to}
-                          onClick={() => setOpen(false)}
-                          className="text-sm text-ink/70 hover:text-red-600"
-                        >
-                          {dl.label}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-
-              <Link
-                to="/contact"
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 10 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="relative w-[90vw] max-w-sm max-h-[90vh] bg-black/10 backdrop-blur-2xl rounded-3xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.5)] border border-white/20 flex flex-col items-center overflow-y-auto custom-scrollbar p-6"
+            >
+              {/* Close Button */}
+              <button
                 onClick={() => setOpen(false)}
-                className="btn-primary justify-center text-sm mt-2"
+                className="absolute top-4 right-4 text-[#0B4EA2] p-2 bg-[#0B4EA2]/10 rounded-full hover:bg-[#0B4EA2]/20 transition-colors"
+                aria-label="Close menu"
               >
-                Get a Quote
-              </Link>
-            </div>
+                <X size={24} />
+              </button>
+
+              <div className="flex flex-col gap-6 items-center text-center w-full pt-6 pb-2">
+                {links.map((l) => (
+                  <div key={l.to} className="flex flex-col items-center w-full">
+                    <NavLink
+                      to={l.to}
+                      end={l.to === "/"}
+                      onClick={() => !l.dropdown && setOpen(false)}
+                      className={({ isActive }) =>
+                        `text-2xl font-display font-extrabold transition-all ${
+                          isActive ? "text-[#0B4EA2] scale-110 tracking-wide" : "text-[#0B4EA2]/80 hover:text-[#0B4EA2]"
+                        }`
+                      }
+                    >
+                      {l.label}
+                    </NavLink>
+                    {l.dropdown && (
+                      <div className="flex flex-col gap-3 mt-4 mb-1 w-full bg-[#0B4EA2]/10 rounded-2xl py-4">
+                        {l.dropdown.map((dl) => (
+                          <Link
+                            key={dl.to}
+                            to={dl.to}
+                            onClick={() => setOpen(false)}
+                            className="text-[17px] font-semibold text-[#0B4EA2]/80 hover:text-[#0B4EA2] transition-colors"
+                          >
+                            {dl.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ))}
+
+                <Link
+                  to="/contact"
+                  onClick={() => setOpen(false)}
+                  className="mt-4 bg-[#0B4EA2] text-white hover:bg-blue-800 py-3.5 px-8 text-lg font-bold rounded-full shadow-[0_0_20px_rgba(11,78,162,0.3)] transition-transform hover:scale-105 active:scale-95 w-full max-w-[220px]"
+                >
+                  Get a Quote
+                </Link>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

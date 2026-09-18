@@ -112,8 +112,8 @@ export default function About() {
       <section className="section relative z-10">
         <div className="container-xl max-w-5xl mx-auto">
           <div className="grid gap-12 md:grid-cols-2">
-            <AnimatedSection className="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-[#0B4EA2] hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1">
-              <div className="h-1 w-12 bg-[#0B4EA2] mb-6"></div>
+            <AnimatedSection className="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-red-600 hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1">
+              <div className="h-1 w-12 bg-red-600 mb-6"></div>
               <h2 className="font-display text-4xl font-bold text-ink mb-6">
                 Our Vision
               </h2>
@@ -122,8 +122,8 @@ export default function About() {
               </p>
             </AnimatedSection>
 
-            <AnimatedSection delay={0.2} className="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-[#0B4EA2] hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1">
-              <div className="h-1 w-12 bg-[#0B4EA2] mb-6"></div>
+            <AnimatedSection delay={0.2} className="bg-white rounded-2xl p-8 shadow-sm border-t-4 border-red-600 hover:shadow-lg transition-shadow duration-300 hover:-translate-y-1">
+              <div className="h-1 w-12 bg-red-600 mb-6"></div>
               <h2 className="font-display text-4xl font-bold text-ink mb-6">
                 Our Mission
               </h2>
@@ -138,31 +138,36 @@ export default function About() {
       {/* Our Core Values (Honeycomb) */}
       <section className="section bg-white/30 backdrop-blur-sm relative overflow-hidden py-24">
         <div className="container-xl relative z-10">
-          <h2 className="font-display text-4xl sm:text-5xl font-bold mb-16 text-[#0B4EA2] text-center">
+          <h2 className="font-display text-4xl sm:text-5xl font-bold mb-16 text-black text-center">
             Our Core Values
           </h2>
 
           <div className="w-full overflow-x-auto pb-12 pt-4 flex justify-start lg:justify-center hide-scrollbar">
             <div className="flex justify-center items-start min-w-[1100px] lg:min-w-0 pl-4 pr-4">
-              
+
               {/* Column 1 */}
               <div className="flex flex-col gap-2">
-                <div 
+                <div
                   className="w-[260px] h-[225px] opacity-0 pointer-events-none"
                   style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                 />
                 <AnimatedSection delay={0.3}>
-                  <div 
-                    className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center hover:scale-105 transition-transform duration-300"
+                  <div
+                    className="w-[264px] h-[229px] bg-red-600 flex items-center justify-center hover:scale-105 transition-transform duration-300"
                     style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
-                    <div className="flex flex-col items-center -translate-y-[6px]">
-                      <div className="mb-4 text-white">
-                        <Scale size={48} strokeWidth={1.5} />
+                    <div
+                      className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center"
+                      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                    >
+                      <div className="flex flex-col items-center -translate-y-[6px]">
+                        <div className="mb-4 text-white">
+                          <Scale size={48} strokeWidth={1.5} />
+                        </div>
+                        <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
+                          Ethics
+                        </h3>
                       </div>
-                      <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                        Ethics
-                      </h3>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -171,17 +176,22 @@ export default function About() {
               {/* Column 2 */}
               <div className="flex flex-col gap-2 -ml-[57px] mt-[116px]">
                 <AnimatedSection delay={0.2}>
-                  <div 
-                    className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center hover:scale-105 transition-transform duration-300"
+                  <div
+                    className="w-[264px] h-[229px] bg-red-600 flex items-center justify-center hover:scale-105 transition-transform duration-300"
                     style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
-                    <div className="flex flex-col items-center -translate-y-[6px]">
-                      <div className="mb-4 text-white">
-                        <HeartHandshake size={48} strokeWidth={1.5} />
+                    <div
+                      className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center"
+                      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                    >
+                      <div className="flex flex-col items-center -translate-y-[6px]">
+                        <div className="mb-4 text-white">
+                          <HeartHandshake size={48} strokeWidth={1.5} />
+                        </div>
+                        <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
+                          Empathy
+                        </h3>
                       </div>
-                      <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                        Empathy
-                      </h3>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -190,32 +200,42 @@ export default function About() {
               {/* Column 3 */}
               <div className="flex flex-col gap-2 -ml-[57px]">
                 <AnimatedSection delay={0.1}>
-                  <div 
-                    className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center hover:scale-105 transition-transform duration-300"
+                  <div
+                    className="w-[264px] h-[229px] bg-red-600 flex items-center justify-center hover:scale-105 transition-transform duration-300"
                     style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
-                    <div className="flex flex-col items-center -translate-y-[6px]">
-                      <div className="mb-4 text-white">
-                        <ShieldCheck size={48} strokeWidth={1.5} />
+                    <div
+                      className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center"
+                      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                    >
+                      <div className="flex flex-col items-center -translate-y-[6px]">
+                        <div className="mb-4 text-white">
+                          <ShieldCheck size={48} strokeWidth={1.5} />
+                        </div>
+                        <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
+                          Integrity
+                        </h3>
                       </div>
-                      <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                        Integrity
-                      </h3>
                     </div>
                   </div>
                 </AnimatedSection>
                 <AnimatedSection delay={0.4}>
-                  <div 
-                    className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center hover:scale-105 transition-transform duration-300"
+                  <div
+                    className="w-[264px] h-[229px] bg-red-600 flex items-center justify-center hover:scale-105 transition-transform duration-300"
                     style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
-                    <div className="flex flex-col items-center -translate-y-[6px]">
-                      <div className="mb-4 text-white">
-                        <Flame size={48} strokeWidth={1.5} />
+                    <div
+                      className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center"
+                      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                    >
+                      <div className="flex flex-col items-center -translate-y-[6px]">
+                        <div className="mb-4 text-white">
+                          <Flame size={48} strokeWidth={1.5} />
+                        </div>
+                        <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
+                          Passion
+                        </h3>
                       </div>
-                      <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                        Passion
-                      </h3>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -224,17 +244,22 @@ export default function About() {
               {/* Column 4 */}
               <div className="flex flex-col gap-2 -ml-[57px] mt-[116px]">
                 <AnimatedSection delay={0.3}>
-                  <div 
-                    className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center hover:scale-105 transition-transform duration-300"
+                  <div
+                    className="w-[264px] h-[229px] bg-red-600 flex items-center justify-center hover:scale-105 transition-transform duration-300"
                     style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
-                    <div className="flex flex-col items-center -translate-y-[6px]">
-                      <div className="mb-4 text-white">
-                        <Briefcase size={48} strokeWidth={1.5} />
+                    <div
+                      className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center"
+                      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                    >
+                      <div className="flex flex-col items-center -translate-y-[6px]">
+                        <div className="mb-4 text-white">
+                          <Briefcase size={48} strokeWidth={1.5} />
+                        </div>
+                        <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
+                          Professionalism
+                        </h3>
                       </div>
-                      <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                        Professionalism
-                      </h3>
                     </div>
                   </div>
                 </AnimatedSection>
@@ -242,22 +267,27 @@ export default function About() {
 
               {/* Column 5 */}
               <div className="flex flex-col gap-2 -ml-[57px]">
-                <div 
+                <div
                   className="w-[260px] h-[225px] opacity-0 pointer-events-none"
                   style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                 />
                 <AnimatedSection delay={0.5}>
-                  <div 
-                    className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center hover:scale-105 transition-transform duration-300"
+                  <div
+                    className="w-[264px] h-[229px] bg-red-600 flex items-center justify-center hover:scale-105 transition-transform duration-300"
                     style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
                   >
-                    <div className="flex flex-col items-center -translate-y-[6px]">
-                      <div className="mb-4 text-white">
-                        <Trophy size={48} strokeWidth={1.5} />
+                    <div
+                      className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center"
+                      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
+                    >
+                      <div className="flex flex-col items-center -translate-y-[6px]">
+                        <div className="mb-4 text-white">
+                          <Trophy size={48} strokeWidth={1.5} />
+                        </div>
+                        <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
+                          Accomplishment
+                        </h3>
                       </div>
-                      <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                        Accomplishment
-                      </h3>
                     </div>
                   </div>
                 </AnimatedSection>

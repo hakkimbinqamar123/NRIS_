@@ -14,7 +14,7 @@ const dubaiItems = [
   { icon: MapPin, label: "Address", value: "Business Bay, BaysWater Tower, Office 2205" },
   { icon: Phone, label: "Phone", value: "+971 4 564 5452" },
   { icon: Mail, label: "Complaints", value: "complaints@nris.ae", href: "mailto:complaints@nris.ae" },
-  { icon: Clock, label: "Office Hours", value: "Mon – Fri, 8:30 – 18:00" },
+  { icon: Clock, label: "Office Hours", value: "Mon – Fri: 08:30 – 18:00" },
 ];
 
 const InfoList = ({ items }) => (
@@ -25,7 +25,7 @@ const InfoList = ({ items }) => (
           <it.icon size={20} />
         </span>
         <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 mt-2">
-          <p className="text-sm uppercase tracking-wide text-muted shrink-0">
+          <p className="text-xs uppercase tracking-wide text-muted shrink-0">
             {it.label}:
           </p>
           {it.href ? (
@@ -33,12 +33,12 @@ const InfoList = ({ items }) => (
               href={it.href}
               target={it.label === "WhatsApp" ? "_blank" : undefined}
               rel={it.label === "WhatsApp" ? "noopener noreferrer" : undefined}
-              className="text-base font-medium text-ink hover:text-primary transition-colors"
+              className="text-sm font-medium text-ink hover:text-primary transition-colors"
             >
               {it.value}
             </a>
           ) : (
-            <p className="text-base font-medium text-ink">{it.value}</p>
+            <p className="text-sm font-medium text-ink">{it.value}</p>
           )}
         </div>
       </li>
@@ -71,20 +71,20 @@ export default function Contact() {
         <div className="container-xl">
           <div className="mb-12 text-center lg:text-left">
             <span className="badge-pill mb-4 inline-block">Contact</span>
-            <h1 className="font-display text-5xl sm:text-6xl font-bold leading-tight mb-4">
+            <h1 className="font-display text-4xl sm:text-5xl font-bold leading-tight mb-4">
               Speak With An <span className="text-[#0B4EA2]">NRiS</span> Specialist
             </h1>
-            <p className="text-muted text-xl max-w-2xl mx-auto lg:mx-0">
+            <p className="text-muted text-lg max-w-2xl mx-auto lg:mx-0">
               Tell us about your coverage needs and a licensed advisor will respond within one business day.
             </p>
           </div>
 
           {/* Top Row: Form */}
           <AnimatedSection className="rounded-2xl border border-black/5 bg-white p-8 sm:p-10 shadow-sm mb-12">
-            <h2 className="font-display text-3xl font-bold text-ink mb-1">
+            <h2 className="font-display text-2xl font-bold text-ink mb-1">
               Request A Quote
             </h2>
-            <p className="text-muted text-base mb-8">
+            <p className="text-muted text-sm mb-8">
               All fields marked with * are required.
             </p>
 
@@ -110,7 +110,7 @@ export default function Contact() {
             ) : (
               <form onSubmit={handleSubmit} className="grid gap-6 sm:grid-cols-2">
                 <div className="sm:col-span-1">
-                  <label className="mb-2 block text-base font-medium text-ink">
+                  <label className="mb-2 block text-sm font-medium text-ink">
                     Name *
                   </label>
                   <input
@@ -118,24 +118,24 @@ export default function Contact() {
                     name="name"
                     value={form.name}
                     onChange={handleChange}
-                    className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none transition-colors focus:border-primary"
+                    className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
                     placeholder="Your full name"
                   />
                 </div>
                 <div className="sm:col-span-1">
-                  <label className="mb-2 block text-base font-medium text-ink">
+                  <label className="mb-2 block text-sm font-medium text-ink">
                     Company
                   </label>
                   <input
                     name="company"
                     value={form.company}
                     onChange={handleChange}
-                    className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none transition-colors focus:border-primary"
+                    className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
                     placeholder="Company name"
                   />
                 </div>
                 <div className="sm:col-span-1">
-                  <label className="mb-2 block text-base font-medium text-ink">
+                  <label className="mb-2 block text-sm font-medium text-ink">
                     Email *
                   </label>
                   <input
@@ -144,12 +144,12 @@ export default function Contact() {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
-                    className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none transition-colors focus:border-primary"
+                    className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
                     placeholder="you@company.com"
                   />
                 </div>
                 <div className="sm:col-span-1">
-                  <label className="mb-2 block text-base font-medium text-ink">
+                  <label className="mb-2 block text-sm font-medium text-ink">
                     Phone *
                   </label>
                   <input
@@ -157,12 +157,12 @@ export default function Contact() {
                     name="phone"
                     value={form.phone}
                     onChange={handleChange}
-                    className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none transition-colors focus:border-primary"
+                    className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
                     placeholder="+971 ..."
                   />
                 </div>
                 <div className="sm:col-span-1">
-                  <label className="mb-2 block text-base font-medium text-ink">
+                  <label className="mb-2 block text-sm font-medium text-ink">
                     Insurance Type *
                   </label>
                   <select
@@ -170,7 +170,7 @@ export default function Contact() {
                     name="type"
                     value={form.type}
                     onChange={handleChange}
-                    className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none transition-colors focus:border-primary bg-white"
+                    className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-primary bg-white"
                   >
 
                     <option>Motor Insurance</option>
@@ -183,7 +183,7 @@ export default function Contact() {
                   </select>
                 </div>
                 <div className="sm:col-span-1">
-                  <label className="mb-2 block text-base font-medium text-ink">
+                  <label className="mb-2 block text-sm font-medium text-ink">
                     Message
                   </label>
                   <textarea
@@ -191,7 +191,7 @@ export default function Contact() {
                     value={form.message}
                     onChange={handleChange}
                     rows={1}
-                    className="w-full rounded-lg border border-black/10 px-4 py-3 text-base outline-none transition-colors focus:border-primary"
+                    className="w-full rounded-lg border border-black/10 px-4 py-3 text-sm outline-none transition-colors focus:border-primary"
                     placeholder="Tell us about your coverage needs..."
                   />
                 </div>
@@ -209,7 +209,7 @@ export default function Contact() {
 
             {/* Abu Dhabi Office */}
             <AnimatedSection delay={0.1} className="rounded-2xl border border-black/5 bg-white p-8 shadow-sm flex flex-col">
-              <h3 className="font-display text-2xl font-semibold text-ink mb-8">Abu Dhabi Office</h3>
+              <h3 className="font-display text-xl font-semibold text-ink mb-8">Abu Dhabi Office</h3>
 
               <div className="flex-1 mb-8">
                 <InfoList items={abuDhabiItems} />
@@ -232,7 +232,7 @@ export default function Contact() {
 
             {/* Dubai Office */}
             <AnimatedSection delay={0.2} className="rounded-2xl border border-black/5 bg-white p-8 shadow-sm flex flex-col">
-              <h3 className="font-display text-2xl font-semibold text-ink mb-8">Dubai Office</h3>
+              <h3 className="font-display text-xl font-semibold text-ink mb-8">Dubai Office</h3>
 
               <div className="flex-1 mb-8">
                 <InfoList items={dubaiItems} />

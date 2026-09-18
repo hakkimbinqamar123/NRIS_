@@ -18,7 +18,7 @@ import {
 import AnimatedSection from "../components/AnimatedSection";
 import AnimatedBackground from "../components/AnimatedBackground";
 import healthImg from "../assets/health.png";
-import motorImg from "../assets/motor.png";
+import motorImg from "../assets/Motor.png";
 import engineeringImg from "../assets/Eng.png";
 import propertyImg from "../assets/Home.png";
 import homePageImg from "../assets/Home Page.png";

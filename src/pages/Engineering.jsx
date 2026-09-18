@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { HardHat, ArrowRight } from "lucide-react";
-import PageHero from "../components/PageHero";
 import AnimatedSection from "../components/AnimatedSection";
-import CTASection from "../components/CTASection";
 import AnimatedBackground from "../components/AnimatedBackground";
-import engineeringHeroBg from "../assets/engineering_hero_bg.png";
 
 const engineeringCards = [
   { num: "01", title: "Contractors' All Risks", desc: "Secures the contractor from any accidents that happen on the construction site while working" },
@@ -110,7 +107,6 @@ export default function Engineering() {
           </div>
         </div>
       </section>
-      {/* <CTASection /> */}
     </div>
   );
 }

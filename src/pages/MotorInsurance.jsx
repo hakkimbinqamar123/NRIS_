@@ -2,24 +2,10 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   Car,
-  Truck,
-  ShieldCheck,
-  ShieldAlert,
-  Check,
-  Phone,
-  UserSearch,
-  Wrench,
   ArrowRight,
 } from "lucide-react";
-import PageHero from "../components/PageHero";
 import AnimatedSection from "../components/AnimatedSection";
-import PhotoBlock from "../components/PhotoBlock";
 import AnimatedBackground from "../components/AnimatedBackground";
-import FAQAccordion from "../components/FAQAccordion";
-import CTASection from "../components/CTASection";
-import motorImg from "../assets/motor.png";
-import motorHeroBg from "../assets/motor_hero_bg.png";
-import nrisHeroBanner from "../assets/NRIS_hero_banner2.png";
 
 const benefits = [
   { num: "01", title: "Third-Party Car Insurance Is Mandatory", desc: "The UAE Government has made it mandatory to buy TPL, as it protects Licensed Driver's Legal Liability towards third parties and their property" },
@@ -29,10 +15,6 @@ const benefits = [
   { num: "05", title: "Covers Damages To The Car", desc: "Excellent financial protection against damage to the car or loss of vehicle" },
   { num: "06", title: "Covers Your Car Against Theft", desc: "Financial security in case of accidents, theft, and natural catastrophes" },
 ];
-
-
-
-
 
 import motImg from "../assets/Mot.png";
 
@@ -147,10 +129,6 @@ export default function MotorInsurance() {
           </div>
         </div>
       </section>
-
-
-
-      {/* <CTASection /> */}
     </div>
   );
 }

@@ -1,15 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Ship, ArrowRight, Check } from "lucide-react";
-import PageHero from "../components/PageHero";
 import AnimatedSection from "../components/AnimatedSection";
-import CTASection from "../components/CTASection";
 import AnimatedBackground from "../components/AnimatedBackground";
-import marine1Img from "../assets/marine1.png";
-import marine2Img from "../assets/marine2.png";
-import marine3Img from "../assets/marine3.png";
-import marine4Img from "../assets/Marine.png";
-import generalHeroBg from "../assets/engineering_hero_bg.png"; // reusing hero bg
 
 import marImg from "../assets/MAR.png";
 
@@ -125,8 +118,6 @@ export default function Marine() {
           </div>
         </div>
       </section>
-
-      {/* <CTASection /> */}
     </div>
   );
 }

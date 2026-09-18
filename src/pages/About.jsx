@@ -1,45 +1,10 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import PageHero from "../components/PageHero";
 import AnimatedSection from "../components/AnimatedSection";
-import CTASection from "../components/CTASection";
 import AnimatedBackground from "../components/AnimatedBackground";
 import aboutHeroImg from "../assets/About US.png";
-import aboutImg from "../assets/about_team.png";
-import { Smile, HeartHandshake, Zap, TrendingUp, UserCheck, Trophy, ArrowRight, Star, ShieldCheck, Clock, Users, Smartphone, Wallet, Car, Scale, Flame, Briefcase } from "lucide-react";
-
-const coreValues = [
-  {
-    icon: Smile,
-    title: "Ethics",
-    desc: "Upholding our code of conduct and principles at every step of our work"
-  },
-  {
-    icon: HeartHandshake,
-    title: "Empathy",
-    desc: "Driving strategic and client-centric decisions in all our endeavours"
-  },
-  {
-    icon: Zap,
-    title: "Integrity",
-    desc: "Ensuring responsible and fair practice at every stage of our work"
-  },
-  {
-    icon: TrendingUp,
-    title: "Passion",
-    desc: "Committed to adding value in the lives of our clients and loving every step of it"
-  },
-  {
-    icon: UserCheck,
-    title: "Professionalism",
-    desc: "Being a service minded and customer oriented organization, we are committed to our professional obligation of serving our clients in the best way possible"
-  },
-  {
-    icon: Trophy,
-    title: "Accomplishment",
-    desc: "Serving customers for more than 30 years, we invest heavily on securing a robust and progressive future for our organization"
-  }
-];
+import { HeartHandshake, Trophy, ArrowRight, ShieldCheck, Scale, Flame, Briefcase } from "lucide-react";
+import HexagonCard from "../components/HexagonCard";
 
 export default function About() {
   return (
@@ -147,158 +112,36 @@ export default function About() {
 
               {/* Column 1 */}
               <div className="flex flex-col gap-2">
-                <div
-                  className="w-[260px] h-[225px] opacity-0 pointer-events-none"
-                  style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                />
-                <AnimatedSection delay={0.3}>
-                  <div
-                    className="w-[264px] h-[229px] bg-red-600 flex items-center justify-center hover:scale-105 transition-transform duration-300"
-                    style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                  >
-                    <div
-                      className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center"
-                      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                    >
-                      <div className="flex flex-col items-center -translate-y-[6px]">
-                        <div className="mb-4 text-white">
-                          <Scale size={48} strokeWidth={1.5} />
-                        </div>
-                        <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                          Ethics
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </AnimatedSection>
+                <HexagonCard invisible={true} />
+                <HexagonCard icon={Scale} title="Ethics" delay={0.3} />
               </div>
 
               {/* Column 2 */}
               <div className="flex flex-col gap-2 -ml-[57px] mt-[116px]">
-                <AnimatedSection delay={0.2}>
-                  <div
-                    className="w-[264px] h-[229px] bg-red-600 flex items-center justify-center hover:scale-105 transition-transform duration-300"
-                    style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                  >
-                    <div
-                      className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center"
-                      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                    >
-                      <div className="flex flex-col items-center -translate-y-[6px]">
-                        <div className="mb-4 text-white">
-                          <HeartHandshake size={48} strokeWidth={1.5} />
-                        </div>
-                        <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                          Empathy
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </AnimatedSection>
+                <HexagonCard icon={HeartHandshake} title="Empathy" delay={0.2} />
               </div>
 
               {/* Column 3 */}
               <div className="flex flex-col gap-2 -ml-[57px]">
-                <AnimatedSection delay={0.1}>
-                  <div
-                    className="w-[264px] h-[229px] bg-red-600 flex items-center justify-center hover:scale-105 transition-transform duration-300"
-                    style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                  >
-                    <div
-                      className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center"
-                      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                    >
-                      <div className="flex flex-col items-center -translate-y-[6px]">
-                        <div className="mb-4 text-white">
-                          <ShieldCheck size={48} strokeWidth={1.5} />
-                        </div>
-                        <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                          Integrity
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </AnimatedSection>
-                <AnimatedSection delay={0.4}>
-                  <div
-                    className="w-[264px] h-[229px] bg-red-600 flex items-center justify-center hover:scale-105 transition-transform duration-300"
-                    style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                  >
-                    <div
-                      className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center"
-                      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                    >
-                      <div className="flex flex-col items-center -translate-y-[6px]">
-                        <div className="mb-4 text-white">
-                          <Flame size={48} strokeWidth={1.5} />
-                        </div>
-                        <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                          Passion
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </AnimatedSection>
+                <HexagonCard icon={ShieldCheck} title="Integrity" delay={0.1} />
+                <HexagonCard icon={Flame} title="Passion" delay={0.4} />
               </div>
 
               {/* Column 4 */}
               <div className="flex flex-col gap-2 -ml-[57px] mt-[116px]">
-                <AnimatedSection delay={0.3}>
-                  <div
-                    className="w-[264px] h-[229px] bg-red-600 flex items-center justify-center hover:scale-105 transition-transform duration-300"
-                    style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                  >
-                    <div
-                      className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center"
-                      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                    >
-                      <div className="flex flex-col items-center -translate-y-[6px]">
-                        <div className="mb-4 text-white">
-                          <Briefcase size={48} strokeWidth={1.5} />
-                        </div>
-                        <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                          Professionalism
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </AnimatedSection>
+                <HexagonCard icon={Briefcase} title="Professionalism" delay={0.3} />
               </div>
 
               {/* Column 5 */}
               <div className="flex flex-col gap-2 -ml-[57px]">
-                <div
-                  className="w-[260px] h-[225px] opacity-0 pointer-events-none"
-                  style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                />
-                <AnimatedSection delay={0.5}>
-                  <div
-                    className="w-[264px] h-[229px] bg-red-600 flex items-center justify-center hover:scale-105 transition-transform duration-300"
-                    style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                  >
-                    <div
-                      className="w-[260px] h-[225px] bg-gradient-to-br from-[#0B4EA2] to-[#083D82] flex flex-col items-center justify-center p-6 text-center"
-                      style={{ clipPath: 'polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)' }}
-                    >
-                      <div className="flex flex-col items-center -translate-y-[6px]">
-                        <div className="mb-4 text-white">
-                          <Trophy size={48} strokeWidth={1.5} />
-                        </div>
-                        <h3 className="text-white text-[15px] font-bold tracking-wide uppercase leading-snug">
-                          Accomplishment
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </AnimatedSection>
+                <HexagonCard invisible={true} />
+                <HexagonCard icon={Trophy} title="Accomplishment" delay={0.5} />
               </div>
 
             </div>
           </div>
         </div>
       </section>
-
-      {/* <CTASection /> */}
     </div>
   );
 }

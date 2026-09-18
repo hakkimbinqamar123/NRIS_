@@ -7,36 +7,20 @@ import {
   Clock,
   ArrowRight,
   Users,
-  Target,
-  Handshake,
-  Zap,
-  BadgePercent,
-  HeartHandshake,
-  HeartPulse,
   Car,
-  HardHat,
-  Building2,
-  ClipboardList,
-  Search,
-  FileCheck2,
-  LifeBuoy,
   LineChart,
   Shield,
   PiggyBank,
   Wallet,
-  CheckCircle2,
   Smile,
   Smartphone,
 } from "lucide-react";
 import AnimatedSection from "../components/AnimatedSection";
 import AnimatedBackground from "../components/AnimatedBackground";
-import CTASection from "../components/CTASection";
 import healthImg from "../assets/health.png";
 import motorImg from "../assets/motor.png";
 import engineeringImg from "../assets/Eng.png";
 import propertyImg from "../assets/Home.png";
-import whyChooseUsImg from "../assets/why_choose_us.png";
-import heroBannerImg from "../assets/hero_banner_image.png";
 import homePageImg from "../assets/Home Page.png";
 import wc1 from "../assets/Tailored Solutaions.png";
 import wc2 from "../assets/Partnership with world class insurers.png";
@@ -270,15 +254,6 @@ export default function Home() {
         </div>
 
         <AnimatedSection className="relative z-10 max-w-3xl mx-auto">
-          {/* Badge */}
-          {/* <motion.span
-            className="inline-flex items-center gap-2 badge-pill mb-8 bg-blue-50/80 text-[#0B4EA2] border-blue-100 backdrop-blur-sm px-5 py-2 text-sm font-semibold"
-            initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-          >
-            <span className="h-2 w-2 rounded-full bg-[#0B4EA2] animate-pulse" />
-            Licensed Insurance Brokerage
-          </motion.span> */}
 
           {/* Heading */}
           <motion.h1
@@ -467,8 +442,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* <CTASection /> */}
     </div>
   );
 }

@@ -6,27 +6,10 @@ import {
   Building2,
   Users,
   ShieldPlus,
-  Hospital,
-  Wallet,
-  Stethoscope,
-  Baby,
-  Brain,
-  Globe2,
   ArrowRight,
-  ShieldCheck,
-  Smile,
-  Smartphone,
-  Car,
 } from "lucide-react";
-import PageHero from "../components/PageHero";
 import AnimatedSection from "../components/AnimatedSection";
-import PhotoBlock from "../components/PhotoBlock";
 import AnimatedBackground from "../components/AnimatedBackground";
-import FAQAccordion from "../components/FAQAccordion";
-import CTASection from "../components/CTASection";
-import healthImg from "../assets/health.png";
-import healthHeroBg from "../assets/health_hero_bg.png";
-import nrisHeroBanner from "../assets/NRIS_hero_banner2.png";
 
 const policyReasons = [
   { num: "01", title: "Medical Insurance Is Compulsory In The UAE", desc: "In order to renew the visa, GDRFA requires valid health insurance cover" },
@@ -195,24 +178,6 @@ export default function HealthInsurance() {
           </div>
         </div>
       </section>
-
-      {/* Why NRIS */}
-      {/* <section className="section bg-gradient-to-br from-red-50 to-blue-50 border-t border-white">
-        <div className="container-xl text-center max-w-2xl mx-auto">
-          <AnimatedSection animation="scaleUp">
-            <span className="badge-pill mb-4 bg-red-100 text-red-700 border-red-200">Why NRiS</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-bold text-ink mb-4">
-              Broker Advantage — Not Just Paperwork
-            </h2>
-            <p className="text-muted text-lg leading-relaxed">
-              You get a partner that treats your medical program as a
-              strategic lever, not a compliance line item.
-            </p>
-          </AnimatedSection>
-        </div>
-      </section> */}
-
-      {/* <CTASection /> */}
     </div>
   );
 }

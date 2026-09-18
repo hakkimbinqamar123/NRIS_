@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { MapPin, Mail, Phone, Clock, MessageCircle } from "lucide-react";
+import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import { LinkedInIcon, TwitterIcon, FacebookIcon, InstagramIcon } from "./SocialIcons";
 import footerBg from "../assets/footer_bg.png";
 import Logo from "./Logo";

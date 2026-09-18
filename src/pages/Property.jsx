@@ -1,15 +1,8 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Building, ArrowRight, Check } from "lucide-react";
-import PageHero from "../components/PageHero";
 import AnimatedSection from "../components/AnimatedSection";
-import CTASection from "../components/CTASection";
 import AnimatedBackground from "../components/AnimatedBackground";
-import property1Img from "../assets/Home.png";
-import property2Img from "../assets/property2.png";
-import property3Img from "../assets/property3.png";
-import property4Img from "../assets/home2.png";
-import generalHeroBg from "../assets/engineering_hero_bg.png"; // reusing hero bg
 import home1Img from "../assets/HOME 1.png";
 
 const propertyBenefits = [
@@ -125,8 +118,6 @@ export default function Property() {
           </div>
         </div>
       </section>
-
-      {/* <CTASection /> */}
     </div>
   );
 }
